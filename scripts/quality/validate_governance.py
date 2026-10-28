@@ -53,7 +53,7 @@ def validate(root: Path, docs_root: Path) -> tuple[list[dict[str, object]], dict
         if not re.search(rf"^\| {decision_id} \|.*\| APPROVED \|", decision_text, re.MULTILINE):
             findings.append(finding("GOV_DECISION_STATUS", f"{decision_id} is not APPROVED in the decision register"))
     phase_text = _read(phase_status)
-    if not re.search(r"^\| P00 \|.*\| (?:SPECIFICATION_IN_PROGRESS|IN_PROGRESS) \|", phase_text, re.MULTILINE):
+    if not re.search(r"^\| P00 \|.*\| (?:SPECIFICATION_IN_PROGRESS|IN_PROGRESS|IN_REVIEW|AWAITING_HUMAN_APPROVAL) \|", phase_text, re.MULTILINE):
         findings.append(finding("GOV_P00_STATUS", "P00 phase status is not an allowed active state"))
     if not re.search(r"^\| P01 \|.*\| AWAITING_APPROVAL \| Not authorized \|", phase_text, re.MULTILINE):
         findings.append(finding("GOV_P01_GUARD", "P01 must remain awaiting approval and not authorized"))

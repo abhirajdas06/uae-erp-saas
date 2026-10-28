@@ -244,7 +244,7 @@ Completion evidence:
 | P00-DEL-009 | Bounded P01 phase specification | Yes | APPROVED SPECIFICATION; implementation not authorized |
 | P00-DEL-010 | Phase/task manifest schema | Yes | IMPLEMENTED AND LOCALLY VERIFIED; P00-EV-010 |
 | P00-DEL-011 | Initial CI workflow and evidence | Yes under roadmap; requires separate authorization | IMPLEMENTED AND VERIFIED; hosted run 40647091699 passed and artifact evidence is recorded in P00-EV-011 |
-| P00-DEL-012 | P00 exit evidence index and approval record | Yes | NOT_STARTED |
+| P00-DEL-012 | P00 exit evidence index and approval record | Yes | READY FOR INDEPENDENT REVIEW; Product Owner approval recorded, technical review pending |
 
 ## 8. P00 Acceptance Criteria
 
@@ -366,8 +366,8 @@ P00 approval does not make the platform production-ready.
 | Traceability baseline | APPROVED VERIFICATION BASELINE |
 | P01 specification | APPROVED SPECIFICATION; tenant-isolation matrix approved but all tests `NOT_RUN` |
 | Manifest/CI foundation | IMPLEMENTED AND VERIFIED; local gates and hosted Actions run 40647091699 pass |
-| P00 exit evidence | IN_PROGRESS; P00-EV-010 and P00-EV-011 verified; completion/independent review and owner approval remain |
-| P00 status | SPECIFICATION_IN_PROGRESS |
+| P00 exit evidence | IN_REVIEW; P00-EV-013 prepared and Product Owner approval recorded in P00-EV-014; independent review and scope-prerequisite disposition remain |
+| P00 status | IN_REVIEW |
 
 ## 16. Approval
 

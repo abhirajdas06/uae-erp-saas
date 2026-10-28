@@ -24,9 +24,9 @@ Canonical supporting records are:
 
 ## 2. Current Summary
 
-The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 has implemented dependency-free validators and an initial read-only GitHub Actions workflow; local-equivalence gates and hosted run 40647091699 pass. Remaining P00 review evidence, P00 exit approval, specialist decisions, and P01 authorization remain incomplete.
+The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, and the Product Owner P00 approval is recorded in P00-EV-014. Formal P00 exit still requires independent reviewer approval and disposition of the initial-increment scope prerequisite; P01 authorization remains separate.
 
-The immediate governance priority is to conduct the remaining P00 critical-finding and completion-evidence review and prepare P00-EV-013. No application work should begin.
+The immediate governance priority is APPR-P00-001 independent review of P00-EV-013 and APPR-P00-002 approval of bounded P01 as the initial implementation increment. No application work should begin.
 
 ## 3. Completed Milestones
 
@@ -59,14 +59,14 @@ The immediate governance priority is to conduct the remaining P00 critical-findi
 |---|---|---|
 | Architecture decisions | ADR-001 through ADR-020 accepted; known membership and RLS-key conflicts reconciled | Remaining architecture narratives reconciled and implementation follows accepted ADRs |
 | Decision governance | Canonical register and standards approval record established | Remaining product/specialist/operational decisions have explicit outcomes |
-| Phase P00 specification | Specification approved; validators and initial CI evidence verified; exit open | Completed evidence package, independent review, and Product Owner exit approval |
+| Phase P00 specification | Product Owner approval recorded; completion report ready; phase in review | Independent review and initial-increment scope disposition |
 | Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
 | Requirements traceability | P00 matrix approved; execution evidence remains incomplete | Every mandatory criterion linked to current verified evidence |
 
 ## 5. Current Blockers
 
-- P00 critical-finding review, completion/independent review, and Product Owner exit approval remain outstanding; P01 implementation remains unauthorized.
+- P00-EV-013 independent review and initial-increment scope disposition remain outstanding; Product Owner P00 approval is recorded, and P01 implementation remains unauthorized.
 - Deployment, recovery, and production-operational specifications remain incomplete.
 - Product, finance, UAE regulatory, provider, region/residency, retention, RPO/RTO, and API-support decisions remain open where recorded.
 - The working tree contains uncommitted documentation changes; they must remain reviewable and must not be overwritten by unrelated work.
@@ -75,7 +75,7 @@ See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 6. Next Recommended Action
 
-Prepare the P00 completion and independent-review report (P00-EV-013), including the critical-finding review required by P00-AC-015, without approving P00 exit automatically.
+Obtain APPR-P00-001 independent review of P00-EV-013 and APPR-P00-002 Product Owner scope disposition using the exact approval statements in the report.
 
 Application work remains blocked by the P00 exit gate, unresolved scope decisions, and explicit P01 authorization. Documentation reconciliation and decision analysis may continue without waiting.
 
@@ -97,3 +97,4 @@ Application work remains blocked by the P00 exit gate, unresolved scope decision
 | 28 October 2026 | Completed authorized P00-T-001: added manifests, schemas, dependency-free validators, seven validator tests, read-only pinned CI workflow, and P00-EV-010/011 local evidence. |
 | 28 October 2026 | Established and seeded the private Notion project hub with derived phase, task, decision, risk, and evidence registers; retained repository specifications and Git evidence as authoritative. |
 | 28 October 2026 | Verified P00-EV-011 from hosted GitHub Actions run 40647091699 for commit 74267c5a2a2f495d8cf5b5e0b8efaec987c45301 and recorded artifact 12798425785 with its SHA-256 digest. |
+| 28 October 2026 | Prepared P00-EV-013, recorded explicit Product Owner P00 approval as P00-EV-014, and moved P00 to IN_REVIEW without authorizing P01. |

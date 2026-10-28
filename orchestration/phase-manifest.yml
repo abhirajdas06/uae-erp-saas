@@ -6,7 +6,7 @@
       "id": "P00",
       "title": "Foundation and Architecture",
       "aliases": ["P0", "P0-FOUNDATION"],
-      "status": "IN_PROGRESS",
+      "status": "IN_REVIEW",
       "specification": "docs/02-phases/P00_FOUNDATION/P00_PHASE_SPECIFICATION.md",
       "owner_roles": ["Product", "Architecture", "Security", "QA", "DevOps"],
       "dependencies": [],
@@ -29,12 +29,39 @@
           "verification": "CI_AND_LOCAL_EQUIVALENCE",
           "evidence_refs": ["P00-EV-011"],
           "owner_roles": ["QA", "DevOps"]
+        },
+        {
+          "id": "P00-AC-015",
+          "statement": "No unresolved critical conflict blocks bounded P01 entry.",
+          "state": "PARTIAL",
+          "mandatory": true,
+          "verification": "INDEPENDENT_SECURITY_ARCHITECTURE_REVIEW",
+          "evidence_refs": ["P00-EV-013"],
+          "owner_roles": ["Architecture", "Security"]
+        },
+        {
+          "id": "P00-AC-016",
+          "statement": "The P00 evidence package is complete and independently reviewed.",
+          "state": "PARTIAL",
+          "mandatory": true,
+          "verification": "INDEPENDENT_EVIDENCE_REVIEW",
+          "evidence_refs": ["P00-EV-013"],
+          "owner_roles": ["QA", "Governance"]
+        },
+        {
+          "id": "P00-AC-017",
+          "statement": "P00 exit approval is recorded and P01 authorization remains separate.",
+          "state": "PARTIAL",
+          "mandatory": true,
+          "verification": "HUMAN_APPROVAL",
+          "evidence_refs": ["P00-EV-013", "P00-EV-014"],
+          "owner_roles": ["Product Owner"]
         }
       ],
       "required_decisions": ["DEC-GOV-002", "DEC-GOV-006", "DEC-QA-005"],
       "required_adrs": ["ADR-015", "ADR-017"],
       "tasks": ["P00-T-001"],
-      "evidence": ["P00-EV-010", "P00-EV-011"],
+      "evidence": ["P00-EV-010", "P00-EV-011", "P00-EV-013", "P00-EV-014"],
       "approvals": [
         {
           "role": "Product Owner",
@@ -42,12 +69,19 @@
           "decision": "AUTHORIZED",
           "date": "2026-10-28",
           "evidence_reference": "USER-2026-10-28-P00-VALIDATORS-CI"
+        },
+        {
+          "role": "Product Owner",
+          "scope": "P00 exit approval component; independent review and separate P01 authorization preserved",
+          "decision": "APPROVED",
+          "date": "2026-10-28",
+          "evidence_reference": "P00-EV-014"
         }
       ],
       "implementation_authorized": true,
       "authorization_reference": "USER-2026-10-28-P00-VALIDATORS-CI",
       "exceptions": [],
-      "updated_at": "2026-10-28T06:58:31Z"
+      "updated_at": "2026-10-28T07:08:09Z"
     },
     {
       "id": "P01",

@@ -507,6 +507,17 @@ After every meaningful documentation task, the responsible agent must:
 6. Update `docs/07-project-management/PROJECT_STATUS.md` and, when applicable, `PHASE_STATUS.md`.
 7. Identify and proceed with the next dependency-ready documentation task when it is within standing authorization and does not depend on unresolved human approval.
 
+Whenever an approval remains pending, the completion report and applicable tracking record must state:
+
+1. The approval identifier and exact decision required.
+2. The authorized approver or reviewer role.
+3. The evidence and alternatives to review.
+4. The recommended option and practical consequences.
+5. An explicit example statement or repository action that records approval.
+6. Whether the approval blocks the current phase, the next phase, or only a later release gate.
+
+Do not report only that “approval is pending.” Make the required decision and recording method actionable without implying approval.
+
 The tracking documents have distinct responsibilities:
 
 - `PROJECT_STATUS.md` records current overall progress, blockers, and the next recommended action.
