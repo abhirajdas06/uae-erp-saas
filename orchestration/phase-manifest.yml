@@ -24,7 +24,7 @@
         {
           "id": "P00-AC-013",
           "statement": "Initial read-only CI gates are implemented and have execution evidence.",
-          "state": "PARTIAL",
+          "state": "VERIFIED",
           "mandatory": true,
           "verification": "CI_AND_LOCAL_EQUIVALENCE",
           "evidence_refs": ["P00-EV-011"],
@@ -47,7 +47,7 @@
       "implementation_authorized": true,
       "authorization_reference": "USER-2026-10-28-P00-VALIDATORS-CI",
       "exceptions": [],
-      "updated_at": "2026-10-28T06:15:00Z"
+      "updated_at": "2026-10-28T06:58:31Z"
     },
     {
       "id": "P01",

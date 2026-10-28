@@ -22,8 +22,8 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 
 | Phase | Name | Status | Authorization | Evidence / Blocker |
 |---|---|---|---|---|
-| P00 | Foundation and Architecture | IN_PROGRESS | P00-T-001 authorized and completed; no application authorization | Validators and read-only workflow implemented; local gates pass; hosted CI evidence, completion review, and exit approval remain |
-| P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification and isolation matrix approved; depends on P00 exit, CI evidence, launch scope, and explicit implementation authorization |
+| P00 | Foundation and Architecture | IN_PROGRESS | P00-T-001 authorized and completed; no application authorization | Validators and read-only workflow verified locally and in hosted run 40647091699; completion review and exit approval remain |
+| P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification and isolation matrix approved; depends on P00 exit, launch scope, and explicit implementation authorization |
 | P02 | Subscription Engine | PLANNED | Not authorized | Depends on P01 and approved entitlement/commercial rules |
 | P03 | CRM, Sales and Basic Invoicing | PLANNED | Not authorized | Depends on P01/P02 and approved domain contracts |
 | P04 | UAE E-Invoicing Integration | PLANNED | Not authorized | Provider and regulatory validation unresolved |
@@ -67,3 +67,4 @@ Current P00 planning evidence:
 | 28 October 2026 | Recorded drafting of the bounded P01 specification and tenant-isolation matrix; P01 implementation remains unauthorized. |
 | 28 October 2026 | Recorded scoped approval of the document/quality/P00/P01 baselines and manifest/CI specifications; P00 exit and all implementation remain unauthorized. |
 | 28 October 2026 | Recorded authorized completion of P00-T-001: validators and read-only CI workflow implemented, local-equivalence gates passed, and P00-EV-010/011 captured; hosted CI remains pending. |
+| 28 October 2026 | Verified P00-EV-011 from successful hosted GitHub Actions run 40647091699 on branch `codex/p00-quality-gates`; P00 exit remains unapproved. |

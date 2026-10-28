@@ -45,7 +45,7 @@ Application verification remains `NOT_RUN` until an authorized implementation ta
 | P00-AC-010 | Roadmap §5.3 | All applicable ADRs | SEC-001, SEC-018 | TST-001 | Decision/risk register review with owners and required-by gates | Product / Governance | SATISFIED |
 | P00-AC-011 | NFR-008 | ADR-001, ADR-003, ADR-015 | SEC-001, SEC-015 | TST-001, TST-016 | `AGENTS.md`, repository structure, link/identifier checks | Architecture / QA | SATISFIED |
 | P00-AC-012 | PRD-003, PRD-004 | ADR-015 | SEC-001, SEC-015 | TST-001, TST-016 | Manifest schema/specification and validation evidence | Governance / DevOps | SATISFIED |
-| P00-AC-013 | NFR-002, NFR-008; DEP-003 | ADR-015, ADR-016, ADR-017 | SEC-011, SEC-015, SEC-016 | CI/release gates; TST-015, TST-016 | Initial CI run or explicit approved P00 exception | QA / DevOps | PARTIAL |
+| P00-AC-013 | NFR-002, NFR-008; DEP-003 | ADR-015, ADR-016, ADR-017 | SEC-011, SEC-015, SEC-016 | CI/release gates; TST-015, TST-016 | Initial CI run or explicit approved P00 exception | QA / DevOps | SATISFIED |
 | P00-AC-014 | PRD-003; TEN-001, TEN-002, TEN-003; IAM-001, IAM-002, IAM-003, IAM-004, IAM-005 | ADR-001, ADR-002, ADR-003, ADR-004, ADR-005, ADR-006, ADR-014, ADR-015 | SEC-001, SEC-002, SEC-003, SEC-004, SEC-005 | TST-001, TST-003, TST-004, TST-005, TST-006 | Bounded P01 specification and task/evidence map | Product / Architecture / Security / QA | SATISFIED |
 | P00-AC-015 | TEN-002, TEN-003; IAM-003, IAM-004, IAM-005; NFR-006, NFR-009 | ADR-002, ADR-003, ADR-004, ADR-005, ADR-011, ADR-014, ADR-017 | SEC-002, SEC-003, SEC-004, SEC-005, SEC-011, SEC-014 | TST-003, TST-004, TST-005, TST-006, TST-010, TST-014, TST-015, TST-016 | Critical finding/decision review showing no P01 blocker | Security / Architecture | OPEN |
 | P00-AC-016 | PRD-004 | ADR-015, ADR-018 | SEC-001, SEC-012 | TST-001; evidence format | Complete P00 evidence index and independent review | QA / Governance | OPEN |
@@ -122,7 +122,7 @@ This section covers product requirements that establish foundation controls or l
 |---|---|---|---|
 | SEC-001–SEC-018 | Defines secure design, implementation, release, and operational controls | Security review, applicability decisions, approval record | APPROVED BASELINE |
 | TST-001–TST-018 | Defines verification layers, negative tests, CI/release gates, and evidence | QA/Security/DevOps review and approval record | APPROVED BASELINE |
-| ADR-015 acceptance criteria | Defines non-bypassable risk-based gates | Testing strategy plus initial CI evidence/approved exception | PARTIAL |
+| ADR-015 acceptance criteria | Defines non-bypassable risk-based gates | Testing strategy plus initial CI evidence/approved exception | SATISFIED |
 | P00 evidence rules | Prevents unsupported phase-status claims | Independent documentation and approval review | APPROVED BASELINE |
 
 ## 7. Exit Evidence Index
@@ -139,7 +139,7 @@ This section covers product requirements that establish foundation controls or l
 | P00-EV-008 | Validated P00 traceability matrix | QA / Governance | APPROVED | Yes |
 | P00-EV-009 | Decision/risk/issue review | Product / Governance | VERIFIED | Yes |
 | P00-EV-010 | Manifest schema and validation evidence | Governance / DevOps | VERIFIED | Yes |
-| P00-EV-011 | Initial CI execution or approved exception | QA / DevOps | PARTIAL | Yes |
+| P00-EV-011 | Initial CI execution or approved exception | QA / DevOps | VERIFIED | Yes |
 | P00-EV-012 | Bounded P01 specification | Product / Architecture / Security / QA | VERIFIED | Yes |
 | P00-EV-013 | P00 completion and independent review report | Governance / Reviewers | NOT_STARTED | Yes |
 | P00-EV-014 | Product Owner P00 exit approval | Product Owner | NOT_STARTED | Yes |
@@ -153,7 +153,7 @@ This section covers product requirements that establish foundation controls or l
 | P00-GAP-002 | Testing strategy baseline | QA / Security / DevOps / Product | Resolved | Approved on 28 October 2026; execution evidence remains phase-specific |
 | P00-GAP-003 | Product baseline and scope/non-goals | Product | Resolved for planning baseline | Launch segment and release scope remain separate decisions |
 | P00-GAP-004 | Phase identifier convention | Governance / Product | Resolved | Canonical `P00`–`P12`; legacy aliases are non-primary identifiers |
-| P00-GAP-005 | Hosted CI execution evidence | Governance / QA / DevOps | P00 exit | Local-equivalence gates pass and workflow is implemented; run the committed workflow on GitHub and retain the run/artifact reference |
+| P00-GAP-005 | Hosted CI execution evidence | Governance / QA / DevOps | Resolved | GitHub Actions run 40647091699 passed for commit 74267c5a2a2f495d8cf5b5e0b8efaec987c45301; artifact 12798425785 and its SHA-256 digest are recorded in P00-EV-011 |
 | P00-GAP-006 | Bounded P01 specification and tenant-isolation matrix | Product / Architecture / Security / QA / Database / DevOps | Resolved for specification | Approved on 28 October 2026; all tests remain `NOT_RUN` and implementation is not authorized |
 | P00-GAP-007 | Requirement-to-test evidence is design-level because application implementation has not started | QA | P01 and later exits | Populate executed evidence only through authorized tasks |
 | P00-GAP-008 | Operational objectives, retention, providers, finance policies, and regulatory details remain open | Named decision owners | Later phase/production gates | Resolve by required-by phase; do not invent values |
