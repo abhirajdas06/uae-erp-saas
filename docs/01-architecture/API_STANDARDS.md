@@ -5,7 +5,7 @@
 | Document ID | ARCH-API-001 |
 | Document | `docs/01-architecture/API_STANDARDS.md` |
 | Version | 1.0 |
-| Status | Draft — Requires Architecture and Security Review |
+| Status | APPROVED — API Architecture Baseline; External Commitments Pending |
 | Last Reviewed | 27 October 2026 |
 | Applies To | Django application, REST APIs, external integrations, webhooks, and API consumers |
 | Primary Stack | Django, Django REST Framework where appropriate, PostgreSQL, Celery, Redis |

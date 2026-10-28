@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | TM-001 |
 | Version | 1.0 |
-| Status | Initial Draft — Pending Approval |
+| Status | APPROVED — Market Positioning Baseline; Market Validation Continues |
 | Product | UAE ERP SaaS |
 | Document Type | Product Strategy and Target Market Definition |
 | Parent Document | `docs/00-product/MASTER_PRODUCT_SPECIFICATION.md` |

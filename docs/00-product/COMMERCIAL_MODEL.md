@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | CM-001 |
 | Version | 1.0 |
-| Status | Initial Draft — Pending Approval |
+| Status | APPROVED — Commercial Design Baseline; Pricing and Terms Pending |
 | Product | UAE ERP SaaS |
 | Document Type | Commercial Strategy and Subscription Requirements |
 | Parent Document | `docs/00-product/MASTER_PRODUCT_SPECIFICATION.md` |

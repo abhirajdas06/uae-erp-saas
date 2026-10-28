@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | ROADMAP-001 |
 | Version | 1.0 |
-| Status | Initial Draft — Pending Approval |
+| Status | APPROVED — Planning Baseline; Phase Gates and Authorizations Required |
 | Product | UAE ERP SaaS |
 | Architecture | Modular Monolith |
 | Primary Framework | Django |

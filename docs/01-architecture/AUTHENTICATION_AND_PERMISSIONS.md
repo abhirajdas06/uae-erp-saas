@@ -6,7 +6,7 @@
 | Document Path | `docs/01-architecture/AUTHENTICATION_AND_PERMISSIONS.md` |
 | Product | UAE ERP SaaS |
 | Version | 1.0 |
-| Status | Draft — Requires Architecture and Security Review |
+| Status | APPROVED — Identity and Authorization Architecture Baseline |
 | Review Date | 27 October 2026 |
 | Framework | Django |
 | Database | PostgreSQL |
@@ -1807,70 +1807,70 @@ Security tests must cover authentication, membership, permission evaluation, ten
 
 | ID | Scenario | Expected result |
 |---|---|---|
-| IAM-001 | Valid credentials for active account | Authentication succeeds |
-| IAM-002 | Invalid credentials | Authentication fails |
-| IAM-003 | Suspended account attempts login | Authentication denied |
-| IAM-004 | Unverified account follows protected flow | Verification policy enforced |
-| IAM-005 | Password-reset token is expired | Reset denied |
-| IAM-006 | Password-reset token is reused | Reset denied |
-| IAM-007 | Login endpoint receives repeated abusive attempts | Rate limiting applies |
-| IAM-008 | Logout is completed | Session is invalidated |
-| IAM-009 | Password changes | Session-revocation policy is applied |
-| IAM-010 | MFA is required but not satisfied | Protected access denied |
+| IAM-TST-001 | Valid credentials for active account | Authentication succeeds |
+| IAM-TST-002 | Invalid credentials | Authentication fails |
+| IAM-TST-003 | Suspended account attempts login | Authentication denied |
+| IAM-TST-004 | Unverified account follows protected flow | Verification policy enforced |
+| IAM-TST-005 | Password-reset token is expired | Reset denied |
+| IAM-TST-006 | Password-reset token is reused | Reset denied |
+| IAM-TST-007 | Login endpoint receives repeated abusive attempts | Rate limiting applies |
+| IAM-TST-008 | Logout is completed | Session is invalidated |
+| IAM-TST-009 | Password changes | Session-revocation policy is applied |
+| IAM-TST-010 | MFA is required but not satisfied | Protected access denied |
 
 ## 25.2 Membership tests
 
 | ID | Scenario | Expected result |
 |---|---|---|
-| IAM-011 | User has active membership in Tenant A | Tenant A access may proceed |
-| IAM-012 | User has no membership in Tenant B | Tenant B access denied |
-| IAM-013 | User has active memberships in A and B | Permissions evaluated independently |
-| IAM-014 | Membership is revoked | Tenant access denied |
-| IAM-015 | Membership is suspended | Tenant access denied |
-| IAM-016 | Tenant is suspended | Access follows the suspension policy |
-| IAM-017 | Client submits an unauthorized tenant UUID | Access denied |
-| IAM-018 | User switches from Tenant A to Tenant B | Tenant B permissions are revalidated |
+| IAM-TST-011 | User has active membership in Tenant A | Tenant A access may proceed |
+| IAM-TST-012 | User has no membership in Tenant B | Tenant B access denied |
+| IAM-TST-013 | User has active memberships in A and B | Permissions evaluated independently |
+| IAM-TST-014 | Membership is revoked | Tenant access denied |
+| IAM-TST-015 | Membership is suspended | Tenant access denied |
+| IAM-TST-016 | Tenant is suspended | Access follows the suspension policy |
+| IAM-TST-017 | Client submits an unauthorized tenant UUID | Access denied |
+| IAM-TST-018 | User switches from Tenant A to Tenant B | Tenant B permissions are revalidated |
 
 ## 25.3 Permission tests
 
 | ID | Scenario | Expected result |
 |---|---|---|
-| IAM-019 | User has required permission and valid scope | Operation allowed |
-| IAM-020 | User lacks required permission | Operation denied |
-| IAM-021 | User has view permission but attempts update | Operation denied |
-| IAM-022 | User has update permission but attempts approval | Operation denied |
-| IAM-023 | User has role in Tenant A only | Role does not grant privileges in Tenant B |
-| IAM-024 | Tenant administrator attempts to grant prohibited permission | Assignment rejected |
-| IAM-025 | User attempts unauthorized legal-entity access | Access denied |
-| IAM-026 | User attempts unauthorized branch access | Access denied |
-| IAM-027 | Unauthorized user attempts sensitive-field access | Sensitive data withheld or access denied |
-| IAM-028 | User attempts unauthorized bulk action | Operation denied |
+| IAM-TST-019 | User has required permission and valid scope | Operation allowed |
+| IAM-TST-020 | User lacks required permission | Operation denied |
+| IAM-TST-021 | User has view permission but attempts update | Operation denied |
+| IAM-TST-022 | User has update permission but attempts approval | Operation denied |
+| IAM-TST-023 | User has role in Tenant A only | Role does not grant privileges in Tenant B |
+| IAM-TST-024 | Tenant administrator attempts to grant prohibited permission | Assignment rejected |
+| IAM-TST-025 | User attempts unauthorized legal-entity access | Access denied |
+| IAM-TST-026 | User attempts unauthorized branch access | Access denied |
+| IAM-TST-027 | Unauthorized user attempts sensitive-field access | Sensitive data withheld or access denied |
+| IAM-TST-028 | User attempts unauthorized bulk action | Operation denied |
 
 ## 25.4 Entitlement tests
 
 | ID | Scenario | Expected result |
 |---|---|---|
-| IAM-029 | User has permission and tenant has module entitlement | Access allowed if all other checks pass |
-| IAM-030 | User has permission but tenant lacks entitlement | Access denied |
-| IAM-031 | Tenant has entitlement but user lacks permission | Access denied |
-| IAM-032 | Required module dependency is absent | Access denied according to dependency rules |
-| IAM-033 | Module entitlement is revoked | Subsequent access is denied |
-| IAM-034 | Cached entitlement is stale | Revocation is enforced according to policy |
+| IAM-TST-029 | User has permission and tenant has module entitlement | Access allowed if all other checks pass |
+| IAM-TST-030 | User has permission but tenant lacks entitlement | Access denied |
+| IAM-TST-031 | Tenant has entitlement but user lacks permission | Access denied |
+| IAM-TST-032 | Required module dependency is absent | Access denied according to dependency rules |
+| IAM-TST-033 | Module entitlement is revoked | Subsequent access is denied |
+| IAM-TST-034 | Cached entitlement is stale | Revocation is enforced according to policy |
 
 ## 25.5 Administrative and operational tests
 
 | ID | Scenario | Expected result |
 |---|---|---|
-| IAM-035 | Tenant administrator attempts platform administration | Denied |
-| IAM-036 | Platform support operator requests restricted customer-data access | Approved workflow required |
-| IAM-037 | Support access expires | Further access denied |
-| IAM-038 | Role is changed during an active session | Authorization reflects the new policy |
-| IAM-039 | User is deactivated | Protected access denied |
-| IAM-040 | Background task executes after membership revocation | Required authorization revalidation occurs |
-| IAM-041 | Django admin accesses an out-of-scope record | Access denied |
-| IAM-042 | API client submits modified ownership fields | Request rejected |
-| IAM-043 | Permission cache contains stale access | Revoked access is not improperly retained |
-| IAM-044 | Privileged role change occurs | Audit event is recorded |
+| IAM-TST-035 | Tenant administrator attempts platform administration | Denied |
+| IAM-TST-036 | Platform support operator requests restricted customer-data access | Approved workflow required |
+| IAM-TST-037 | Support access expires | Further access denied |
+| IAM-TST-038 | Role is changed during an active session | Authorization reflects the new policy |
+| IAM-TST-039 | User is deactivated | Protected access denied |
+| IAM-TST-040 | Background task executes after membership revocation | Required authorization revalidation occurs |
+| IAM-TST-041 | Django admin accesses an out-of-scope record | Access denied |
+| IAM-TST-042 | API client submits modified ownership fields | Request rejected |
+| IAM-TST-043 | Permission cache contains stale access | Revoked access is not improperly retained |
+| IAM-TST-044 | Privileged role change occurs | Audit event is recorded |
 
 ## 25.6 Test execution requirements
 

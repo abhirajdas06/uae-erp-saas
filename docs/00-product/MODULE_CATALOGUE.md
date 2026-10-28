@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | MOD-CAT-001 |
 | Version | 1.0 |
-| Status | Initial Draft — Pending Approval |
+| Status | APPROVED — Product Catalogue Baseline; Release Scope Pending |
 | Product | UAE ERP SaaS |
 | Document Type | Product Module Catalogue |
 | Parent Document | `docs/00-product/MASTER_PRODUCT_SPECIFICATION.md` |

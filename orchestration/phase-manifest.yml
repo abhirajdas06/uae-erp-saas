@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-10-28T00:00:00Z",
+  "phases": [
+    {
+      "id": "P00",
+      "title": "Foundation and Architecture",
+      "aliases": ["P0", "P0-FOUNDATION"],
+      "status": "IN_PROGRESS",
+      "specification": "docs/02-phases/P00_FOUNDATION/P00_PHASE_SPECIFICATION.md",
+      "owner_roles": ["Product", "Architecture", "Security", "QA", "DevOps"],
+      "dependencies": [],
+      "entry_criteria": [],
+      "exit_criteria": [
+        {
+          "id": "P00-AC-012",
+          "statement": "Phase and task manifests and their validation rules are implemented and evidenced.",
+          "state": "VERIFIED",
+          "mandatory": true,
+          "verification": "AUTOMATED_VALIDATION",
+          "evidence_refs": ["P00-EV-010"],
+          "owner_roles": ["Governance", "DevOps"]
+        },
+        {
+          "id": "P00-AC-013",
+          "statement": "Initial read-only CI gates are implemented and have execution evidence.",
+          "state": "PARTIAL",
+          "mandatory": true,
+          "verification": "CI_AND_LOCAL_EQUIVALENCE",
+          "evidence_refs": ["P00-EV-011"],
+          "owner_roles": ["QA", "DevOps"]
+        }
+      ],
+      "required_decisions": ["DEC-GOV-002", "DEC-GOV-006", "DEC-QA-005"],
+      "required_adrs": ["ADR-015", "ADR-017"],
+      "tasks": ["P00-T-001"],
+      "evidence": ["P00-EV-010", "P00-EV-011"],
+      "approvals": [
+        {
+          "role": "Product Owner",
+          "scope": "P00-T-001 validators and initial read-only CI workflow only",
+          "decision": "AUTHORIZED",
+          "date": "2026-10-28",
+          "evidence_reference": "USER-2026-10-28-P00-VALIDATORS-CI"
+        }
+      ],
+      "implementation_authorized": true,
+      "authorization_reference": "USER-2026-10-28-P00-VALIDATORS-CI",
+      "exceptions": [],
+      "updated_at": "2026-10-28T06:15:00Z"
+    },
+    {
+      "id": "P01",
+      "title": "Core Platform and Multi-Tenancy",
+      "aliases": ["P1", "P1-CORE-PLATFORM"],
+      "status": "AWAITING_APPROVAL",
+      "specification": "docs/02-phases/P01_CORE_PLATFORM/P01_PHASE_SPECIFICATION.md",
+      "owner_roles": ["Product", "Architecture", "Security", "QA", "Database", "DevOps"],
+      "dependencies": ["P00"],
+      "entry_criteria": [],
+      "exit_criteria": [],
+      "required_decisions": ["DEC-PHASE-002", "DEC-QA-004"],
+      "required_adrs": ["ADR-002", "ADR-003", "ADR-004", "ADR-005", "ADR-014", "ADR-015"],
+      "tasks": [],
+      "evidence": [],
+      "approvals": [],
+      "implementation_authorized": false,
+      "authorization_reference": null,
+      "exceptions": [],
+      "updated_at": "2026-10-28T00:00:00Z"
+    }
+  ]
+}
+

@@ -6,7 +6,7 @@
 | Document Path | `docs/01-architecture/ENTITLEMENT_ENGINE.md` |
 | Product | UAE ERP SaaS |
 | Version | 1.0 |
-| Status | Draft — Requires Architecture and Security Review |
+| Status | APPROVED — Entitlement Architecture Baseline |
 | Review Date | 27 October 2026 |
 | Target Phase | P2 — Module Catalogue, Subscription and Billing |
 | Framework | Django |

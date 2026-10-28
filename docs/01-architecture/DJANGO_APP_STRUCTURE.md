@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | ARCH-002 |
 | Version | 1.0 |
-| Status | Initial Draft — Pending Technical Approval |
+| Status | APPROVED — Architecture Baseline |
 | Product | UAE ERP SaaS |
 | Framework | Django |
 | API Framework | Django REST Framework, where required |
@@ -318,11 +318,13 @@ Do not split files merely because they exceed an arbitrary line count. Split the
 
 The following table establishes initial domain ownership.
 
+> **Accepted decision:** ADR-003 assigns `TenantMembership` to `tenants`. The `users` application owns identity, roles, permissions, and membership-role assignments, but not the membership record itself.
+
 | Application | Primary Responsibility | Owns Primary Records | Commercial Module |
 |---|---|---|---|
 | `core` | Shared technical foundations | Generic shared infrastructure records, if required | No |
-| `tenants` | Organization and tenant lifecycle | Tenant, tenant configuration | No |
-| `users` | User identity, membership, and roles | User, membership, role assignments | No |
+| `tenants` | Organization, tenant lifecycle, and membership relationships | Tenant, tenant configuration, `TenantMembership`, legal entity, branch | No |
+| `users` | User identity, authentication, roles, and permissions | User, roles, permissions, membership-role assignments | No |
 | `audit` | Business and security audit records | Audit events | No |
 | `subscriptions` | Plans, subscriptions, and entitlements | Subscription, subscription lines, entitlement state | Platform |
 | `billing` | SaaS charges and payment processing records | SaaS billing documents and payment records | Platform |
@@ -439,7 +441,7 @@ The exact model design belongs in `DATABASE_DESIGN.md`.
 
 - User identity.
 - Authentication integration.
-- Tenant membership.
+- Role and permission definitions and assignments for tenant memberships owned by `tenants`.
 - Role assignment.
 - User activation and deactivation.
 - Organization-level access configuration.
@@ -461,7 +463,7 @@ User identity and tenant membership are different concepts.
 
 A single user may belong to more than one tenant if that capability is approved.
 
-Membership records should determine which organizations the user can access.
+`tenants.TenantMembership` records determine which organizations the user can access. The `users` application may own role assignments that reference an active membership through the approved domain contract.
 
 Role assignment must not be inferred solely from a user having a particular email address or being the first user created.
 

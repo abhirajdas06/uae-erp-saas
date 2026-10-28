@@ -5,7 +5,7 @@
 | Document ID | ARCH-EVT-001 |
 | Document | `docs/01-architecture/EVENT_AND_TASK_PROCESSING.md` |
 | Version | 1.0 |
-| Status | Draft — Requires Architecture and Security Review |
+| Status | APPROVED — Event and Task Architecture Baseline |
 | Last Reviewed | 27 October 2026 |
 | Applies To | Django application, Celery workers, scheduled jobs, internal events, external integrations |
 | Primary Stack | Django, PostgreSQL, Celery, Redis |

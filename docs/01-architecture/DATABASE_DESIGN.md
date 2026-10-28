@@ -7,7 +7,7 @@
 |---|---|
 | Document ID | ARCH-003 |
 | Version | 2.0 |
-| Status | Draft — Requires Architecture, Tax and Compliance Review |
+| Status | APPROVED — Technical Data Architecture Baseline; Tax and Compliance Policies Pending |
 | Market | United Arab Emirates |
 | Primary Database | PostgreSQL |
 | Backend | Django |

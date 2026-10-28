@@ -5,7 +5,7 @@
 |---|---|
 | Document ID | PROD-REQ-001 |
 | Version | 1.0 |
-| Status | Initial Draft — Pending Approval |
+| Status | APPROVED — Requirements Baseline; Specialist Policies Pending |
 | Parent Document | `docs/00-product/MASTER_PRODUCT_SPECIFICATION.md` |
 | Applies To | Product, architecture, implementation, testing, security, and release planning |
 | Primary Market | United Arab Emirates |

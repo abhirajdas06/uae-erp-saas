@@ -4,7 +4,7 @@
 |---|---|
 | ADR ID | ADR-001 |
 | Title | Modular Monolith Architecture |
-| Status | PROPOSED |
+| Status | ACCEPTED |
 | Decision Date | 27 October 2026 |
 | Decision Owner | Product Architect / Technical Lead |
 | Reviewers | Architecture, Security, Development, DevOps |
@@ -655,21 +655,11 @@ Review the current versions of technical references before implementing version-
 
 ## 16. Approval
 
-**Current status:** PROPOSED
+**Current status:** ACCEPTED
 
-This decision is not considered approved until the designated human decision owner explicitly accepts it.
-
-- **Approved by:** Pending
-- **Approval date:** Pending
-- **Approval notes:** Pending
-
-Upon approval:
-
-1. Change the status to `ACCEPTED`.
-2. Update the ADR register.
-3. Confirm consistency with `SYSTEM_ARCHITECTURE.md` and `DJANGO_APP_STRUCTURE.md`.
-4. Add any required implementation tasks to the relevant phase.
-5. Record deviations or superseding decisions through the ADR process.
+- **Approved by:** Product Owner — explicit project instruction
+- **Approval date:** 28 October 2026
+- **Approval notes:** Accepted as the initial architecture baseline following `docs/07-project-management/ADR_STANDARDS_REVIEW.md`. Implementation still requires phase authorization.
 
 ---
 
@@ -677,6 +667,6 @@ Upon approval:
 
 | Version | Status | Description |
 |---|---|---|
-| 1.0 | PROPOSED | Initial architecture decision for a modular monolith. |
+| 1.0 | ACCEPTED | Initial architecture decision accepted after standards review. |
 
 **Final architectural principle:** Maintain strong internal domain boundaries within a single deployable Django application, enforce tenant and business invariants explicitly, and introduce distributed services only when measurable requirements justify their additional complexity.

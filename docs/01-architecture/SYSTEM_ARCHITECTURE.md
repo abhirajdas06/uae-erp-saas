@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | ARCH-001 |
 | Version | 1.0 |
-| Status | Initial Draft — Pending Technical Approval |
+| Status | APPROVED — Architecture Baseline |
 | Product | UAE ERP SaaS |
 | Architecture Style | Modular Monolith |
 | Backend | Python, Django, Django REST Framework where required |

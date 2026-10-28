@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-10-28T00:00:00Z",
+  "tasks": [
+    {
+      "id": "P00-T-001",
+      "phase_id": "P00",
+      "title": "Implement P00 validators and initial read-only CI",
+      "objective": "Provide locally reproducible P00 manifest, documentation, governance, and secret checks with machine-readable evidence and an equivalent read-only GitHub Actions workflow.",
+      "status": "DONE",
+      "scope": {
+        "included": [
+          "P00/P01 phase manifest",
+          "P00 task manifest",
+          "Manifest, documentation, governance, and secret validators",
+          "Validator unit tests",
+          "Read-only GitHub Actions workflow",
+          "P00-EV-010 and P00-EV-011 evidence"
+        ],
+        "excluded": [
+          "ERP application implementation",
+          "P01 implementation",
+          "Deployment or production credentials",
+          "Paid services",
+          "Phase-exit approval"
+        ]
+      },
+      "owner_role": "DevOps",
+      "reviewer_roles": ["QA", "Security", "Architecture", "Project Governance"],
+      "dependencies": [],
+      "requirements": ["P00-AC-012", "P00-AC-013", "SEC-015", "TST-016"],
+      "adrs": ["ADR-015", "ADR-017"],
+      "risks": ["RISK-005", "RISK-006", "RISK-007", "RISK-018", "RISK-020", "RISK-023"],
+      "decisions": ["DEC-GOV-006", "DEC-QA-005"],
+      "acceptance_criteria": [
+        {
+          "id": "P00-T-001-AC-001",
+          "statement": "Valid manifests pass and invalid identifiers, references, cycles, statuses, or authorization states fail.",
+          "state": "VERIFIED",
+          "mandatory": true,
+          "verification": "UNIT_AND_REPOSITORY_TEST",
+          "evidence_refs": ["P00-EV-010"],
+          "owner_roles": ["QA", "Governance"]
+        },
+        {
+          "id": "P00-T-001-AC-002",
+          "statement": "The initial workflow uses read-only permissions, immutable actions, no secrets, and the same local gate command.",
+          "state": "VERIFIED",
+          "mandatory": true,
+          "verification": "STATIC_AND_LOCAL_CI_EQUIVALENCE",
+          "evidence_refs": ["P00-EV-011"],
+          "owner_roles": ["Security", "DevOps"]
+        }
+      ],
+      "commands": [
+        {
+          "id": "CMD-001",
+          "purpose": "Run every initial P00 gate and collect evidence",
+          "run_from": ".",
+          "command": "python scripts/quality/run_p00_gates.py --output-dir build/evidence",
+          "image_or_runtime": "CPython 3.14.7, standard library only",
+          "network": "disabled",
+          "expected_exit": 0,
+          "produces": ["build/evidence/p00-gate-summary.json"]
+        }
+      ],
+      "permissions": {
+        "repository": "read",
+        "pull_requests": "none",
+        "actions": "none",
+        "id_token": "none",
+        "secrets": [],
+        "database_role": "none",
+        "object_storage": "none",
+        "deployment_environment": "none"
+      },
+      "evidence_requirements": [
+        {
+          "id": "P00-EV-010",
+          "format": "JSON",
+          "producer": "validate_manifests.py and validator unit tests",
+          "retention_class": "P00_FOUNDATION_EVIDENCE",
+          "sensitivity": "INTERNAL"
+        },
+        {
+          "id": "P00-EV-011",
+          "format": "JSON plus GitHub Actions run artifact when hosted",
+          "producer": "run_p00_gates.py and p00-quality.yml",
+          "retention_class": "P00_FOUNDATION_EVIDENCE",
+          "sensitivity": "INTERNAL"
+        }
+      ],
+      "rollback_or_recovery": "Remove the workflow and validators through reviewed version-control reversion; retain prior evidence and failure records.",
+      "implementation_authorized": true,
+      "authorization_reference": "USER-2026-10-28-P00-VALIDATORS-CI",
+      "exceptions": [],
+      "updated_at": "2026-10-28T06:15:00Z"
+    }
+  ]
+}
+

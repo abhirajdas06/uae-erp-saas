@@ -4,7 +4,7 @@
 |---|---|
 | ADR ID | ADR-002 |
 | Title | Shared PostgreSQL Database and Schema |
-| Status | PROPOSED |
+| Status | ACCEPTED |
 | Version | 1.0 |
 | Date | 27 October 2026 |
 | Decision Owner | Product Architect / Technical Lead |
@@ -618,7 +618,42 @@ The database strategy alone does not establish compliance with UAE data-protecti
 
 ---
 
-## 14. Conditions for Reconsideration
+## 14. Rationale
+
+A shared database and shared schema provide the lowest justified initial operational complexity while retaining PostgreSQL transactions, referential integrity, migration consistency, and consolidated observability. The approach is suitable only when paired with explicit tenant ownership, restricted runtime roles, application-level scoping, tenant-aware constraints, and tested RLS defense-in-depth.
+
+The alternative tenancy topologies remain valid reconsideration options when contractual, regulatory, recovery, capacity, or workload evidence justifies their additional cost.
+
+## 15. Consequences
+
+### Positive consequences
+
+- One migration sequence and operational database baseline.
+- Local transactions across related domain operations.
+- Lower initial provisioning, monitoring, backup, and connection-management complexity.
+- Efficient cross-domain reporting under controlled tenant scope.
+
+### Negative consequences and trade-offs
+
+- Isolation failures can have a multi-tenant blast radius.
+- Tenant-level restore and deletion are more complex than database-level recovery.
+- Large tenants can create noisy-neighbor pressure.
+- RLS, database-role, constraint, and context-management discipline is mandatory.
+
+### Risks and mitigations
+
+- **Cross-tenant access:** layered application controls, RLS, constraints, and negative tests.
+- **Shared recovery impact:** point-in-time recovery, isolated restore procedures, and tenant-level extraction validation.
+- **Migration contention:** staged migrations, lock analysis, compatibility windows, and rollback planning.
+- **Capacity concentration:** tenant-aware monitoring, query limits, indexing, and evidence-based topology review.
+
+## 16. Operational Impact
+
+Operations must manage one shared schema across all tenants, use least-privilege runtime roles, monitor tenant-skewed workloads, test full and tenant-level recovery, and coordinate migrations with web and worker compatibility. Production runbooks must cover RLS policy failures, privileged maintenance, suspected cross-tenant exposure, backup restoration, and controlled topology reconsideration.
+
+---
+
+## 17. Conditions for Reconsideration
 
 The shared-schema model remains the default until measurable requirements justify an alternative.
 
@@ -639,7 +674,7 @@ Any proposed alternative must be assessed for migration complexity, application 
 
 ---
 
-## 15. Implementation Requirements
+## 18. Implementation Requirements
 
 | ID | Requirement | Expected Evidence |
 |---|---|---|
@@ -660,7 +695,7 @@ Implementation must be phased. RLS must not be enabled across the entire databas
 
 ---
 
-## 16. Validation and Acceptance Criteria
+## 19. Validation and Acceptance Criteria
 
 The implementation satisfies this ADR when:
 
@@ -684,7 +719,7 @@ Evidence must be linked to implementation pull requests, test results, operation
 
 ---
 
-## 17. Alternatives Rejected
+## 20. Alternatives Rejected
 
 ### Separate Database per Tenant as the Default
 
@@ -712,7 +747,7 @@ The approved approach uses layered controls.
 
 ---
 
-## 18. References
+## 21. References
 
 ### Internal Documents
 
@@ -739,30 +774,20 @@ Verify version-specific behavior against the PostgreSQL and Django versions sele
 
 ---
 
-## 19. Approval
+## 22. Approval
 
-**Current Status:** PROPOSED
+**Current Status:** ACCEPTED
 
-This ADR becomes authoritative only after explicit human approval.
-
-- **Approved By:** Pending
-- **Approval Date:** Pending
-- **Approval Notes:** Pending
-
-Upon approval:
-
-1. Change the status to `ACCEPTED`.
-2. Update the ADR register.
-3. Verify consistency with `DATABASE_DESIGN.md` and `MULTI_TENANCY.md`.
-4. Add implementation tasks to the appropriate roadmap phases.
-5. Record any future replacement through a new ADR.
+- **Approved By:** Product Owner — explicit project instruction
+- **Approval Date:** 28 October 2026
+- **Approval Notes:** Accepted as the initial database-tenancy direction following `docs/07-project-management/ADR_STANDARDS_REVIEW.md`. Dedicated topology, recovery objectives, and tenant-level recovery remain separate decisions.
 
 ---
 
-## 20. Supersession History
+## 23. Supersession History
 
 | Version | Status | Description |
 |---|---|---|
-| 1.0 | PROPOSED | Initial shared PostgreSQL database and schema decision. |
+| 1.0 | ACCEPTED | Initial shared PostgreSQL database and schema decision accepted after standards review. |
 
 **Final architectural principle:** Use a shared PostgreSQL database and schema for the initial SaaS platform, with explicit tenant ownership, layered isolation controls, integrity-preserving relationships, tested recovery procedures, and a documented path to stronger isolation when justified.

@@ -6,7 +6,7 @@
 | Document Path | `docs/01-architecture/MODULE_DEPENDENCIES.md` |
 | Product | UAE ERP SaaS |
 | Version | 1.0 |
-| Status | Draft — Requires Architecture and Product Approval |
+| Status | APPROVED — Module Dependency Baseline; Commercial Rules Pending |
 | Review Date | 27 October 2026 |
 | Architecture | Django Modular Monolith |
 | Database | PostgreSQL |

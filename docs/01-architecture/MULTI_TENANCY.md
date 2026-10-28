@@ -6,7 +6,7 @@
 | Document | `docs/01-architecture/MULTI_TENANCY.md` |
 | Product | UAE ERP SaaS |
 | Version | 1.0 |
-| Status | Draft — Requires Architecture and Security Review |
+| Status | APPROVED — Tenant-Isolation Architecture Baseline |
 | Last Reviewed | 27 October 2026 |
 | Primary Stack | Django, PostgreSQL, Celery, Redis |
 | Architecture | Modular monolith, shared database, shared schema |
@@ -710,6 +710,8 @@ If signals are used for secondary effects, they must not assume that every calle
 
 # 8. PostgreSQL Row-Level Security
 
+> **Accepted decision:** ADR-004 establishes `app.current_tenant_id` as the canonical transaction-local PostgreSQL tenant-context key. All examples in this document use that key.
+
 ## 8.1 Purpose
 
 PostgreSQL Row-Level Security provides a database-level mechanism for restricting which rows can be read or modified by a database role.
@@ -753,7 +755,7 @@ Example SQL:
 
 ```sql
 SELECT set_config(
-    'app.tenant_id',
+    'app.current_tenant_id',
     '00000000-0000-0000-0000-000000000001',
     true
 );
@@ -794,13 +796,13 @@ FOR ALL
 TO app_runtime
 USING (
     tenant_id = NULLIF(
-        current_setting('app.tenant_id', true),
+        current_setting('app.current_tenant_id', true),
         ''
     )::uuid
 )
 WITH CHECK (
     tenant_id = NULLIF(
-        current_setting('app.tenant_id', true),
+        current_setting('app.current_tenant_id', true),
         ''
     )::uuid
 );
@@ -863,7 +865,7 @@ The runtime application role must not be allowed to alter policies, disable RLS 
 
 ## 8.7 Important trust boundary
 
-A custom PostgreSQL setting such as `app.tenant_id` is not an independent identity credential.
+A custom PostgreSQL setting such as `app.current_tenant_id` is not an independent identity credential.
 
 A database role that can execute arbitrary SQL and set this variable to any tenant UUID may be able to select another tenant's rows.
 
@@ -925,7 +927,7 @@ def tenant_transaction(tenant):
             cursor.execute(
                 """
                 SELECT set_config(
-                    'app.tenant_id',
+                    'app.current_tenant_id',
                     %s,
                     true
                 )

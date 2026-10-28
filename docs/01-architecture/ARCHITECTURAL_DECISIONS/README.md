@@ -3,7 +3,7 @@
 **Project:** UAE ERP SaaS Platform  
 **Document Type:** Architecture Governance  
 **Status:** Active  
-**Version:** 1.0
+**Version:** 1.1
 
 ## 1. Purpose
 
@@ -81,26 +81,26 @@ This register is the canonical ADR numbering sequence. Other documents must refe
 
 | ADR | Topic | Record state | Decision status | Record |
 |---|---|---|---|---|
-| ADR-001 | Modular monolith architecture | DRAFTED | PROPOSED | [ADR-001](ADR-001-modular-monolith-architecture.md) |
-| ADR-002 | Shared PostgreSQL database and schema | DRAFTED | PROPOSED | [ADR-002](ADR-002-shared-postgresql-database-and-schema.md) |
-| ADR-003 | Django application and domain ownership | NOT_DRAFTED | — | Pending |
-| ADR-004 | Tenant isolation and PostgreSQL RLS | NOT_DRAFTED | — | Pending |
-| ADR-005 | Authentication and authorization model | NOT_DRAFTED | — | Pending |
-| ADR-006 | Module entitlement and dependency enforcement | NOT_DRAFTED | — | Pending |
-| ADR-007 | Server-rendered UI with HTMX and Tailwind CSS | NOT_DRAFTED | — | Pending |
-| ADR-008 | Selective use of Django REST Framework | NOT_DRAFTED | — | Pending |
-| ADR-009 | Celery, Redis, and background task execution | NOT_DRAFTED | — | Pending |
-| ADR-010 | Transactional outbox and event delivery | NOT_DRAFTED | — | Pending |
-| ADR-011 | Financial data integrity and immutable posted entries | NOT_DRAFTED | — | Pending |
-| ADR-012 | UAE e-invoicing provider integration boundary | NOT_DRAFTED | — | Pending |
-| ADR-013 | Monetary precision, currency, and rounding | NOT_DRAFTED | — | Pending |
-| ADR-014 | UUID primary keys and tenant-aware references | NOT_DRAFTED | — | Pending |
-| ADR-015 | Automated testing and CI quality gates | NOT_DRAFTED | — | Pending |
-| ADR-016 | Docker-based deployment architecture | NOT_DRAFTED | — | Pending |
-| ADR-017 | Secrets and environment configuration | NOT_DRAFTED | — | Pending |
-| ADR-018 | Audit logging and sensitive-data handling | NOT_DRAFTED | — | Pending |
-| ADR-019 | File and document storage | NOT_DRAFTED | — | Pending |
-| ADR-020 | API versioning and external integration contracts | NOT_DRAFTED | — | Pending |
+| ADR-001 | Modular monolith architecture | DRAFTED | ACCEPTED | [ADR-001](ADR-001-modular-monolith-architecture.md) |
+| ADR-002 | Shared PostgreSQL database and schema | DRAFTED | ACCEPTED | [ADR-002](ADR-002-shared-postgresql-database-and-schema.md) |
+| ADR-003 | Django application and domain ownership | DRAFTED | ACCEPTED | [ADR-003](ADR-003-django-application-and-domain-ownership.md) |
+| ADR-004 | Tenant isolation and PostgreSQL RLS | DRAFTED | ACCEPTED | [ADR-004](ADR-004-tenant-isolation-and-postgresql-rls.md) |
+| ADR-005 | Authentication and authorization model | DRAFTED | ACCEPTED | [ADR-005](ADR-005-authentication-and-authorization-model.md) |
+| ADR-006 | Module entitlement and dependency enforcement | DRAFTED | ACCEPTED | [ADR-006](ADR-006-module-entitlement-and-dependency-enforcement.md) |
+| ADR-007 | Server-rendered UI with HTMX and Tailwind CSS | DRAFTED | ACCEPTED | [ADR-007](ADR-007-server-rendered-ui-with-htmx-and-tailwind.md) |
+| ADR-008 | Selective use of Django REST Framework | DRAFTED | ACCEPTED | [ADR-008](ADR-008-selective-use-of-django-rest-framework.md) |
+| ADR-009 | Celery, Redis, and background task execution | DRAFTED | ACCEPTED | [ADR-009](ADR-009-celery-redis-and-background-task-execution.md) |
+| ADR-010 | Transactional outbox and event delivery | DRAFTED | ACCEPTED | [ADR-010](ADR-010-transactional-outbox-and-event-delivery.md) |
+| ADR-011 | Financial data integrity and immutable posted entries | DRAFTED | ACCEPTED | [ADR-011](ADR-011-financial-data-integrity-and-immutable-posted-entries.md) |
+| ADR-012 | UAE e-invoicing provider integration boundary | DRAFTED | ACCEPTED | [ADR-012](ADR-012-uae-e-invoicing-provider-integration-boundary.md) |
+| ADR-013 | Monetary precision, currency, and rounding | DRAFTED | ACCEPTED | [ADR-013](ADR-013-monetary-precision-currency-and-rounding.md) |
+| ADR-014 | UUID primary keys and tenant-aware references | DRAFTED | ACCEPTED | [ADR-014](ADR-014-uuid-primary-keys-and-tenant-aware-references.md) |
+| ADR-015 | Automated testing and CI quality gates | DRAFTED | ACCEPTED | [ADR-015](ADR-015-automated-testing-and-ci-quality-gates.md) |
+| ADR-016 | Docker-based deployment architecture | DRAFTED | ACCEPTED | [ADR-016](ADR-016-docker-based-deployment-architecture.md) |
+| ADR-017 | Secrets and environment configuration | DRAFTED | ACCEPTED | [ADR-017](ADR-017-secrets-and-environment-configuration.md) |
+| ADR-018 | Audit logging and sensitive-data handling | DRAFTED | ACCEPTED | [ADR-018](ADR-018-audit-logging-and-sensitive-data-handling.md) |
+| ADR-019 | File and document storage | DRAFTED | ACCEPTED | [ADR-019](ADR-019-file-and-document-storage.md) |
+| ADR-020 | API versioning and external integration contracts | DRAFTED | ACCEPTED | [ADR-020](ADR-020-api-versioning-and-external-integration-contracts.md) |
 
 The sequence is a documentation roadmap, not a requirement to create unnecessary ADRs. Before drafting a candidate, verify that it represents a material decision and is not adequately governed by an existing accepted ADR. Retired candidates remain listed with an explanatory note so identifiers are not silently reused.
 
