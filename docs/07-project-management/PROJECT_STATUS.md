@@ -20,6 +20,7 @@ Canonical supporting records are:
 - `DECISIONS_PENDING.md` for unresolved decisions and approvals.
 - `RISKS_AND_ISSUES.md` for material risks and active issues.
 - `../01-architecture/ARCHITECTURAL_DECISIONS/README.md` for ADR numbering and status.
+- [UAE ERP SaaS — Project Hub](https://app.notion.com/p/40714ff52961817d9b27f4dbb4a2ddca) for derived operational views of phases, bounded tasks, decisions, risks, and evidence. Git records remain authoritative.
 
 ## 2. Current Summary
 
@@ -50,6 +51,7 @@ The immediate governance priority is to run the committed workflow on GitHub, pr
 | Initial repository audit | Current project handover record | Complete |
 | Canonical ADR numbering | ADR register and `SYSTEM_ARCHITECTURE.md` | Reconciled |
 | Persistent tracking baseline | `docs/07-project-management/` | Established |
+| Notion operational dashboard | [UAE ERP SaaS — Project Hub](https://app.notion.com/p/40714ff52961817d9b27f4dbb4a2ddca) | Established as a derived view; repository remains authoritative |
 
 ## 4. Work in Progress
 
@@ -94,3 +96,4 @@ Application work remains blocked by the P00 exit gate, hosted CI evidence, unres
 | 28 October 2026 | Drafted the bounded P01 Core Platform and Multi-Tenancy specification and 53-scenario tenant-isolation matrix; all implementation and test execution remain unauthorized/not run. |
 | 28 October 2026 | Completed the repository-wide document standards review; approved bounded product, architecture, quality, P00/P01, manifest, and CI specification baselines without approving compliance, P00 exit, or implementation. |
 | 28 October 2026 | Completed authorized P00-T-001: added manifests, schemas, dependency-free validators, seven validator tests, read-only pinned CI workflow, and P00-EV-010/011 local evidence. |
+| 28 October 2026 | Established and seeded the private Notion project hub with derived phase, task, decision, risk, and evidence registers; retained repository specifications and Git evidence as authoritative. |
