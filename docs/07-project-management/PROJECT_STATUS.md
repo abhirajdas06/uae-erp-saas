@@ -27,7 +27,7 @@ Canonical supporting records are:
 
 The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, the Product Owner P00 approval is recorded in P00-EV-014, and APPR-P00-002 approves bounded P01 as the initial implementation increment. Formal P00 exit still requires independent reviewer approval; P01 authorization remains separate.
 
-The immediate delivery priority is completing the phase, module, traceability, and prompt documentation defined in `DOCUMENTATION_COMPLETION_PLAN.md`. APPR-P00-001 remains a parallel governance item and does not block non-conflicting documentation drafting. No application work should begin.
+The immediate delivery priority is completing the phase, module, traceability, and prompt documentation defined in `DOCUMENTATION_COMPLETION_PLAN.md`. The complete P02 subscription-engine documentation batch is ready for review; P03 CRM/Sales/ERP Invoicing is next. APPR-P00-001 remains a parallel governance item and does not block non-conflicting documentation drafting. No application work should begin.
 
 ## 3. Completed Milestones
 
@@ -56,6 +56,9 @@ The immediate delivery priority is completing the phase, module, traceability, a
 | Documentation completion plan and reusable templates | `DOCUMENTATION_COMPLETION_PLAN.md`; phase/module/task templates | Established |
 | P01 core module specification batch | `docs/03-modules/` | CORE, TENANTS, USERS, and AUDIT drafts ready for review |
 | P01 orchestration prompt | `docs/04-agents/phase-prompts/P01_CORE_PLATFORM.md` | Drafted; implementation remains unauthorized |
+| P02 phase and traceability batch | `docs/02-phases/P02_SUBSCRIPTION_ENGINE/` | Phase specification and 122-test traceability catalogue ready for review |
+| P02 module specification batch | `docs/03-modules/` | SUBSCRIPTIONS, ENTITLEMENTS, and BILLING ready for review |
+| P02 orchestration and task prompts | `docs/04-agents/phase-prompts/` | Phase prompt and twelve bounded task prompts ready for review |
 
 ## 4. Work in Progress
 
@@ -67,20 +70,20 @@ The immediate delivery priority is completing the phase, module, traceability, a
 | Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
 | Requirements traceability | P00 matrix approved; execution evidence remains incomplete | Every mandatory criterion linked to current verified evidence |
-| Module/phase documentation completion | Canonical completion plan established; P01 core module batch drafted | P01 prompt/task pack completed, followed by P02–P12 and all module specifications |
+| Module/phase documentation completion | P01 core drafts and complete P02 documentation batch ready for review | P01 bounded prompt debt reconciled and P03–P12/module specifications completed |
 
 ## 5. Current Blockers
 
 - P00-EV-013 independent review and initial-increment scope disposition remain outstanding; Product Owner P00 approval is recorded, and P01 implementation remains unauthorized.
 - Deployment, recovery, and production-operational specifications remain incomplete.
 - Product, finance, UAE regulatory, provider, region/residency, retention, RPO/RTO, and API-support decisions remain open where recorded.
-- The working tree contains uncommitted documentation changes; they must remain reviewable and must not be overwritten by unrelated work.
+- P02 commercial policies and provider selection remain unresolved; the P02 specifications require undecided flows to stay disabled and do not block later-phase documentation drafting.
 
 See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 6. Next Recommended Action
 
-Complete the remaining Batch A P01 documentation prompt/task pack, validate the four core-module specifications, and proceed directly to the P02 phase and subscription/entitlement/billing documentation batch.
+Draft Batch C: the P03 CRM, Sales, and ERP Customer Invoicing phase/module specifications, traceability/test matrix, and orchestration/bounded-task prompts. Validate the boundary with P02 SaaS billing and entitlement contracts.
 
 Application work remains blocked by the P00 exit gate and explicit P01 authorization. Phase/module documentation drafting may continue without waiting.
 
@@ -105,3 +108,4 @@ Application work remains blocked by the P00 exit gate and explicit P01 authoriza
 | 28 October 2026 | Prepared P00-EV-013, recorded explicit Product Owner P00 approval as P00-EV-014, and moved P00 to IN_REVIEW without authorizing P01. |
 | 28 October 2026 | Recorded APPR-P00-002 approval of bounded P01 as the initial implementation increment while retaining DEC-PROD-001 for commercial pilot planning. |
 | 28 October 2026 | Refocused delivery on the complete phase/module documentation pack; established the documentation completion plan, reusable phase/module/task templates, four P01 core-module specifications, and the P01 orchestration prompt. |
+| 28 October 2026 | Drafted the complete P02 documentation batch: phase specification, subscription/entitlement/SaaS billing module contracts, 122-test traceability catalogue, orchestration prompt, and twelve bounded task prompts. |

@@ -51,8 +51,8 @@ Every module specification must define:
 | Phase | Scope | Required module/capability specifications | Phase specification | Prompt pack | Status |
 |---|---|---|---|---|---|
 | P00 | Foundation and governance | Cross-cutting architecture and quality baselines | Complete; in review | Validator/CI task defined | Substantially complete |
-| P01 | Core Platform and Multi-Tenancy | CORE, TENANTS, USERS, AUDIT foundation | Complete | Missing | Module specifications in progress |
-| P02 | Subscription Engine | SUBSCRIPTIONS, ENTITLEMENTS, BILLING | Missing | Missing | Not started |
+| P01 | Core Platform and Multi-Tenancy | CORE, TENANTS, USERS, AUDIT foundation | Complete | Orchestration prompt drafted; bounded task pack pending | Module specifications ready for review |
+| P02 | Subscription Engine | SUBSCRIPTIONS, ENTITLEMENTS, BILLING | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW |
 | P03 | CRM, Sales, Invoicing | CRM, SALES, INVOICING | Missing | Missing | Not started |
 | P04 | UAE E-Invoicing | E_INVOICING and provider contract | Missing | Missing | Not started; regulatory/provider facts require verification |
 | P05 | Accounting and UAE VAT | ACCOUNTING, VAT | Missing | Missing | Not started; finance/tax policy decisions remain |
@@ -145,12 +145,12 @@ Documentation completion is not implementation completion.
 
 ## 7. Current next action
 
-Complete Batch A:
+Complete Batch C as the next dependency-ready documentation unit:
 
-1. finish the P01 core module specifications;
-2. create the P01 implementation and task prompt pack;
-3. validate links and terminology;
-4. update this matrix and project status;
-5. then proceed directly to Batch B documentation.
+1. draft the bounded P03 phase specification;
+2. draft CRM, Sales, and ERP Customer Invoicing module specifications;
+3. define customer, contact, item, quotation, order, and invoice ownership/interfaces;
+4. create the P03 traceability/test matrix and orchestration/bounded-task prompts;
+5. validate P03 against P02 entitlement contracts while preserving SaaS/ERP billing separation.
 
-P00 independent-review administration may continue separately and must not stop non-conflicting documentation drafting.
+The P01 bounded-task prompt pack remains a small documentation debt and should be reconciled before P01 implementation authorization. It does not block P03 specification drafting. P00 independent-review administration may continue separately and must not stop non-conflicting documentation drafting.
