@@ -76,12 +76,19 @@
           "decision": "APPROVED",
           "date": "2026-10-28",
           "evidence_reference": "P00-EV-014"
+        },
+        {
+          "role": "Product Owner",
+          "scope": "Bounded P01 Core Platform and Multi-Tenancy as the initial implementation increment; commercial launch scope remains open",
+          "decision": "APPROVED",
+          "date": "2026-10-28",
+          "evidence_reference": "APPR-P00-002"
         }
       ],
       "implementation_authorized": true,
       "authorization_reference": "USER-2026-10-28-P00-VALIDATORS-CI",
       "exceptions": [],
-      "updated_at": "2026-10-28T07:08:09Z"
+      "updated_at": "2026-10-28T07:15:00Z"
     },
     {
       "id": "P01",

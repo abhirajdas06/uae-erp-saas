@@ -22,7 +22,7 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 
 | Phase | Name | Status | Authorization | Evidence / Blocker |
 |---|---|---|---|---|
-| P00 | Foundation and Architecture | IN_REVIEW | Product Owner P00 approval recorded; no P01 application authorization | P00-EV-013 is ready for independent review; APPR-P00-001 and APPR-P00-002 remain before formal exit |
+| P00 | Foundation and Architecture | IN_REVIEW | Product Owner P00 approval and APPR-P00-002 initial-increment approval recorded; no P01 application authorization | P00-EV-013 is ready for independent review; APPR-P00-001 remains before formal exit |
 | P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification and isolation matrix approved; depends on P00 exit, launch scope, and explicit implementation authorization |
 | P02 | Subscription Engine | PLANNED | Not authorized | Depends on P01 and approved entitlement/commercial rules |
 | P03 | CRM, Sales and Basic Invoicing | PLANNED | Not authorized | Depends on P01/P02 and approved domain contracts |
@@ -69,3 +69,4 @@ Current P00 planning evidence:
 | 28 October 2026 | Recorded authorized completion of P00-T-001: validators and read-only CI workflow implemented, local-equivalence gates passed, and P00-EV-010/011 captured; hosted CI remains pending. |
 | 28 October 2026 | Verified P00-EV-011 from successful hosted GitHub Actions run 40647091699 on branch `codex/p00-quality-gates`; P00 exit remains unapproved. |
 | 28 October 2026 | Prepared P00-EV-013, recorded Product Owner P00 approval as P00-EV-014, and moved P00 to IN_REVIEW; independent review and initial-increment scope disposition remain mandatory. |
+| 28 October 2026 | Recorded APPR-P00-002: bounded P01 Core Platform and Multi-Tenancy is the initial implementation increment; DEC-PROD-001 remains open for commercial pilot planning. |

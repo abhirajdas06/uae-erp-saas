@@ -16,19 +16,28 @@
   },
   "artifact": {
     "path": "docs/02-phases/P00_FOUNDATION/evidence/P00-EV-013.md",
-    "sha256": "f01aa3e69b3419c49251bcb55e2bf83ecff39d41cfac8c00efe3bec4633b6675",
+    "sha256": "5ff28ec9499ec558517891678987d9dc956b8ea1f6667761a6f1a5ec466426ef",
     "format": "Markdown"
   },
   "assessment": {
     "dependency_cycle_review": "PASS",
     "p00_ac_015_preparer_result": "PASS_PENDING_INDEPENDENT_CONFIRMATION",
     "p00_ac_016": "PARTIAL_PENDING_INDEPENDENT_REVIEW",
-    "p00_ac_017": "PARTIAL_PRODUCT_OWNER_APPROVED_P01_AUTHORIZATION_PENDING"
+    "p00_ac_017": "PARTIAL_PRODUCT_OWNER_AND_INITIAL_INCREMENT_APPROVED_P01_AUTHORIZATION_PENDING",
+    "appr_p00_002": "APPROVED"
   },
   "pending_approvals": [
     "APPR-P00-001",
-    "APPR-P00-002",
     "APPR-P01-001"
+  ],
+  "recorded_approvals": [
+    {
+      "approval_id": "APPR-P00-002",
+      "approver_role": "Product Owner",
+      "date": "2026-10-28",
+      "decision": "APPROVED",
+      "statement": "I approve the bounded P01 Core Platform and Multi-Tenancy scope as the initial implementation increment for the P00 exit prerequisite. DEC-PROD-001 remains open for commercial pilot planning."
+    }
   ],
   "related_criteria": ["P00-AC-004", "P00-AC-015", "P00-AC-016", "P00-AC-017"],
   "related_evidence": ["P00-EV-001", "P00-EV-002", "P00-EV-003", "P00-EV-004", "P00-EV-005", "P00-EV-006", "P00-EV-007", "P00-EV-008", "P00-EV-009", "P00-EV-010", "P00-EV-011", "P00-EV-012", "P00-EV-014"],

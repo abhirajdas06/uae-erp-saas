@@ -24,9 +24,9 @@ Canonical supporting records are:
 
 ## 2. Current Summary
 
-The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, and the Product Owner P00 approval is recorded in P00-EV-014. Formal P00 exit still requires independent reviewer approval and disposition of the initial-increment scope prerequisite; P01 authorization remains separate.
+The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, the Product Owner P00 approval is recorded in P00-EV-014, and APPR-P00-002 approves bounded P01 as the initial implementation increment. Formal P00 exit still requires independent reviewer approval; P01 authorization remains separate.
 
-The immediate governance priority is APPR-P00-001 independent review of P00-EV-013 and APPR-P00-002 approval of bounded P01 as the initial implementation increment. No application work should begin.
+The immediate governance priority is APPR-P00-001 independent review of P00-EV-013. No application work should begin.
 
 ## 3. Completed Milestones
 
@@ -59,7 +59,7 @@ The immediate governance priority is APPR-P00-001 independent review of P00-EV-0
 |---|---|---|
 | Architecture decisions | ADR-001 through ADR-020 accepted; known membership and RLS-key conflicts reconciled | Remaining architecture narratives reconciled and implementation follows accepted ADRs |
 | Decision governance | Canonical register and standards approval record established | Remaining product/specialist/operational decisions have explicit outcomes |
-| Phase P00 specification | Product Owner approval recorded; completion report ready; phase in review | Independent review and initial-increment scope disposition |
+| Phase P00 specification | Product Owner and initial-increment approvals recorded; completion report ready; phase in review | Independent review |
 | Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
 | Requirements traceability | P00 matrix approved; execution evidence remains incomplete | Every mandatory criterion linked to current verified evidence |
@@ -75,7 +75,7 @@ See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 6. Next Recommended Action
 
-Obtain APPR-P00-001 independent review of P00-EV-013 and APPR-P00-002 Product Owner scope disposition using the exact approval statements in the report.
+Obtain APPR-P00-001 independent review of P00-EV-013 using the exact approval statement in the report.
 
 Application work remains blocked by the P00 exit gate, unresolved scope decisions, and explicit P01 authorization. Documentation reconciliation and decision analysis may continue without waiting.
 
@@ -98,3 +98,4 @@ Application work remains blocked by the P00 exit gate, unresolved scope decision
 | 28 October 2026 | Established and seeded the private Notion project hub with derived phase, task, decision, risk, and evidence registers; retained repository specifications and Git evidence as authoritative. |
 | 28 October 2026 | Verified P00-EV-011 from hosted GitHub Actions run 40647091699 for commit 74267c5a2a2f495d8cf5b5e0b8efaec987c45301 and recorded artifact 12798425785 with its SHA-256 digest. |
 | 28 October 2026 | Prepared P00-EV-013, recorded explicit Product Owner P00 approval as P00-EV-014, and moved P00 to IN_REVIEW without authorizing P01. |
+| 28 October 2026 | Recorded APPR-P00-002 approval of bounded P01 as the initial implementation increment while retaining DEC-PROD-001 for commercial pilot planning. |

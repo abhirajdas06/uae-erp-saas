@@ -158,7 +158,7 @@ This section covers product requirements that establish foundation controls or l
 | P00-GAP-007 | Requirement-to-test evidence is design-level because application implementation has not started | QA | P01 and later exits | Populate executed evidence only through authorized tasks |
 | P00-GAP-008 | Operational objectives, retention, providers, finance policies, and regulatory details remain open | Named decision owners | Later phase/production gates | Resolve by required-by phase; do not invent values |
 | P00-GAP-009 | Independent P00 completion and P00-AC-015 review | Architecture / Security / QA / DevOps | P00 exit | Approve or reject P00-EV-013 using APPR-P00-001 |
-| P00-GAP-010 | Initial implementation increment prerequisite is not explicitly reconciled with open DEC-PROD-001 | Product Owner | P00 exit | Approve bounded P01 as the initial implementation increment while retaining commercial launch scope for later, or amend the prerequisite explicitly |
+| P00-GAP-010 | Initial implementation increment prerequisite is not explicitly reconciled with open DEC-PROD-001 | Product Owner | Resolved | APPR-P00-002 approved bounded P01 as the initial implementation increment while DEC-PROD-001 remains open for commercial pilot planning |
 
 ## 9. Validation Rules
 
