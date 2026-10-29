@@ -39,7 +39,7 @@
 
 ## 3. Evidence Index
 
-P09-EV-001 dated regulatory/mode baseline; EV-002 approved role/provider/capability record; EV-003 account/security; EV-004 import/parser/file; EV-005 native/dedup/normalization; EV-006 matching; EV-007 reconciliation; EV-008 Accounting/source contract; EV-009 reports; EV-010 provider data/consent; EV-011 payment operation when enabled; EV-012 authorization/isolation/privacy/audit; EV-013 migration/recovery; EV-014 performance/operations/full gates; EV-015 legal/provider/finance/security/independent completion and Product Owner decisions. All are `PLANNED`.
+P09-EV-001 dated regulatory/mode baseline; P09-EV-002 approved role/provider/capability record; P09-EV-003 account/security; P09-EV-004 import/parser/file; P09-EV-005 native/dedup/normalization; P09-EV-006 matching; P09-EV-007 reconciliation; P09-EV-008 Accounting/source contract; P09-EV-009 reports; P09-EV-010 provider data/consent; P09-EV-011 payment operation when enabled; P09-EV-012 authorization/isolation/privacy/audit; P09-EV-013 migration/recovery; P09-EV-014 performance/operations/full gates; P09-EV-015 legal/provider/finance/security/independent completion and Product Owner decisions. All are `PLANNED`.
 
 ## 4. Exception Rules
 

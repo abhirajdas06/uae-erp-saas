@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | ARCH-PINT-AE-001 |
-| Status | VERSIONED TECHNICAL REFERENCE — CURRENT/APPLICABILITY APPROVAL REQUIRED |
+| Status | HISTORICAL SUPERSEDED TECHNICAL REFERENCE — TRACEABILITY ONLY |
 | Referenced release | `https://docs.peppol.eu/poac/ae/2025-Q2/` |
 | Documentation family | PINT AE Billing and PINT AE Self-Billing |
 | Review date | 29 October 2026 |
@@ -13,7 +13,9 @@
 
 This document records the structure of the OpenPeppol UAE `2025-Q2` technical publication and defines how the ERP should consume a specifically approved PINT AE release. It is not a legal-applicability decision, provider accreditation, conformance certificate or approval to enable self-billing or production submission.
 
-The publication landing page displays release date 9 June 2025. Billing and Self-Billing release notes identify version `1.0.0`, release date 10 June 2025, and last update 9 June 2025 UTC. Preserve those published facts rather than silently choosing one date. The path `2025-Q2`, artefact checksums and release-note version jointly identify this candidate baseline; a qualified reviewer must confirm the currently operative/contracted version before implementation.
+The publication landing page displays release date 9 June 2025. Billing and Self-Billing release notes identify version `1.0.0`, release date 10 June 2025, and last update 9 June 2025 UTC. Preserve those published facts rather than silently choosing one date. The path `2025-Q2`, artefact checksums and release-note version jointly identify this historical baseline.
+
+OpenPeppol now publishes final PINT AE Billing/Self-Billing/TDD `1.0.4`. The current implementation candidate is [ARCH-PINT-AE-002](PINT_AE_V1_0_4_IMPLEMENTATION_PROFILE.md); this document must not be used as the active ruleset without an explicit exception and change review. Exact archive digests are in [REG-EV-EINV-20261029-001](../00-product/regulatory-evidence/PINT_AE_RESOURCE_ARCHIVE_MANIFEST_2026-10-29.md).
 
 ## 2. Published Document Families
 

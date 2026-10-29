@@ -14,7 +14,7 @@
 
 Own sellable commercial references, quotations, revisions, approvals, acceptances, and sales orders between CRM interest and downstream invoicing/fulfillment. This specification follows the [P03 phase specification](../02-phases/P03_CRM_SALES_INVOICING/P03_PHASE_SPECIFICATION.md), Module Catalogue Sales boundary, ADR-003 through ADR-006, ADR-010, ADR-013 through ADR-015, and ADR-018 through ADR-020.
 
-The product requirements currently lack dedicated stable `SALES-*` identifiers. The P03 criteria and `SALESM-*` rules below are the bounded implementation baseline pending a future product-requirement reconciliation.
+The stable product requirements are `SALES-001` through `SALES-005`. The `SALESM-*` rules below are module-level control identifiers that refine, but do not replace, those product requirements.
 
 ## 2. Scope
 
@@ -106,7 +106,7 @@ Monitor calculation failures, approval backlog, stale/expired quotations, sequen
 
 ## 12. Acceptance Criteria, Tests, and Evidence
 
-Acceptance criteria are `SALESM-001`–`SALESM-010` and P03-AC-004–006, 016–020. Required tests are P03-TST-019–040 and 102–152 as applicable. Evidence is P03-EV-002, 005, and 009–012 in the [P03 matrix](../02-phases/P03_CRM_SALES_INVOICING/P03_TRACEABILITY_AND_TEST_MATRIX.md).
+Source requirements are `SALES-001`–`SALES-005`. Module controls are `SALESM-001`–`SALESM-010`; phase acceptance is P03-AC-004–006 and 016–020. Required tests are P03-TST-019–040 and 102–152 as applicable. Evidence is P03-EV-002, 005, and 009–012 in the [P03 matrix](../02-phases/P03_CRM_SALES_INVOICING/P03_TRACEABILITY_AND_TEST_MATRIX.md).
 
 ## 13. Pending Decisions
 

@@ -9,7 +9,7 @@
 
 ## 1. Purpose and Scope
 
-Own provider-bound preparation, validation, submission, evidence, status, callback and reconciliation for approved UAE electronic invoices and electronic credit notes. Implements `EIN-001`–`EIN-005` under P04-SPEC-001, ADR-012, REG-SRC-001, ARCH-PINT-AE-001 and ARCH-EINV-CONTRACT-001.
+Own provider-bound preparation, validation, submission, evidence, status, callback and reconciliation for approved UAE electronic invoices and electronic credit notes. Implements `EIN-001`–`EIN-005` under P04-SPEC-001, ADR-012, REG-SRC-001, ARCH-PINT-AE-002, ARCH-PINT-AE-MAP-001 and ARCH-EINV-CONTRACT-001.
 
 Included: effective-dated applicability; provider configurations by tenant/legal entity/environment; canonical snapshots; approved PINT AE transaction-profile mapping/UBL serialization/shared-and-AE Schematron/code-list validation; operations/attempts; adapters; callbacks; exception queues; reconciliation; audit, reports and runbooks. Excluded: invoice authorship, VAT policy, ledger posting, provider selection by code, direct-government assumptions, PDF/email as eInvoice, Self-Billing or other unapproved document types, and compliance claims.
 

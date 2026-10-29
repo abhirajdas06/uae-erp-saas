@@ -21,7 +21,7 @@ P01 defines the smallest implementation increment that can establish a secure Dj
 
 This document specifies future implementation work but does not authorize it. No P01 task may begin until the P00 exit gate and separate P01 start authorization are recorded.
 
-The mandatory tenant-isolation verification plan is [P01_TENANT_ISOLATION_TEST_MATRIX.md](P01_TENANT_ISOLATION_TEST_MATRIX.md).
+The canonical phase traceability is [P01_TRACEABILITY_AND_TEST_MATRIX.md](P01_TRACEABILITY_AND_TEST_MATRIX.md); its mandatory detailed tenant-isolation plan is [P01_TENANT_ISOLATION_TEST_MATRIX.md](P01_TENANT_ISOLATION_TEST_MATRIX.md).
 
 ## 2. Governing Sources
 

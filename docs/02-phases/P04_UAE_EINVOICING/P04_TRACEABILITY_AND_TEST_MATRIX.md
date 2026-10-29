@@ -13,7 +13,7 @@
 | Criteria | Sources | Controls | Tests | Evidence |
 |---|---|---|---|---|
 | P04-AC-001–002 | EIN-001; REG-SRC-001; ADR-012 | Dated source/applicability register; provider due diligence; version pinning | P04-TST-001–012 | P04-EV-001, 003, 013 |
-| P04-AC-003–005 | EIN-001–002; INV-001/004; UAE-EINV-010; ARCH-PINT-AE-001 | Immutable source/hash; semantic mapping; UBL binding; pinned code lists/shared-and-AE Schematrons; provider preflight; domain boundary | P04-TST-013–032 | P04-EV-002, 004 |
+| P04-AC-003–005 | EIN-001–002; INV-001/004; UAE-EINV-011/012; ARCH-PINT-AE-002; ARCH-PINT-AE-MAP-001 | Immutable source/hash; semantic mapping; UBL binding; pinned code lists/shared-and-AE Schematrons; provider preflight; TDD/status boundary | P04-TST-013–032 | P04-EV-002, 004 |
 | P04-AC-006–007 | EIN-002/004; ADR-010 | Operation/outbox; idempotency; attempts; uncertainty/reconciliation | P04-TST-033–052 | P04-EV-005–006 |
 | P04-AC-008–010 | EIN-003–004; INT-002 | Native/internal status mapping; authenticated callbacks; correction links | P04-TST-053–076 | P04-EV-006–007 |
 | P04-AC-011–012 | ADR-004/005/006/017–019 | Permission AND entitlement; RLS; secret/payload minimization; audit | P04-TST-077–104 | P04-EV-008–009, 011 |
@@ -25,7 +25,7 @@
 
 | IDs | Scenarios | Expected result |
 |---|---|---|
-| P04-TST-001–006 | Source/version/resource ZIP retrieval and SHA-256 inventory; 2025-Q2 landing/release-note date discrepancy; amendment/supersession/current-profile decision; stale source; applicability/profile/effective date; ambiguous or disabled Billing/Self-Billing scope | Only exact approved current ruleset/profile/resource bundle qualifies; ambiguity/staleness fails closed |
+| P04-TST-001–006 | Source/version/resource ZIP retrieval and SHA-256 inventory; historical `2025-Q2` versus current `1.0.4` resolution; amendment/supersession/current-profile decision; stale source; applicability/profile/effective date; ambiguous or disabled Billing/Self-Billing/TDD scope | Only exact approved current ruleset/profile/resource bundle qualifies; ambiguity/staleness fails closed |
 | P04-TST-007–012 | Provider accreditation snapshot; contract capability/version/environment; unsupported type; expired credential/cert; sandbox/prod separation; provider portability gap | Exact approved provider contract or safe rejection |
 | P04-TST-013–022 | Invoice/credit source/version/hash; party/line/tax/currency/totals; conditional/missing fields; correction link; current-master change; foreign tenant/source | Exact immutable canonical snapshot or validation finding |
 | P04-TST-023–032 | Complete `IBT`/`IBG`/`BTAE` mapping coverage; Invoice/Credit Note and disabled Self-Billing profiles; UBL root/control identifiers/cardinality; UAE and external code lists including transaction flags; decimal/total reconciliation; structural/shared-PINT/AE-specific Schematron/provider-preflight separation; serialization/hash/namespace/encoding; attachment/media safety; provider leakage; historical version coexistence | Deterministic versioned mapping and layered findings with no fabricated value or silent rule weakening |

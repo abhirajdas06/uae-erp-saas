@@ -8,7 +8,7 @@ Prompts are execution aids, not sources of product requirements. They must link 
 
 1. `IMPLEMENTATION_TASK_PROMPT_TEMPLATE.md` — required structure for every bounded coding task.
 2. `phase-prompts/` — phase-level orchestration prompts.
-3. `module-prompts/` — module-specific implementation and review prompts.
+3. Module specifications under `docs/03-modules/` provide module-specific implementation prompts where needed. A separate `module-prompts/` directory is deferred to avoid duplicating those authoritative boundaries.
 
 Every generated task prompt must identify:
 

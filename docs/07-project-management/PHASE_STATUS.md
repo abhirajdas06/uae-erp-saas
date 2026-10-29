@@ -23,7 +23,7 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 | Phase | Name | Status | Authorization | Evidence / Blocker |
 |---|---|---|---|---|
 | P00 | Foundation and Architecture | IN_REVIEW | Product Owner P00 approval and APPR-P00-002 initial-increment approval recorded; no P01 application authorization | P00-EV-013 is ready for independent review; APPR-P00-001 remains before formal exit |
-| P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification and isolation matrix approved; depends on P00 exit, launch scope, and explicit implementation authorization |
+| P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification, full traceability, bounded prompts and isolation matrix present; depends on P00 exit and explicit implementation authorization |
 | P02 | Subscription Engine | PLANNED | Not authorized | Depends on P01 and approved entitlement/commercial rules |
 | P03 | CRM, Sales and Basic Invoicing | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | P03 phase, three module specifications, 156-test matrix, and prompt pack drafted; implementation depends on P01/P02 contracts and APPR-P03-001–003 |
 | P04 | UAE E-Invoicing Integration | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated regulatory register, phase/module/provider contract, 144-test matrix and prompt pack drafted; APPR-P04-001–003 precede dependent implementation |
@@ -75,3 +75,4 @@ Current P00 planning evidence:
 | 29 October 2026 | Drafted Batch E P06/P07 phase/module/traceability/prompt packages and the dated UAE employment/payroll/WPS source baseline; implementation remains unauthorized. |
 | 29 October 2026 | Drafted Batch F P08/P09 phase/module/traceability/prompt packages, provider-neutral banking contract and dated banking/payment source register; implementation and regulated connectivity remain unauthorized. |
 | 29 October 2026 | Drafted Batch G P10–P12 phase/module/traceability/prompt packages and deployment, recovery, monitoring, incident, release, capacity, runbook and evidence specifications; production remains unauthorized. |
+| 29 October 2026 | Completed P00–P12 cross-phase review, P01 full traceability/prompts, stable Sales requirements, current PINT AE 1.0.4 evidence/mapping and grouped specification approval packets; no implementation authorization granted. |

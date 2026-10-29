@@ -92,21 +92,21 @@ The product roadmap consists of thirteen phases, beginning with Phase 0 and endi
 
 | Phase | Phase ID | Name | Primary Outcome |
 |---|---|---|---|
-| P0 | P0-FOUNDATION | Foundation & Architecture | Approved architecture, repository structure, development standards, and delivery controls |
-| P1 | P1-CORE-PLATFORM | Core Platform & Multi-Tenancy | Secure tenant-aware application foundation |
-| P2 | P2-SUBSCRIPTION-ENGINE | Module Catalogue, Subscription & Billing | Configurable subscriptions, module entitlements, and SaaS billing foundation |
-| P3 | P3-CRM-SALES-INVOICING | CRM, Sales & Basic Invoicing | First coherent customer-facing commercial workflow |
-| P4 | P4-UAE-EINVOICING | UAE E-Invoicing Provider Integration | Validated integration with the selected provider and applicable UAE requirements |
-| P5 | P5-ACCOUNTING-VAT | Accounting & UAE VAT | Accounting ledger, financial reporting foundations, and configurable VAT handling |
-| P6 | P6-PROCUREMENT-INVENTORY | Procurement & Inventory | Supplier purchasing and stock-control workflows |
-| P7 | P7-HRMS-PAYROLL | HRMS & Payroll | Employee management and validated payroll workflows |
-| P8 | P8-PROJECTS-EXPENSES-ASSETS | Projects, Expenses & Fixed Assets | Project tracking, expense management, and asset accounting |
-| P9 | P9-BANKING-ADVANCED-FINANCE | Banking & Advanced Finance | Bank reconciliation and additional financial controls |
+| P00 | P00-FOUNDATION | Foundation & Architecture | Approved architecture, repository structure, development standards, and delivery controls |
+| P01 | P01-CORE-PLATFORM | Core Platform & Multi-Tenancy | Secure tenant-aware application foundation |
+| P02 | P02-SUBSCRIPTION-ENGINE | Module Catalogue, Subscription & Billing | Configurable subscriptions, module entitlements, and SaaS billing foundation |
+| P03 | P03-CRM-SALES-INVOICING | CRM, Sales & Basic Invoicing | First coherent customer-facing commercial workflow |
+| P04 | P04-UAE-EINVOICING | UAE E-Invoicing Provider Integration | Validated integration with the selected provider and applicable UAE requirements |
+| P05 | P05-ACCOUNTING-VAT | Accounting & UAE VAT | Accounting ledger, financial reporting foundations, and configurable VAT handling |
+| P06 | P06-PROCUREMENT-INVENTORY | Procurement & Inventory | Supplier purchasing and stock-control workflows |
+| P07 | P07-HRMS-PAYROLL | HRMS & Payroll | Employee management and validated payroll workflows |
+| P08 | P08-PROJECTS-EXPENSES-ASSETS | Projects, Expenses & Fixed Assets | Project tracking, expense management, and asset accounting |
+| P09 | P09-BANKING-ADVANCED-FINANCE | Banking & Advanced Finance | Bank reconciliation and additional financial controls |
 | P10 | P10-REPORTING-INTEGRATIONS | Reporting, Analytics & Integration Hub | Consolidated reports, dashboards, and controlled integrations |
 | P11 | P11-ENTERPRISE-READINESS | Advanced SaaS Administration & Enterprise Readiness | Advanced administration, governance, and scale-readiness improvements |
 | P12 | P12-PRODUCTION-LAUNCH | Production Deployment, Launch & Operations | Production release, operational handover, and post-launch controls |
 
-**Important:** P0 is a planning and engineering-foundation phase, not a substitute for implementing the actual application. P12 is not merely deployment; it includes launch validation and operational readiness.
+**Important:** P00 is a planning and engineering-foundation phase, not a substitute for implementing the actual application. P12 is not merely deployment; it includes launch validation and operational readiness.
 
 ---
 
@@ -116,16 +116,16 @@ The roadmap is sequential by default, but certain specification and testing acti
 
 | Phase | Required Dependencies | May Prepare in Parallel |
 |---|---|---|
-| P0 | None | Initial product discovery and requirement clarification |
-| P1 | P0 approved | Detailed specifications for subscription, CRM, and accounting |
-| P2 | P1 approved | CRM workflow design and provider research |
-| P3 | P1 approved; P2 entitlement contracts available | E-invoicing provider evaluation; accounting design |
-| P4 | P3 invoice model and workflow approved; provider and regulatory assumptions validated | Accounting and VAT implementation planning |
-| P5 | P1 and P3 approved; P4 coordination plan established | Procurement and inventory specifications |
-| P6 | P1 approved; product and accounting integration contracts agreed | HRMS specification and data-protection review |
-| P7 | P1 approved; employee, payroll, and statutory requirements validated | Projects and expenses specifications |
-| P8 | P1 and relevant financial integration contracts approved | Banking integration research |
-| P9 | P5 accounting foundation approved; relevant P6/P8 integrations available where required | Reporting design and integration framework planning |
+| P00 | None | Initial product discovery and requirement clarification |
+| P01 | P00 approved | Detailed specifications for subscription, CRM, and accounting |
+| P02 | P01 approved | CRM workflow design and provider research |
+| P03 | P01 approved; P02 entitlement contracts available | E-invoicing provider evaluation; accounting design |
+| P04 | P03 invoice model and workflow approved; provider and regulatory assumptions validated | Accounting and VAT implementation planning |
+| P05 | P01 and P03 approved; P04 coordination plan established | Procurement and inventory specifications |
+| P06 | P01 approved; product and accounting integration contracts agreed | HRMS specification and data-protection review |
+| P07 | P01 approved; employee, payroll, and statutory requirements validated | Projects and expenses specifications |
+| P08 | P01 and relevant financial integration contracts approved | Banking integration research |
+| P09 | P05 accounting foundation approved; relevant P06/P08 integrations available where required | Reporting design and integration framework planning |
 | P10 | Relevant underlying modules and reporting contracts approved | Enterprise-readiness assessment |
 | P11 | Core commercial workflows implemented; security and operational foundations established | Production infrastructure preparation |
 | P12 | Required launch scope implemented; release gates satisfied | No unapproved production changes |
@@ -142,7 +142,7 @@ The roadmap is sequential by default, but certain specification and testing acti
 
 # 5. Phase 0 — Foundation & Architecture
 
-**Phase ID:** `P0-FOUNDATION`
+**Phase ID:** `P00-FOUNDATION`
 
 **Objective:** Establish an approved, consistent foundation for product development and AI-assisted engineering.
 
@@ -206,13 +206,13 @@ The roadmap is sequential by default, but certain specification and testing acti
 
 **Gate:** Architecture and product foundation approved.
 
-The Product Owner and designated technical reviewer must approve the architecture baseline before P1 begins implementation.
+The Product Owner and designated technical reviewer must approve the architecture baseline before P01 begins implementation.
 
 ---
 
 # 6. Phase 1 — Core Platform & Multi-Tenancy
 
-**Phase ID:** `P1-CORE-PLATFORM`
+**Phase ID:** `P01-CORE-PLATFORM`
 
 **Objective:** Build the secure application foundation on which every business module depends.
 
@@ -293,7 +293,7 @@ No commercial ERP module may be declared production-ready until tenant isolation
 
 # 7. Phase 2 — Module Catalogue, Subscription & Billing
 
-**Phase ID:** `P2-SUBSCRIPTION-ENGINE`
+**Phase ID:** `P02-SUBSCRIPTION-ENGINE`
 
 **Objective:** Enable configurable subscriptions and control access to modules according to each customer's purchased plan.
 
@@ -382,7 +382,7 @@ No module may be commercially sold until its release status, dependencies, prici
 
 # 8. Phase 3 — CRM, Sales & Basic Invoicing
 
-**Phase ID:** `P3-CRM-SALES-INVOICING`
+**Phase ID:** `P03-CRM-SALES-INVOICING`
 
 **Objective:** Deliver the first coherent business workflow for customers, sales, and invoicing.
 
@@ -462,7 +462,7 @@ The product may proceed to a controlled pilot only if the Product Owner explicit
 
 # 9. Phase 4 — UAE E-Invoicing Provider Integration
 
-**Phase ID:** `P4-UAE-EINVOICING`
+**Phase ID:** `P04-UAE-EINVOICING`
 
 **Objective:** Integrate the invoicing workflow with a selected provider after validating applicable UAE e-invoicing requirements.
 
@@ -541,7 +541,7 @@ Production release requires the relevant provider validation, legal or specialis
 
 # 10. Phase 5 — Accounting & UAE VAT
 
-**Phase ID:** `P5-ACCOUNTING-VAT`
+**Phase ID:** `P05-ACCOUNTING-VAT`
 
 **Objective:** Establish a reliable accounting foundation and implement VAT workflows according to validated business and regulatory requirements.
 
@@ -625,7 +625,7 @@ Financial workflows must pass reconciliation and integrity tests before being of
 
 # 11. Phase 6 — Procurement & Inventory
 
-**Phase ID:** `P6-PROCUREMENT-INVENTORY`
+**Phase ID:** `P06-PROCUREMENT-INVENTORY`
 
 **Objective:** Implement supplier purchasing and stock-control workflows integrated with the approved accounting and product foundations.
 
@@ -698,7 +698,7 @@ Stock movement, concurrency, and valuation tests must pass before production inv
 
 # 12. Phase 7 — HRMS & Payroll
 
-**Phase ID:** `P7-HRMS-PAYROLL`
+**Phase ID:** `P07-HRMS-PAYROLL`
 
 **Objective:** Deliver employee management and payroll functionality based on validated UAE employment and payroll requirements.
 
@@ -770,7 +770,7 @@ Payroll must not be commercially represented as fully compliant until the suppor
 
 # 13. Phase 8 — Projects, Expenses & Fixed Assets
 
-**Phase ID:** `P8-PROJECTS-EXPENSES-ASSETS`
+**Phase ID:** `P08-PROJECTS-EXPENSES-ASSETS`
 
 **Objective:** Expand the platform into project operations, expense control, and fixed-asset management.
 
@@ -838,7 +838,7 @@ Project, expense, and asset workflows must be tested independently and together 
 
 # 14. Phase 9 — Banking & Advanced Finance
 
-**Phase ID:** `P9-BANKING-ADVANCED-FINANCE`
+**Phase ID:** `P09-BANKING-ADVANCED-FINANCE`
 
 **Objective:** Improve financial operations through bank reconciliation and additional finance controls.
 
@@ -1172,7 +1172,7 @@ Required checks should include:
 - Secret scanning.
 - Container image scanning where applicable.
 
-The project must select and configure its actual tools in P0. The roadmap does not require every available tool to be adopted if an approved equivalent meets the requirement.
+The project must select and configure its actual tools in P00. The roadmap does not require every available tool to be adopted if an approved equivalent meets the requirement.
 
 ## 18.3 Testing
 
@@ -1408,89 +1408,89 @@ roadmap:
   status: AWAITING_APPROVAL
 
 phases:
-  - id: P0-FOUNDATION
+  - id: P00-FOUNDATION
     sequence: 0
     status: PLANNED
     dependencies: []
 
-  - id: P1-CORE-PLATFORM
+  - id: P01-CORE-PLATFORM
     sequence: 1
     status: PLANNED
     dependencies:
-      - P0-FOUNDATION
+      - P00-FOUNDATION
 
-  - id: P2-SUBSCRIPTION-ENGINE
+  - id: P02-SUBSCRIPTION-ENGINE
     sequence: 2
     status: PLANNED
     dependencies:
-      - P1-CORE-PLATFORM
+      - P01-CORE-PLATFORM
 
-  - id: P3-CRM-SALES-INVOICING
+  - id: P03-CRM-SALES-INVOICING
     sequence: 3
     status: PLANNED
     dependencies:
-      - P1-CORE-PLATFORM
-      - P2-SUBSCRIPTION-ENGINE
+      - P01-CORE-PLATFORM
+      - P02-SUBSCRIPTION-ENGINE
 
-  - id: P4-UAE-EINVOICING
+  - id: P04-UAE-EINVOICING
     sequence: 4
     status: PLANNED
     dependencies:
-      - P3-CRM-SALES-INVOICING
+      - P03-CRM-SALES-INVOICING
 
-  - id: P5-ACCOUNTING-VAT
+  - id: P05-ACCOUNTING-VAT
     sequence: 5
     status: PLANNED
     dependencies:
-      - P1-CORE-PLATFORM
-      - P3-CRM-SALES-INVOICING
+      - P01-CORE-PLATFORM
+      - P03-CRM-SALES-INVOICING
 
-  - id: P6-PROCUREMENT-INVENTORY
+  - id: P06-PROCUREMENT-INVENTORY
     sequence: 6
     status: PLANNED
     dependencies:
-      - P1-CORE-PLATFORM
-      - P5-ACCOUNTING-VAT
+      - P01-CORE-PLATFORM
+      - P05-ACCOUNTING-VAT
 
-  - id: P7-HRMS-PAYROLL
+  - id: P07-HRMS-PAYROLL
     sequence: 7
     status: PLANNED
     dependencies:
-      - P1-CORE-PLATFORM
+      - P01-CORE-PLATFORM
 
-  - id: P8-PROJECTS-EXPENSES-ASSETS
+  - id: P08-PROJECTS-EXPENSES-ASSETS
     sequence: 8
     status: PLANNED
     dependencies:
-      - P1-CORE-PLATFORM
-      - P5-ACCOUNTING-VAT
+      - P01-CORE-PLATFORM
+      - P05-ACCOUNTING-VAT
 
-  - id: P9-BANKING-ADVANCED-FINANCE
+  - id: P09-BANKING-ADVANCED-FINANCE
     sequence: 9
     status: PLANNED
     dependencies:
-      - P5-ACCOUNTING-VAT
+      - P05-ACCOUNTING-VAT
 
   - id: P10-REPORTING-INTEGRATIONS
     sequence: 10
     status: PLANNED
     dependencies:
-      - P1-CORE-PLATFORM
-      - P5-ACCOUNTING-VAT
+      - P01-CORE-PLATFORM
+      - P05-ACCOUNTING-VAT
 
   - id: P11-ENTERPRISE-READINESS
     sequence: 11
     status: PLANNED
     dependencies:
-      - P1-CORE-PLATFORM
-      - P2-SUBSCRIPTION-ENGINE
+      - P01-CORE-PLATFORM
+      - P02-SUBSCRIPTION-ENGINE
 
   - id: P12-PRODUCTION-LAUNCH
     sequence: 12
     status: PLANNED
     dependencies:
-      - P0-FOUNDATION
-      - P1-CORE-PLATFORM
+      - P00-FOUNDATION
+      - P01-CORE-PLATFORM
 ```
 
 **Manifest implementation note:** The manifest above captures minimum planning dependencies, not the complete release-readiness graph. Before a phase is marked `READY`, the orchestrator must validate its actual requirements, implementation dependencies, and applicable launch gates.
@@ -1576,16 +1576,16 @@ Each phase must include deployment considerations for the functionality it intro
 
 | Phase | Required Deployment Considerations |
 |---|---|
-| P0 | Local development setup, repository conventions, initial CI |
-| P1 | Application configuration, database setup, migrations, health checks |
-| P2 | Subscription configuration, scheduled billing tasks, payment-provider secrets |
-| P3 | Invoice rendering, storage, application permissions, financial data backups |
-| P4 | Provider credentials, network access, integration monitoring, retry and reconciliation procedures |
-| P5 | Financial migration safety, accounting reconciliation, sensitive-data controls |
-| P6 | Stock transaction integrity, import handling, inventory performance |
-| P7 | Payroll privacy, access controls, sensitive exports, retention |
-| P8 | Attachment storage, scheduled depreciation, approval workflows |
-| P9 | Bank statement storage, import limits, reconciliation recovery |
+| P00 | Local development setup, repository conventions, initial CI |
+| P01 | Application configuration, database setup, migrations, health checks |
+| P02 | Subscription configuration, scheduled billing tasks, payment-provider secrets |
+| P03 | Invoice rendering, storage, application permissions, financial data backups |
+| P04 | Provider credentials, network access, integration monitoring, retry and reconciliation procedures |
+| P05 | Financial migration safety, accounting reconciliation, sensitive-data controls |
+| P06 | Stock transaction integrity, import handling, inventory performance |
+| P07 | Payroll privacy, access controls, sensitive exports, retention |
+| P08 | Attachment storage, scheduled depreciation, approval workflows |
+| P09 | Bank statement storage, import limits, reconciliation recovery |
 | P10 | Report performance, export limits, webhook delivery and retries |
 | P11 | Administrative controls, support access, security review, operational capacity |
 | P12 | Production release, recovery tests, monitoring, support handover |

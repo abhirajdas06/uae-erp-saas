@@ -79,7 +79,7 @@ Migrations preserve UUID/tenant keys, UOM/precision, movement/source/correction/
 
 ## 9. Task/Evidence Plan
 
-P06-T01 policy/ownership (`P06-EV-001–002`); T02 suppliers/procurement (`EV-003–004`); T03 item/UOM/location (`EV-005`); T04 movements/receipts/transfers (`EV-006`); T05 reservations/adjustments/counts (`EV-007`); T06 valuation/accounting/VAT (`EV-008–009`); T07 surfaces/security (`EV-010–011`); T08 migration/recovery/operations (`EV-012–013`); T09 independent exit (`EV-014`).
+P06-T01 policy/ownership (`P06-EV-001–002`); P06-T02 suppliers/procurement (`P06-EV-003–004`); P06-T03 item/UOM/location (`P06-EV-005`); P06-T04 movements/receipts/transfers (`P06-EV-006`); P06-T05 reservations/adjustments/counts (`P06-EV-007`); P06-T06 valuation/accounting/VAT (`P06-EV-008–009`); P06-T07 surfaces/security (`P06-EV-010–011`); P06-T08 migration/recovery/operations (`P06-EV-012–013`); P06-T09 independent exit (`P06-EV-014`).
 
 ## 10. Pending Approvals
 

@@ -4,7 +4,8 @@
 |---|---|
 | Document ID | P03-SPEC-001 |
 | Status | READY FOR REVIEW |
-| Phase | P3-CRM-SALES-INVOICING |
+| Phase | P03-CRM-SALES-INVOICING |
+| Legacy alias | P3-CRM-SALES-INVOICING |
 | Implementation Authorization | Not granted by this document |
 | Owners | Product, Architecture, Revenue Operations, Finance |
 | Required predecessors | P01 approved and implemented; P02 entitlement contracts available |

@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | QUAL-CI-001 |
-| Version | 1.0 |
+| Version | 1.2 |
 | Status | APPROVED SPECIFICATION |
 | Date | 28 October 2026 |
 | Owner | QA / Security / DevOps / Architecture |
@@ -13,7 +13,7 @@
 
 This document defines the initial GitHub Actions quality-gate contract for P00 and the minimum extensible gate model for later phases. It specifies reproducible command interfaces, permissions, evidence, failure behavior, and controlled exceptions.
 
-The P00 workflow and dependency-free quality scripts now exist and have local-equivalence evidence. Application tests, containers, release pipelines, and hosted workflow evidence do not yet exist. A later planned command becomes an enforced gate only after its implementation is reviewed and its first evidence is recorded.
+The P00 workflow and dependency-free quality scripts have local-equivalence evidence and successful hosted evidence from GitHub Actions run `40647091699`, artifact `12798425785`, as recorded by P00-EV-011. Application tests, containers and release pipelines do not yet exist. Protected-branch enforcement and later application gates remain separate work. A planned command becomes an enforced gate only after its implementation is reviewed and its first evidence is recorded.
 
 ## 2. Governing Controls
 
@@ -234,7 +234,8 @@ No exception permits production release with:
 - [x] Tooling errors and timeouts fail the aggregate gate rather than becoming a pass.
 - [x] Local and CI execution use the same `run_p00_gates.py` command.
 - [x] The workflow contains no deployment job or production permission.
-- [ ] Hosted GitHub Actions execution and retained run-artifact evidence are pending the first pushed run.
+- [x] Hosted GitHub Actions execution recorded by P00-EV-011: run `40647091699`, artifact `12798425785`.
+- [ ] Protected-branch enforcement and application-level gates remain pending their authorized implementation phases.
 
 Local equivalence and workflow-review evidence is recorded in [P00-EV-011](../02-phases/P00_FOUNDATION/evidence/P00-EV-011.json).
 
@@ -252,3 +253,4 @@ Local equivalence and workflow-review evidence is recorded in [P00-EV-011](../02
 |---|---|---|---|
 | 1.0 | 28 October 2026 | APPROVED SPECIFICATION | Initial reproducibility, permission, evidence, exception, failure, and release-gate contract. |
 | 1.1 | 28 October 2026 | IMPLEMENTED LOCALLY | Initial read-only workflow and dependency-free gates implemented; hosted execution remains pending. |
+| 1.2 | 29 October 2026 | HOSTED BASELINE VERIFIED | Reconciled successful hosted run `40647091699` and artifact `12798425785`; retained protected-branch and future application gates as pending. |

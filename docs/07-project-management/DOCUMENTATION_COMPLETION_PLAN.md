@@ -50,8 +50,8 @@ Every module specification must define:
 
 | Phase | Scope | Required module/capability specifications | Phase specification | Prompt pack | Status |
 |---|---|---|---|---|---|
-| P00 | Foundation and governance | Cross-cutting architecture and quality baselines | Complete; in review | Validator/CI task defined | Substantially complete |
-| P01 | Core Platform and Multi-Tenancy | CORE, TENANTS, USERS, AUDIT foundation | Complete | Orchestration prompt drafted; bounded task pack pending | Module specifications ready for review |
+| P00 | Foundation and governance | Cross-cutting architecture and quality baselines | Complete; in review | Validator/CI task and evidence defined | READY_FOR_REVIEW; formal exit pending |
+| P01 | Core Platform and Multi-Tenancy | CORE, TENANTS, USERS, AUDIT foundation | Complete | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; implementation authorization pending |
 | P02 | Subscription Engine | SUBSCRIPTIONS, ENTITLEMENTS, BILLING | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW |
 | P03 | CRM, Sales, Invoicing | CRM, SALES, INVOICING | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW |
 | P04 | UAE E-Invoicing | E_INVOICING and provider contract | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; provider/applicability approvals remain |
@@ -145,6 +145,6 @@ Documentation completion is not implementation completion.
 
 ## 7. Current next action
 
-Batch G is complete as a review-ready documentation set. Next perform the cross-phase documentation completion review: reconcile P01 bounded-prompt debt and stable Sales requirement identifiers, validate P00–P12 dependency/requirement/decision/evidence coverage, and prepare a grouped specification-approval sequence without implying implementation, operational readiness or production authorization.
+Batch G and the P00–P12 cross-phase review are complete as a review-ready documentation set. P01 bounded prompts, stable `SALES-*` requirements, repository traceability, grouped approvals and current PINT AE evidence/mapping are present.
 
-The P01 bounded-task prompt pack and stable `SALES-*` product requirement identifiers remain documentation debts before their respective implementations. P00 independent-review administration may continue separately.
+Inventory disposition, deterministic validation, current-status reconciliation and independent agent review are complete and recorded in `DOCUMENTATION_INVENTORY.md`, `FINAL_DOCUMENTATION_COMPLETION_REPORT.md` and `GOAL_COMPLETION_AUDIT.md`. The remaining documentation-goal gates are the named human/independent approvals in `SPECIFICATION_APPROVAL_PACKETS.md` and `DECISIONS_PENDING.md`. P00 independent-review administration may continue separately; implementation remains unauthorized.

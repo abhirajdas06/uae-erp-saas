@@ -34,6 +34,6 @@
 
 ## 3. Evidence Index and Exceptions
 
-P10-EV-001 catalogue/semantics; EV-002 report authorization; EV-003 source reconciliation; EV-004 resource/performance; EV-005 export/files; EV-006 report surfaces; EV-007 registry/secrets; EV-008 operation/outbox/retry; EV-009 webhook/inbox; EV-010 provider/domain reconciliation; EV-011 isolation/security/audit; EV-012 migration/recovery; EV-013 capacity/operations/full gates; EV-014 independent review and approvals. All are `PLANNED`.
+P10-EV-001 catalogue/semantics; P10-EV-002 report authorization; P10-EV-003 source reconciliation; P10-EV-004 resource/performance; P10-EV-005 export/files; P10-EV-006 report surfaces; P10-EV-007 registry/secrets; P10-EV-008 operation/outbox/retry; P10-EV-009 webhook/inbox; P10-EV-010 provider/domain reconciliation; P10-EV-011 isolation/security/audit; P10-EV-012 migration/recovery; P10-EV-013 capacity/operations/full gates; P10-EV-014 independent review and approvals. All are `PLANNED`.
 
 No exception may waive tenant isolation, source reconciliation for financial reports, export authorization, secret protection, callback authentication, duplicate-effect prevention, uncertain-outcome reconciliation, domain ownership, audit or restore evidence.

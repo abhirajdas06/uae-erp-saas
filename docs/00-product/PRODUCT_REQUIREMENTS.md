@@ -645,6 +645,97 @@ The CRM module should support configurable lead and sales-opportunity workflows.
 
 # 9. Sales and Invoicing Requirements
 
+### SALES-001 — Quotations and Revisions
+
+**Priority:** P1
+
+**Requirement:**
+
+Authorized users must be able to prepare, revise, approve, issue, expire, accept, reject, and withdraw tenant-scoped quotations under explicit commercial policies.
+
+**Acceptance criteria:**
+
+1. Authoritative totals are calculated server-side using approved Decimal, currency, discount, tax, and rounding policies.
+2. Each material revision is preserved; an approved, sent, or accepted revision is not silently overwritten.
+3. Approval, price override, discount override, issue, acceptance recording, and withdrawal use distinct server-side permissions.
+4. Acceptance identifies the exact eligible revision, actor or channel, timestamp, and approved evidence method.
+5. Expired, superseded, unapproved, unauthorized, or cross-tenant quotations cannot be accepted or converted.
+6. Missing required commercial or financial policy fails closed.
+
+**Verification:** Calculation, state-transition, authorization, tenant-isolation, and concurrency tests.
+
+### SALES-002 — Sales Orders
+
+**Priority:** P1
+
+**Requirement:**
+
+The platform must support a controlled sales-order lifecycle derived from an eligible quotation or an explicitly authorized manual source.
+
+**Acceptance criteria:**
+
+1. Order states and permitted transitions are explicit and policy-controlled.
+2. Order lines preserve the approved commercial and customer snapshots needed for history.
+3. Repeated or concurrent quote-to-order commands create at most one intended order.
+4. Cancellation preserves history and coordinates existing downstream invoice or fulfilment effects.
+5. P03 does not simulate stock, delivery, or accounting truth owned by later modules.
+
+**Verification:** Workflow, idempotency, boundary, and reconciliation tests.
+
+### SALES-003 — Sellable Commercial References
+
+**Priority:** P1
+
+**Requirement:**
+
+Sales must own or consume an approved tenant-scoped sellable-item/service reference without duplicating Inventory ownership.
+
+**Acceptance criteria:**
+
+1. References have stable identifiers, lifecycle status, description, unit, and approved commercial attributes.
+2. A reference may map explicitly to a future Inventory item but does not own stock, warehouse, movement, or valuation data.
+3. Retiring or changing master data does not rewrite accepted quotation or order snapshots.
+4. Cross-tenant and inactive references are rejected.
+5. Customer, item, tax, price, and unit ownership boundaries are documented before schema implementation.
+
+**Verification:** Model, boundary, snapshot, and tenant-isolation tests.
+
+### SALES-004 — Sales Approval and Conversion Controls
+
+**Priority:** P1
+
+**Requirement:**
+
+Material sales approvals and conversions must be policy-driven, traceable, and safe under retry and concurrency.
+
+**Acceptance criteria:**
+
+1. Approval thresholds, override authority, self-approval, and separation-of-duties rules are effective-dated and configurable where approved.
+2. Stale approval is invalidated when a protected input or policy version changes.
+3. Quote-to-order and order-to-invoice conversions use stable source identifiers and idempotency keys.
+4. Sales creates downstream requests only through approved service/event contracts and never mutates Invoice, Inventory, or Accounting tables directly.
+5. Every material approval, override, conversion, and cancellation produces durable, redacted audit evidence.
+
+**Verification:** Permission, stale-approval, transaction, idempotency, event-contract, and audit tests.
+
+### SALES-005 — Sales Documents, Access, and Recovery
+
+**Priority:** P2
+
+**Requirement:**
+
+Quotation and order documents, reports, exports, files, and recovery procedures must reproduce authoritative sales snapshots without weakening access or integrity controls.
+
+**Acceptance criteria:**
+
+1. Rendered documents match the authoritative revision and approved locale/layout.
+2. UI, direct URL, API, task, report, export, file, cache, and administration paths independently enforce tenant, entitlement, permission, and object scope.
+3. Files are private and follow approved content, checksum, retention, and download controls.
+4. Restore and replay evidence reconciles quotations, orders, revisions, approvals, conversions, documents, outbox operations, and audit records.
+5. No document or status is represented as customer acceptance, fulfilment, invoice issuance, tax acceptance, or settlement without the corresponding evidence.
+
+**Verification:** Rendering, authorization, file-security, restore, reconciliation, and negative representation tests.
+
 ### INV-001 — Customer Invoices
 
 **Priority:** P1

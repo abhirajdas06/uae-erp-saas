@@ -27,7 +27,7 @@ Canonical supporting records are:
 
 The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, the Product Owner P00 approval is recorded in P00-EV-014, and APPR-P00-002 approves bounded P01 as the initial implementation increment. Formal P00 exit still requires independent reviewer approval; P01 authorization remains separate.
 
-The P02–P12 phase, module/capability, traceability and prompt documentation programme is now complete as a review-ready draft set. The next priority is a cross-phase completion review, closure of the bounded P01 prompt and stable Sales-requirement identifier debts, and a grouped human specification-approval sequence. APPR-P00-001 remains a parallel governance item. No application, infrastructure provisioning or production work should begin without its separate gates.
+The P00–P12 cross-phase review is complete. The P01 bounded prompt gap and stable Sales requirement gap are closed; phase dependencies, identifiers, evidence plans and grouped approvals are documented. Current PINT AE Billing/Self-Billing/TDD `1.0.4` is recorded as the technical candidate with checksummed resources and a semantic-to-UBL mapping baseline; production applicability/conformance remains unapproved. Repository-wide traceability, agent charters, quality standards and deployment governance templates are present. Inventory disposition, deterministic validation and independent agent reviews are complete; the remaining documentation-goal gates are human/independent specification approvals—not application implementation.
 
 ## 3. Completed Milestones
 
@@ -64,7 +64,7 @@ The P02–P12 phase, module/capability, traceability and prompt documentation pr
 | P03 orchestration and task prompts | `docs/04-agents/phase-prompts/` | Phase prompt and twelve bounded task prompts ready for review |
 | UAE regulatory source baseline | `docs/00-product/UAE_REGULATORY_SOURCE_REGISTER.md` | Dated official-source/supersession/revalidation register ready for specialist review |
 | P04 phase, module, contract, traceability and prompts | P04/architecture/module/prompt paths | Complete draft with 144 planned tests; provider and ruleset approvals remain |
-| PINT AE 2025-Q2 technical profile | `docs/01-architecture/PINT_AE_2025_Q2_IMPLEMENTATION_PROFILE.md` | Pinned Billing/Self-Billing artefact structure, UBL mapping, code-list, layered validation and version-change strategy recorded; current/applicability approval remains |
+| PINT AE release evidence/current profile | `ARCH-PINT-AE-001/002`, `ARCH-PINT-AE-MAP-001`, `REG-EV-EINV-20261029-001` | `2025-Q2` retained as historical; current `1.0.4` candidate archives/mapping recorded; provider/specialist/production approval remains |
 | P05 phase, Accounting/VAT modules, traceability and prompts | P05/module/prompt paths | Complete draft with 180 planned tests; finance and UAE VAT approvals remain |
 | UAE employment/payroll/WPS source baseline | `docs/00-product/UAE_EMPLOYMENT_PAYROLL_WPS_SOURCE_REGISTER.md` | Dated official-source/applicability/revalidation baseline ready for specialist review |
 | P06 Procurement/Inventory batch | P06/module/prompt paths | Complete draft with 170 planned tests; ownership, movement and valuation approvals remain |
@@ -85,8 +85,9 @@ The P02–P12 phase, module/capability, traceability and prompt documentation pr
 | Phase P00 specification | Product Owner and initial-increment approvals recorded; completion report ready; phase in review | Independent review |
 | Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
-| Requirements traceability | P00 matrix approved; execution evidence remains incomplete | Every mandatory criterion linked to current verified evidence |
-| Module/phase documentation completion | P01 core drafts and complete P02–P12 batches ready for review | P01 bounded prompt debt and stable Sales requirement identifiers reconciled; cross-phase review and approvals prepared |
+| Requirements traceability | Repository matrix, ID convention and P00–P12 matrices present; identifier/internal-link validation passes; implementation evidence remains `NOT_RUN` | Human review and ongoing maintenance during implementation |
+| Module/phase documentation completion | P00–P12 phase/module/prompt set, cross-phase review and inventory evidence complete | Grouped specification approvals |
+| Agent/quality/deployment governance | Role charters, DoD, coding/performance/release standards and deployment indexes/templates added | Human review and implementation-derived values/evidence later |
 
 ## 5. Current Blockers
 
@@ -102,7 +103,7 @@ See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 6. Next Recommended Action
 
-Run the cross-phase documentation completion review: close the P01 bounded-task prompt and stable `SALES-*` requirement identifier debts, validate P00–P12 dependency/requirement/decision/evidence links, identify contradictions/duplicates, and prepare grouped human specification approvals in dependency order.
+Begin independent/human review of `FINAL_DOCUMENTATION_COMPLETION_REPORT.md` and `SPECIFICATION_APPROVAL_PACKETS.md`, starting with Packet A and APPR-P00-001. Documentation drafting/validation is complete for the approved inventory; the overall goal awaits review/approval and implementation remains unauthorized.
 
 Application work remains blocked by the P00 exit gate and explicit P01 authorization. Phase/module documentation drafting may continue without waiting.
 
@@ -134,3 +135,4 @@ Application work remains blocked by the P00 exit gate and explicit P01 authoriza
 | 29 October 2026 | Created the dated UAE banking/payment integration source register and provider-neutral contract; completed P08/P09 phase, four module, 175/180-test traceability and bounded-prompt batches; recorded actionable project, expense, asset, banking, provider and payment gates. |
 | 29 October 2026 | Completed Batch G: P10–P12 phase/module/traceability/prompt packages plus provider-neutral deployment, infrastructure/configuration, backup/recovery, monitoring, incident, release, capacity, operations, evidence and launch specifications; production remains unauthorized. |
 | 29 October 2026 | Added UAE-EINV-010 and ARCH-PINT-AE-001 from the OpenPeppol `2025-Q2` publication; reconciled P04 mapping, UBL, code-list, shared/AE Schematron, provider and test contracts without approving that release or Self-Billing for implementation. |
+| 29 October 2026 | Completed the master-directive A–J completion audit, reconciled stale P01/completion-plan status, reran deterministic validators, and recorded qualified external-link evidence; named human/independent approvals remain. |

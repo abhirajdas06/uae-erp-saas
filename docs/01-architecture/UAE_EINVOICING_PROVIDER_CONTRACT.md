@@ -11,7 +11,7 @@
 
 `invoicing` owns immutable issued invoice/credit-note facts. `e_invoicing` owns applicability evaluation, canonical submission snapshots, validation, provider accounts/adapters, operations, attempts, native and internal statuses, callbacks, acknowledgements and reconciliation. An adapter may translate; it cannot mutate the source document or decide accounting/VAT policy.
 
-The contract is an internal architecture contract, not a provider selection or claim of conformance to PINT AE. `ARCH-PINT-AE-001` governs the pinned 2025-Q2 artefact structure and mapping strategy; the provider contract must name the exact profile/resource versions it accepts.
+The contract is an internal architecture contract, not a provider selection or claim of conformance to PINT AE. `ARCH-PINT-AE-002` and `ARCH-PINT-AE-MAP-001` govern the current `1.0.4` candidate release set and mapping strategy; `ARCH-PINT-AE-001` is historical. The provider contract must name the exact profile/resource versions it accepts.
 
 ## 2. Versioned Commands and Facts
 

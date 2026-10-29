@@ -36,7 +36,7 @@
 
 ## 3. Evidence Index
 
-P12-EV-001 approved launch scope/targets/ownership; EV-002 infrastructure inventory/topology; EV-003 build/provenance/SBOM/scans; EV-004 configuration/secrets/network/TLS/access; EV-005 clean deployment; EV-006 migration/release/rollback rehearsal; EV-007 isolation/authorization/domain integrity; EV-008 monitoring/alerting; EV-009 backup; EV-010 restore/PITR/object recovery; EV-011 measured RPO/RTO/reconciliation; EV-012 incident/runbook exercises; EV-013 capacity/performance/resilience; EV-014 provider conformance; EV-015 UAT/onboarding/support; EV-016 release/rollback/emergency controls; EV-017 security/readiness findings and complete manifest; EV-018 Product Owner launch and stabilization/post-launch review.
+P12-EV-001 approved launch scope/targets/ownership; P12-EV-002 infrastructure inventory/topology; P12-EV-003 build/provenance/SBOM/scans; P12-EV-004 configuration/secrets/network/TLS/access; P12-EV-005 clean deployment; P12-EV-006 migration/release/rollback rehearsal; P12-EV-007 isolation/authorization/domain integrity; P12-EV-008 monitoring/alerting; P12-EV-009 backup; P12-EV-010 restore/PITR/object recovery; P12-EV-011 measured RPO/RTO/reconciliation; P12-EV-012 incident/runbook exercises; P12-EV-013 capacity/performance/resilience; P12-EV-014 provider conformance; P12-EV-015 UAT/onboarding/support; P12-EV-016 release/rollback/emergency controls; P12-EV-017 security/readiness findings and complete manifest; P12-EV-018 Product Owner launch and stabilization/post-launch review.
 
 ## 4. Non-Waivable Gates
 

@@ -39,7 +39,7 @@
 
 ## 3. Evidence Index
 
-P06-EV-001 policy/ownership; EV-002 schema/contracts; EV-003 supplier tests; EV-004 purchase tests; EV-005 item/UOM/location; EV-006 movement/receipt/transfer; EV-007 reservation/count/adjustment; EV-008 valuation; EV-009 accounting/VAT reconciliation; EV-010 surfaces/accessibility; EV-011 authorization/isolation/security/audit; EV-012 migration/recovery; EV-013 performance/operations/full gates; EV-014 independent completion/Product Owner decisions. All are `PLANNED`.
+P06-EV-001 policy/ownership; P06-EV-002 schema/contracts; P06-EV-003 supplier tests; P06-EV-004 purchase tests; P06-EV-005 item/UOM/location; P06-EV-006 movement/receipt/transfer; P06-EV-007 reservation/count/adjustment; P06-EV-008 valuation; P06-EV-009 accounting/VAT reconciliation; P06-EV-010 surfaces/accessibility; P06-EV-011 authorization/isolation/security/audit; P06-EV-012 migration/recovery; P06-EV-013 performance/operations/full gates; P06-EV-014 independent completion/Product Owner decisions. All are `PLANNED`.
 
 ## 4. Exception Rules
 

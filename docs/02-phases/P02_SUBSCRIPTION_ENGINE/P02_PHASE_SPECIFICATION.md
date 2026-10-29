@@ -4,7 +4,8 @@
 |---|---|
 | Document ID | P02-SPEC-001 |
 | Status | READY FOR REVIEW |
-| Phase | P2-SUBSCRIPTION-ENGINE |
+| Phase | P02-SUBSCRIPTION-ENGINE |
+| Legacy alias | P2-SUBSCRIPTION-ENGINE |
 | Implementation Authorization | Not granted by this document |
 | Owners | Product, Architecture, Commercial Operations |
 | Required predecessor | P01 approved and implemented |

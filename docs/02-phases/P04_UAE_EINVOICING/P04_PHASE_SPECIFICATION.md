@@ -10,7 +10,7 @@
 
 ## 1. Objective and Authority
 
-Deliver a secure, tenant-safe and provider-bounded UAE e-invoicing capability for explicitly approved document types and applicability segments. This phase implements `EIN-001`–`EIN-005`, `INT-001`–`INT-002`, and applicable security/reliability requirements under ADR-004, ADR-010, ADR-012, ADR-013, ADR-017–020; [REG-SRC-001](../../00-product/UAE_REGULATORY_SOURCE_REGISTER.md); [ARCH-PINT-AE-001](../../01-architecture/PINT_AE_2025_Q2_IMPLEMENTATION_PROFILE.md); and [ARCH-EINV-CONTRACT-001](../../01-architecture/UAE_EINVOICING_PROVIDER_CONTRACT.md).
+Deliver a secure, tenant-safe and provider-bounded UAE e-invoicing capability for explicitly approved document types and applicability segments. This phase implements `EIN-001`–`EIN-005`, `INT-001`–`INT-002`, and applicable security/reliability requirements under ADR-004, ADR-010, ADR-012, ADR-013, ADR-017–020; [REG-SRC-001](../../00-product/UAE_REGULATORY_SOURCE_REGISTER.md); [ARCH-PINT-AE-002](../../01-architecture/PINT_AE_V1_0_4_IMPLEMENTATION_PROFILE.md); [ARCH-PINT-AE-MAP-001](../../01-architecture/PINT_AE_V1_0_4_SEMANTIC_UBL_MAPPING_REGISTER.md); and [ARCH-EINV-CONTRACT-001](../../01-architecture/UAE_EINVOICING_PROVIDER_CONTRACT.md). The `2025-Q2` profile is historical evidence only.
 
 The phase does not certify compliance. Legislation, customer applicability, provider accreditation/contract, schemas and production behavior require current evidence and qualified review.
 
@@ -27,6 +27,7 @@ The phase does not certify compliance. Legislation, customer applicability, prov
 - Effective-dated applicability and document-eligibility rules.
 - Canonical immutable e-invoice/e-credit-note preparation and preflight validation.
 - Version-pinned semantic-term mapping, UBL serialization, code lists, shared PINT and AE-specific Schematron validation for each approved PINT AE transaction profile.
+- UAE TDD and Message Level Status evidence under the selected ASP contract; the ERP does not impersonate the ASP or FTA.
 - Approved ASP onboarding and versioned adapter.
 - Durable submission/attempt/idempotency workflow and transactional outbox.
 - Provider-native evidence plus controlled internal statuses.
@@ -39,6 +40,7 @@ The phase does not certify compliance. Legislation, customer applicability, prov
 ## 4. Excluded Scope
 
 - Choosing a provider in this document; direct-government API assumptions; B2C, Self-Billing or other excluded/unapproved transaction categories unless separately approved.
+- A general UAE e-way-bill workflow. No authoritative requirement was identified at the evidence cut-off; airway bills, despatch/delivery references and customs/transport documents remain distinct.
 - Creating or changing invoices, VAT policy or ledger entries in `e_invoicing`.
 - Treating PDFs, email delivery, HTTP success, provider receipt or worker success as regulatory acceptance.
 - Automatic provider switching, production submission, accreditation/compliance claims, or unsupported filing/reporting.

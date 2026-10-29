@@ -16,7 +16,7 @@
 | Criteria | Source | Primary controls | Tests | Evidence |
 |---|---|---|---|---|
 | P03-AC-001–003 | CRM-001–003 | CRM ownership; tenant constraints; lifecycle; duplicate policy; permissions | P03-TST-001–018 | P03-EV-002–004, 009 |
-| P03-AC-004–006 | Roadmap 8.1; Module Catalogue 8 | Sales ownership; snapshots; server calculation; approval/conversion services | P03-TST-019–040 | P03-EV-002, 005 |
+| P03-AC-004–006 | SALES-001–005; SALESM-001–010 | Sales ownership; snapshots; server calculation; approval/conversion services | P03-TST-019–040 | P03-EV-002, 005 |
 | P03-AC-007–008 | INV-001; ADR-013 | Validated draft; Decimal/currency/policy snapshot; server totals | P03-TST-041–053 | P03-EV-006, 013 |
 | P03-AC-009–011 | INV-002; ADR-011 | Scoped sequence; transactional issue; frozen fields; DB/service protection | P03-TST-054–068 | P03-EV-006, 009, 011 |
 | P03-AC-012 | INV-004 | Linked correction; remaining-credit limit; immutable original | P03-TST-069–078 | P03-EV-007, 013 |
