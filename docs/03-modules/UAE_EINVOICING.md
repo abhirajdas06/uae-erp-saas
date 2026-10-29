@@ -9,9 +9,9 @@
 
 ## 1. Purpose and Scope
 
-Own provider-bound preparation, validation, submission, evidence, status, callback and reconciliation for approved UAE electronic invoices and electronic credit notes. Implements `EIN-001`–`EIN-005` under P04-SPEC-001, ADR-012, REG-SRC-001 and ARCH-EINV-CONTRACT-001.
+Own provider-bound preparation, validation, submission, evidence, status, callback and reconciliation for approved UAE electronic invoices and electronic credit notes. Implements `EIN-001`–`EIN-005` under P04-SPEC-001, ADR-012, REG-SRC-001, ARCH-PINT-AE-001 and ARCH-EINV-CONTRACT-001.
 
-Included: effective-dated applicability; provider configurations by tenant/legal entity/environment; canonical snapshots; validations; operations/attempts; adapters; callbacks; exception queues; reconciliation; audit, reports and runbooks. Excluded: invoice authorship, VAT policy, ledger posting, provider selection by code, direct-government assumptions, PDF/email as eInvoice, unapproved document types and compliance claims.
+Included: effective-dated applicability; provider configurations by tenant/legal entity/environment; canonical snapshots; approved PINT AE transaction-profile mapping/UBL serialization/shared-and-AE Schematron/code-list validation; operations/attempts; adapters; callbacks; exception queues; reconciliation; audit, reports and runbooks. Excluded: invoice authorship, VAT policy, ledger posting, provider selection by code, direct-government assumptions, PDF/email as eInvoice, Self-Billing or other unapproved document types, and compliance claims.
 
 ## 2. Actors and Permissions
 
@@ -31,7 +31,7 @@ Conceptual records: `RegulatoryRuleSet`, `ApplicabilityDecision`, `ProviderAccou
 
 - UUID public IDs and explicit tenant/legal-entity ownership; all source/provider/callback relationships are same-tenant/account valid.
 - One source document version/hash and submission purpose maps to at most one active authoritative operation under the approved retry/correction model.
-- Snapshot, ruleset, schema, adapter and status-map versions are immutable after preparation/submission.
+- Snapshot, ruleset, transaction profile, semantic mapping, UBL syntax, code-list/resource checksums, Schematron, adapter and status-map versions are immutable after preparation/submission.
 - Attempts/evidence append; native status is never overwritten by a normalized label.
 - Secrets are references to the approved secret store, never model fields or exported configuration.
 - Ordinary deletion of submitted evidence is prohibited; retention disposal is policy-controlled and audited.
@@ -40,7 +40,7 @@ Conceptual records: `RegulatoryRuleSet`, `ApplicabilityDecision`, `ProviderAccou
 
 **Applicability/preflight:** resolve effective policy from trusted tenant/legal-entity/transaction facts. Missing, expired, ambiguous or unsupported policy blocks preparation with a safe reason.
 
-**Preparation:** fetch the immutable invoicing snapshot, validate content and correction links, build canonical form, calculate hash, persist validation results and outbox intent atomically. Current CRM/config changes cannot change it.
+**Preparation:** fetch the immutable invoicing snapshot, validate content and correction links, build canonical form, map reviewed `IBT`/`IBG`/`BTAE` terms, serialize the exact UBL transaction profile, run structural/shared-PINT/AE-specific/code-list/provider-preflight layers, calculate hashes, and persist versioned findings plus outbox intent atomically. Current CRM/config changes cannot change it.
 
 **Submission:** worker resolves approved adapter/environment/secret, maps and validates again, sends with stable idempotency controls, and records sanitized request evidence and response. Network work occurs after commit.
 

@@ -10,7 +10,7 @@
 
 ## 1. Objective and Authority
 
-Deliver a secure, tenant-safe and provider-bounded UAE e-invoicing capability for explicitly approved document types and applicability segments. This phase implements `EIN-001`–`EIN-005`, `INT-001`–`INT-002`, and applicable security/reliability requirements under ADR-004, ADR-010, ADR-012, ADR-013, ADR-017–020; [REG-SRC-001](../../00-product/UAE_REGULATORY_SOURCE_REGISTER.md); and [ARCH-EINV-CONTRACT-001](../../01-architecture/UAE_EINVOICING_PROVIDER_CONTRACT.md).
+Deliver a secure, tenant-safe and provider-bounded UAE e-invoicing capability for explicitly approved document types and applicability segments. This phase implements `EIN-001`–`EIN-005`, `INT-001`–`INT-002`, and applicable security/reliability requirements under ADR-004, ADR-010, ADR-012, ADR-013, ADR-017–020; [REG-SRC-001](../../00-product/UAE_REGULATORY_SOURCE_REGISTER.md); [ARCH-PINT-AE-001](../../01-architecture/PINT_AE_2025_Q2_IMPLEMENTATION_PROFILE.md); and [ARCH-EINV-CONTRACT-001](../../01-architecture/UAE_EINVOICING_PROVIDER_CONTRACT.md).
 
 The phase does not certify compliance. Legislation, customer applicability, provider accreditation/contract, schemas and production behavior require current evidence and qualified review.
 
@@ -26,6 +26,7 @@ The phase does not certify compliance. Legislation, customer applicability, prov
 
 - Effective-dated applicability and document-eligibility rules.
 - Canonical immutable e-invoice/e-credit-note preparation and preflight validation.
+- Version-pinned semantic-term mapping, UBL serialization, code lists, shared PINT and AE-specific Schematron validation for each approved PINT AE transaction profile.
 - Approved ASP onboarding and versioned adapter.
 - Durable submission/attempt/idempotency workflow and transactional outbox.
 - Provider-native evidence plus controlled internal statuses.
@@ -37,7 +38,7 @@ The phase does not certify compliance. Legislation, customer applicability, prov
 
 ## 4. Excluded Scope
 
-- Choosing a provider in this document; direct-government API assumptions; B2C or other excluded/unapproved transaction categories.
+- Choosing a provider in this document; direct-government API assumptions; B2C, Self-Billing or other excluded/unapproved transaction categories unless separately approved.
 - Creating or changing invoices, VAT policy or ledger entries in `e_invoicing`.
 - Treating PDFs, email delivery, HTTP success, provider receipt or worker success as regulatory acceptance.
 - Automatic provider switching, production submission, accreditation/compliance claims, or unsupported filing/reporting.
@@ -47,7 +48,7 @@ The phase does not certify compliance. Legislation, customer applicability, prov
 
 `e_invoicing` owns `RegulatoryRuleSet`, `ProviderConfigurationReference`, `ElectronicDocumentSnapshot`, `SubmissionOperation`, `SubmissionAttempt`, `ProviderEvidence`, `CallbackReceipt`, `StatusMappingVersion` and `ReconciliationCase`. All tenant-owned records carry explicit tenant/legal-entity ownership and same-tenant constraints. Provider secrets remain in the approved secret store.
 
-Every snapshot references the immutable P03 source/version/hash and records regulatory, schema, adapter and mapping versions. Attempts append evidence. Ordinary workflows cannot rewrite or delete a submitted snapshot, attempt, provider reference or terminal evidence.
+Every snapshot references the immutable P03 source/version/hash and records regulatory, PINT AE transaction profile/resource checksums, semantic mapping, UBL syntax, code-list, Schematron, adapter and status-mapping versions. Attempts append evidence. Ordinary workflows cannot rewrite or delete a submitted snapshot, attempt, provider reference or terminal evidence.
 
 ## 6. Core Workflows
 
@@ -77,7 +78,7 @@ Monitor validation/rejection rate, latency, uncertain cases, backlog/age, callba
 | P04-AC-001 | Current authoritative sources, applicability, ruleset versions and review evidence are recorded |
 | P04-AC-002 | Selected provider accreditation, contract, capability and environment are approved before dependent activation |
 | P04-AC-003 | Only eligible immutable invoice/credit snapshots can be prepared |
-| P04-AC-004 | Mandatory/conditional fields and totals validate against the approved schema/ruleset |
+| P04-AC-004 | Every supported transaction has complete reviewed mandatory/conditional semantic-to-UBL mapping and totals, and passes the pinned structural, shared PINT, AE-specific, code-list and provider-preflight layers |
 | P04-AC-005 | Source and provider processing remain separate; provider processing cannot mutate issued financial meaning |
 | P04-AC-006 | Submission is durable, idempotent, tenant/legal-entity scoped and linked to one source version |
 | P04-AC-007 | Timeout/crash/ambiguous outcomes reconcile safely before retry |

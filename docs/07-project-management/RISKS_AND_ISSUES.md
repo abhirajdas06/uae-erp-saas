@@ -69,6 +69,7 @@ Severity values are `CRITICAL`, `HIGH`, `MEDIUM`, and `LOW`. Status values are `
 | RISK-050 | Backups may be missing, corrupt, incomplete or unusable within required objectives, especially across database and files | CRITICAL | MITIGATING | DevOps / Database / Operations / File Owner | DEP-BCR-001 and P12 require protected inventory plus independent DB/PITR/object restore, reconciliation and measured RPO/RTO |
 | RISK-051 | Monitoring or incident procedures may miss tenant exposure, financial corruption, provider uncertainty or recovery failure | CRITICAL | MITIGATING | Operations / Security / Domain Owners | DEP-OBS/RUN/INC and P12 require business/security/recovery signals, actionable alerts, on-call ownership and exercised scenarios |
 | RISK-052 | Rollback may worsen data integrity because code, schema, tasks, providers and files are not backward compatible | CRITICAL | MITIGATING | Release / Database / Integration / Domain Owners | DEP-REL/GUIDE require compatibility analysis, single migrations, containment, forward recovery and reconciled verification; no automatic schema rollback |
+| RISK-053 | A PINT AE web page, semantic model, code list, Schematron or provider mapping may be used from a different or stale release, or Self-Billing may be enabled because its data model resembles Billing | CRITICAL | MITIGATING | E-Invoicing / Tax / Integration / QA | UAE-EINV-010 and ARCH-PINT-AE-001 require an archived checksummed release set, separate transaction profiles, complete term-to-UBL mapping, layered validation, historical coexistence and explicit current-version/Self-Billing approval |
 
 ## 3. Active Issues
 
@@ -104,3 +105,4 @@ Severity values are `CRITICAL`, `HIGH`, `MEDIUM`, and `LOW`. Status values are `
 | 29 October 2026 | Added P06 stock/master/valuation and P07 applicability/privacy/payroll/WPS/retroactivity risks with explicit approval and evidence gates. |
 | 29 October 2026 | Added P08 project/expense/asset and P09 import/licensing/sensitive-data/payment risks with provider-neutral, fail-closed and reconciliation controls. |
 | 29 October 2026 | Added P10 reporting/integration, P11 privileged/data-lifecycle/readiness and P12 deployment/recovery/incident/release risks with explicit evidence and approval gates. |
+| 29 October 2026 | Added the pinned PINT AE 2025-Q2 structure/mapping/validation strategy and stale/mixed-profile risk after reviewing the OpenPeppol publication. |

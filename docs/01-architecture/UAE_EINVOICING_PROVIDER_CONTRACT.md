@@ -11,7 +11,7 @@
 
 `invoicing` owns immutable issued invoice/credit-note facts. `e_invoicing` owns applicability evaluation, canonical submission snapshots, validation, provider accounts/adapters, operations, attempts, native and internal statuses, callbacks, acknowledgements and reconciliation. An adapter may translate; it cannot mutate the source document or decide accounting/VAT policy.
 
-The contract is an internal architecture contract, not a provider selection or claim of conformance to PINT AE.
+The contract is an internal architecture contract, not a provider selection or claim of conformance to PINT AE. `ARCH-PINT-AE-001` governs the pinned 2025-Q2 artefact structure and mapping strategy; the provider contract must name the exact profile/resource versions it accepts.
 
 ## 2. Versioned Commands and Facts
 
@@ -26,13 +26,13 @@ Schema compatibility follows ADR-020. Decimals are strings; timestamps include t
 
 ## 3. Canonical Snapshot
 
-The snapshot records document and correction identity, supplier and buyer identifiers/addresses, dates, currency, lines, allowances/charges, tax classifications and amounts, totals, payment/terms references only when approved, source/rule/schema versions, and cryptographic content hash. Optional/conditional fields are explicit; missing mandatory data produces a validation finding, not a fabricated value.
+The snapshot records document and correction identity, supplier and buyer identifiers/addresses, dates, currency, lines, allowances/charges, tax classifications and amounts, totals, payment/terms references only when approved, source/rule/schema versions, and cryptographic content hash. A separate mapping manifest records the approved Billing/Self-Billing and Invoice/Credit Note profile, `IBT`/`IBG`/`BTAE` mapping, UBL paths/cardinalities, code-list/resource checksums, shared/AE Schematron versions and serialized payload hash. Optional/conditional fields are explicit; missing mandatory data produces a validation finding, not a fabricated value.
 
 Provider payloads and responses are retained minimally according to approved policy. Store hashes, safe metadata and immutable evidence; encrypt restricted payloads and never log credentials or complete invoice data.
 
 ## 4. Adapter Interface
 
-Each adapter implements capabilities, preflight validation, map/serialize, submit, query/reconcile, verify callback, normalize evidence/status, and safe health check. Its manifest declares provider, environment, API/schema/status-map versions, authentication mode, idempotency semantics, timeouts/rate limits, supported document types, callback rules, data locations/retention responsibilities and known limitations.
+Each adapter implements capabilities, provider preflight, submit, query/reconcile, verify callback, normalize evidence/status, and safe health check. The domain mapping layer—not arbitrary provider code—performs the approved semantic-to-UBL serialization and standard validation before provider preflight. The adapter manifest declares provider, environment, accepted PINT AE profiles/resource versions/checksums, API/schema/status-map versions, authentication mode, idempotency semantics, timeouts/rate limits, supported document types, callback rules, data locations/retention responsibilities and known limitations.
 
 An unsupported capability fails closed. A generic interface does not erase provider differences.
 
