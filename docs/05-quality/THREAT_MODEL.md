@@ -161,7 +161,7 @@ Mitigation references name the controls in `SECURITY_REQUIREMENTS.md` and the go
 | ID | Residual risk | Disposition |
 |---|---|---|
 | THR-RES-01 | A malicious tenant administrator retains full authority over that tenant's own data by design | Accepted by design; mitigated by audit, maker-checker and notification, not preventable |
-| THR-RES-02 | Insider access by platform operators cannot be eliminated | Mitigated by least privilege, purpose binding, time bounding and tenant-visible audit; residual risk requires `DEC-SEC-002` acceptance |
+| THR-RES-02 | Insider access by platform operators cannot be eliminated | Mitigated by least privilege, purpose binding, time bounding and tenant-visible audit; residual risk requires `DEC-SEC-005` acceptance |
 | THR-RES-03 | Provider compromise outside platform control | Mitigated by evidence retention, reconciliation and fail-closed handling; residual risk remains with the provider decision |
 | THR-RES-04 | Data residency and cross-border processing exposure | Unresolved pending hosting and privacy decisions in `DATA_PROTECTION_AND_RETENTION.md` |
 | THR-RES-05 | Denial-of-service resilience limits | Unresolved pending infrastructure decisions `DEC-OPS-001` to `DEC-OPS-005` |
@@ -181,8 +181,8 @@ Mitigation references name the controls in `SECURITY_REQUIREMENTS.md` and the go
 
 | ID | Decision required | Owner |
 |---|---|---|
-| DEC-SEC-002 | Accept or further mitigate the insider-access residual risk, including the support-access model and its tenant visibility | Product Owner / Security reviewer |
-| DEC-SEC-003 | Approve the scope, timing and provider of independent security testing before production launch | Product Owner |
-| DEC-SEC-004 | Approve the vulnerability severity, remediation-window and exception policy | Security reviewer |
+| DEC-SEC-005 | Accept or further mitigate the insider-access residual risk, including the support-access model and its tenant visibility | Product Owner / Security reviewer |
+| DEC-SEC-006 | Approve the scope, timing and provider of independent security testing before production launch | Product Owner |
+| DEC-SEC-007 | Approve the vulnerability severity, remediation-window and exception policy | Security reviewer |
 
 These decisions are registered in `../07-project-management/DECISIONS_PENDING.md`. This document provides no security assurance and claims no tested control.

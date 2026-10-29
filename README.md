@@ -200,6 +200,7 @@ uae-erp-saas/
 │
 ├── AGENTS.md
 ├── README.md
+├── CONTRIBUTING.md
 ├── docker-compose.yml
 ├── manage.py
 │
@@ -251,12 +252,17 @@ Location: `docs/00-product/`
 | `COMMERCIAL_MODEL.md` | Subscription, pricing, and module-selection principles |
 | `MODULE_CATALOGUE.md` | Module definitions, boundaries, dependencies, and availability |
 | `DEVELOPMENT_ROADMAP.md` | Implementation phases and sequencing |
+| `GLOSSARY.md` | Controlled vocabulary for platform, financial and UAE regulatory terms |
+| `REPORT_CATALOGUE.md` | Proposed launch report catalogue and report definition contract |
+| `UAE_REGULATORY_SOURCE_REGISTER.md` | Dated regulatory sources, verification dates and revalidation requirements |
 
 ### Architecture
 
 Location: `docs/01-architecture/`
 
 Contains the system architecture, Django application structure, database design, tenant isolation, authentication, permissions, module dependencies, entitlements, API standards, background processing, and architecture decisions.
+
+Also contains the UI design system and interaction standards, localization and bilingual interface standards, document numbering and sequence allocation, notifications and outbound communications, and tenant data migration, import and export.
 
 ### Phase specifications
 
@@ -281,6 +287,8 @@ Defines the operating responsibilities, authority, required inputs, outputs, and
 Location: `docs/05-quality/`
 
 Defines coding standards, testing strategy, security requirements, performance expectations, definition of done, and release criteria.
+
+Also defines accessibility and browser support, the platform threat model, data protection and records retention, test data and fixtures, and developer onboarding and the contribution workflow. New contributors start at the root `CONTRIBUTING.md`.
 
 ### Deployment and operations
 

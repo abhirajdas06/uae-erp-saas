@@ -1,4 +1,4 @@
-# UAE Regulatory Source Register — E-Invoicing and VAT
+# UAE Regulatory Source Register — E-Invoicing, VAT, Record Retention and Personal Data
 
 | Property | Value |
 |---|---|
@@ -6,7 +6,7 @@
 | Status | DATED RESEARCH BASELINE — SPECIALIST REVIEW REQUIRED |
 | Evidence cut-off | 29 October 2026 |
 | Owner | Product / UAE Regulatory Research |
-| Applies to | P03–P05 and production release governance |
+| Applies to | P03–P05, data retention and privacy design, and production release governance |
 
 ## 1. Purpose and Limits
 
@@ -60,7 +60,7 @@ Regulated behavior must use an approved, effective-dated policy derived from the
 | UAE-VAT-004 | [FTA amendments index](https://tax.gov.ae/en/content/amendments.to.the.vat.federal.decreelaw.no.8.of.2017.aspx) | Dynamic; reviewed 2026-10-29 | `VERIFIED_PRIMARY` | Official amendment discovery and change-control input. | Policy activation must confirm no later amendment. |
 | UAE-VAT-005 | [FTA VAT return filing and payments](https://tax.gov.ae/en/content/filing.vat.returns.and.making.payments.aspx) | Reviewed 2026-10-29 | `OFFICIAL_GUIDANCE` | Official operational guidance states returns and payments are due within 28 days after the end of the tax period. | Tenant tax periods, exceptions and filing responsibility require review; P05 initially produces workpapers, not automatic filing. |
 | UAE-VAT-006 | [FTA VAT Returns User Guide](https://tax.gov.ae/-/media/Files/EN/PDF/Guides/VAT-Returns-User-Guide.pdf) | Dynamic guide | `OFFICIAL_GUIDANCE` | Supports proposed return-workpaper mapping and reconciliation design. | Check guide revision, form version and legislation at implementation/release. |
-| UAE-VAT-007 | [FTA Decision No. 4 of 2026 on accounting records and commercial books](https://tax.gov.ae//Datafolder/Files/Legislation/2026/FTA%20Decision%20No.%204%20of%202026%20on%20the%20Rules%20and%20Requirements%20-%2018%2008%202026.pdf) | 2026 | `VERIFIED_PRIMARY` | Official input to accounting-record form, accessibility and electronic-record governance. | Qualified review must determine applicability and retention obligations for each record class. |
+| UAE-VAT-007 | [FTA Decision No. 4 of 2026 on accounting records and commercial books](https://tax.gov.ae//Datafolder/Files/Legislation/2026/FTA%20Decision%20No.%204%20of%202026%20on%20the%20Rules%20and%20Requirements%20-%2018%2008%202026.pdf) | Issued 2026-06-02; stated effective 2026-07-30; text retrieved and read 2026-10-29 | `VERIFIED_PRIMARY` | Text read at the cut-off. Article 2 requires records and commercial books to be complete and identical to the original documents, clear and easily legible, and accessible to the Authority on request including access to the system in which they are saved. Article 3 requires an electronic copy or photocopy to be an identical copy including all pages in the same order, and states that partial scanning of any part of a document is not accepted; where copies or systems are protected by encryption or passwords the Person must provide the keys or passwords necessary to enable Authority access, and access to photocopies must include the places where they are stored. Article 4 permits engaging a third party to maintain records while the Person remains legally responsible for maintaining them and ensuring their safety. The decision governs how records are maintained and states no retention period. | Qualified review must determine applicability per record class. The FTA labels the English text an unofficial translation, so the Arabic is authoritative. Recheck for amendments at every regulated task and release. |
 | UAE-VAT-008 | FTA decisions and clarifications listed on UAE-VAT-001, including 2026 decisions affecting evidence and input-tax treatment | Dynamic | `SPECIALIST_REQUIRED` | Signals that treatments and evidence can change and cannot be represented by one hardcoded rate. | Tax specialist selects applicable decisions per supported scenario. |
 
 ### 4.1 Draft-safe conclusions
@@ -70,18 +70,76 @@ Regulated behavior must use an approved, effective-dated policy derived from the
 - No VAT rate, registration threshold, place-of-supply rule, recovery rule, invoice field, retention period or filing representation becomes enabled merely because it appears in guidance.
 - Initial P05 scope is calculation, reconciliation and return workpapers for explicitly approved treatments; government filing/API submission is excluded until separately specified and approved.
 
-## 5. Required Revalidation Record
+## 5. Record Retention Period Sources
+
+Added 29 October 2026. Each period below was read from the official FTA-hosted publication of the instrument at the article cited. The FTA labels its English publications unofficial translations, so the Arabic text is authoritative and every entry remains subject to qualified review.
+
+| Source ID | Authority / source | Article | Class | Verified period | Revalidation |
+|---|---|---|---|---|---|
+| UAE-RET-001 | [Federal Decree-Law No. 47 of 2022 on the Taxation of Corporations and Businesses](https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/CT%20law%20final/Federal%20Decree-Law%20No.%2047%20of%202022%20-%20For%20publishing.pdf) | Article 56(1) | `VERIFIED_PRIMARY` | Read 2026-10-29: notwithstanding the Tax Procedures Law, a Taxable Person shall maintain all records and documents for a period of seven years following the end of the Tax Period to which they relate, where those records support the information to be provided in a Tax Return or any other document filed with the Authority, or enable the Authority to ascertain taxable income. Article 56(2) addresses an Exempt Person. | Confirm against the consolidated text and any amendment; corporate tax applicability per tenant requires specialist review. |
+| UAE-RET-002 | [Cabinet Decision No. 74 of 2023 on the Executive Regulation of Federal Decree-Law No. 28 of 2022 on Tax Procedures](https://tax.gov.ae/Datafolder/Files/Legislation/Cabinet%20Decision%20No.%2074%20of%202023%20on%20Executive%20Regulation%20of%20Federal%20Decree-Law%20No.%2028%20of%202022%20on%20Tax%20Procedures%20-%20For%20Publishing.pdf) | Article 3(1) | `VERIFIED_PRIMARY` | Read 2026-10-29, expressed as unless the Tax Law states otherwise: five years following the Tax Period to which they relate for a Taxable Person; five years from the end of the calendar year in which the document was created for all Persons other than Taxable Persons; and seven years from the end of the calendar year in which the document was created for real estate records. | The FTA legislation index lists this decision with amendments dated 2026-04-01; the consolidated amended text must be confirmed before configuration. |
+| UAE-RET-003 | Cabinet Decision No. 74 of 2023 (same source as UAE-RET-002) | Article 3(2) | `VERIFIED_PRIMARY` | Read 2026-10-29: additional retention beyond the Article 3(1) periods, being an additional four years or until a dispute is finally settled, whichever is later, where a dispute exists between the Person and the Authority in respect of Tax obligations; an additional four years where the Person is subject to an ongoing Tax Audit; and an additional four years where the Authority has notified the Person of its intention to audit. | Extension triggers are event-driven, so the platform must support a hold mechanism rather than a single fixed period. |
+| UAE-RET-004 | [Executive Regulation of Federal Decree-Law No. 8 of 2017 on VAT and its amendments](https://tax.gov.ae//Datafolder/Files/Legislation/2026/Law-No-8-of-2017-and-its-amendments--09-2026.pdf) | Record-keeping article, clause 2 | `VERIFIED_PRIMARY` | Read 2026-10-29: records related to real estate required to be kept shall be held for a period of fifteen years after the end of the Tax Period to which they relate. The same article refers the general keeping obligation to the Tax Procedures Law and its Executive Regulation. | Confirm the clause numbering in the consolidated September 2026 text at implementation; later amendments prevail. |
+| UAE-RET-005 | Executive Regulation of Federal Decree-Law No. 8 of 2017 (same source as UAE-RET-004) | Capital Asset Scheme articles | `VERIFIED_PRIMARY` / `SPECIALIST_REQUIRED` | Read 2026-10-29: a Capital Asset is defined by reference to a threshold of AED 5,000,000 or more excluding Tax with an estimated useful life equal to or longer than ten years for a building or part thereof and five years for other Capital Assets, and input tax is monitored and adjusted over ten consecutive years for buildings or five consecutive years for other Capital Assets. This is a monitoring and adjustment period, not a stated record retention period. | Widely repeated secondary claims of a ten-year capital-asset *retention* period conflate this monitoring period with retention. Do not configure it as a retention period without specialist confirmation. |
+
+### 5.2 Document Numbering Particulars
+
+Added 29 October 2026 from the same official VAT Executive Regulation text as `UAE-RET-004`. These readings bear directly on `DEC-SEQ-002`.
+
+| Source ID | Article | Class | Verified wording and use | Revalidation |
+|---|---|---|---|---|
+| UAE-NUM-001 | Tax Invoice particulars article of the VAT Executive Regulation | `VERIFIED_PRIMARY` | Read 2026-10-29. Among the required particulars of a Tax Invoice is a sequential Tax Invoice number, or a unique number which enables identification of the Tax Invoice and the order of the Tax Invoice in any sequence of invoices. The requirement is therefore identifiability plus determinable order; the wording read does not require an unbroken series with no gaps. | Confirm clause numbering in the consolidated September 2026 text and against any later amendment; the FTA labels the English an unofficial translation. |
+| UAE-NUM-002 | Simplified Tax Invoice particulars, same article | `VERIFIED_PRIMARY` / `SPECIALIST_REQUIRED` | Read 2026-10-29. The particulars listed for a simplified Tax Invoice in the text read comprise the supplier name, address and Tax Registration Number, the date of issue, a description of the Goods or Services, and the total Consideration and Tax amount in AED. No sequential or unique number particular appeared in that list. | Some list items did not extract cleanly, so a specialist must confirm the complete particulars before relying on the absence of a numbering requirement. |
+| UAE-NUM-003 | Tax Credit Note particulars article | `VERIFIED_PRIMARY` / `SPECIALIST_REQUIRED` | Read 2026-10-29. The particulars listed in the text read comprise a clear display that the document is a tax credit note, the supplier name, address and Tax Registration Number, the recipient details where a Registrant, the date of issue, and the value comparison and Tax relating to the difference in AED. No sequential-number particular appeared in that list. | Same extraction caveat as `UAE-NUM-002`; confirm the full list and any e-invoicing identifier requirement before setting the credit-note numbering policy. |
+
+### 5.3 Draft-safe conclusions on numbering
+
+- For tax invoices the evidenced obligation is identifiability and determinable order, satisfied either by a sequential number or by a unique number that establishes position in a sequence.
+- Gapless numbering is therefore a conservative design choice rather than an evidenced statutory requirement for tax invoices. `../01-architecture/DOCUMENT_NUMBERING_AND_SEQUENCES.md` keeps the conservative default, which remains compliant with the wording read, but the specialist may relax it per document family.
+- Where a number is allocated at commit so that a rollback consumes no value, the series is both gapless and ordered, which satisfies the wording read without further analysis. That is why `SEQ-021` allocates at commit.
+- No numbering requirement is asserted for simplified tax invoices or tax credit notes, because the particulars read did not include one and the extraction was incomplete. The conservative default continues to apply until `DEC-SEQ-002` is recorded.
+- E-invoicing identifier requirements are separate and are owned by the PINT AE profile and mandatory-field sources, not by this reading.
+
+### 5.1 Draft-safe conclusions
+
+- The instruments impose overlapping obligations for different purposes rather than contradicting one another. A single ERP record can fall under more than one, so the longest applicable obligation governs the shared record, which is the rule already stated as `PRIV-041` in `../05-quality/DATA_PROTECTION_AND_RETENTION.md`.
+- Retention is not a single number. Corporate tax runs seven years from the end of the Tax Period, the Tax Procedures baseline runs five years with a different start point for non-taxable persons, real estate runs seven years under the Tax Procedures Executive Regulation and fifteen years under the VAT Executive Regulation, and dispute or audit events add four more years or until settlement.
+- Because extensions are event-driven, a fixed expiry alone cannot satisfy these rules. The legal-hold mechanism in `QUAL-PRIV-001` section 7 is a requirement, not an optional feature.
+- Secondary commentary contradicted itself on these periods and conflated the Capital Asset Scheme monitoring period with retention. Only the article-level readings above may be relied upon, and only after specialist confirmation against the Arabic text.
+- What remains specialist work is the applicability mapping: which period applies to each ERP record category for a given tenant. The existence and wording of the periods is now evidenced; their mapping is not.
+
+## 6. UAE Personal Data Protection Sources
+
+Added 29 October 2026 from the official UAE legislation portal, which states that the Arabic text prevails in case of conflict.
+
+| Source ID | Authority / source | Version or date | Class | Verified facts and implementation use | Revalidation |
+|---|---|---|---|---|---|
+| UAE-PDP-001 | [Federal Decree-Law No. 45 of 2021 concerning the Protection of Personal Data](https://uaelegislation.gov.ae/en/legislations/1972) | Issued 2021-09-20; Official Gazette 2021-09-26 No. 712 supplement; effective 2022-01-02; legislation state shown as Active; page read 2026-10-29 | `VERIFIED_PRIMARY` | Structure read at the cut-off. Scope and exemptions are Articles 2 to 4; processing controls and consent are Articles 5 and 6; controller and processor obligations are Articles 7 and 8; personal data breach reporting is Article 9; the Data Protection Officer is Articles 10 to 12; data subject rights are Articles 13 to 19, covering information, transfer, correction and erasure, restriction, objection to processing and automated processing; security is Article 20; the data protection impact assessment is Article 21; cross-border transfer is Articles 22 and 23; complaints and grievances are Articles 24 and 25; administrative penalties are Article 26. | Recheck for amendments and for the Executive Regulations before any privacy commitment or automated erasure behavior. |
+| UAE-PDP-002 | Article 28 of UAE-PDP-001, The Executive Regulation | Read 2026-10-29 | `VERIFIED_PRIMARY` | The Council of Ministers, based on a suggestion from the General Director of the Bureau, shall issue the Executive Regulations of the Decree-Law within six months of its promulgation. | The Executive Regulations are required by the law itself; their content governs much of the operational detail. |
+| UAE-PDP-003 | Article 29 of UAE-PDP-001, Regularisation | Read 2026-10-29 | `VERIFIED_PRIMARY` | Controllers and processors shall regularise their status in compliance with the Decree-Law within no more than six months from the date on which its Executive Regulations are issued, and the Council of Ministers may extend that period by a similar period. | This is the decisive scheduling fact: the regularisation clock runs from issuance of the Executive Regulations, not from the law's effective date. |
+| UAE-PDP-004 | Executive Regulations of Federal Decree-Law No. 45 of 2021 | Searched 2026-10-29 | `SPECIALIST_REQUIRED` | Not located. No Executive Regulation was listed among the related legislation on the official portal page for the Decree-Law when that page was read on 29 October 2026, and no official publication of it was found. Absence from that page is not proof that none has been issued, and secondary commentary consulted on the same date contradicted itself on the question. | A qualified legal reviewer must establish the current status against the official portal and the UAE Data Office before any applicability, rights-timeline or regularisation statement is relied upon. |
+
+### 6.1 Draft-safe conclusions
+
+- The Decree-Law is in force and its state is shown as Active, so the platform is designed to support the obligations it names. The design already does this through the data inventory, classification, minimization, access control, breach assessment and data-subject-request workflow in `../05-quality/DATA_PROTECTION_AND_RETENTION.md`.
+- Articles 13 to 19 name the rights the platform must be technically capable of serving. The capability is therefore built; the exact scope, exemptions and response timelines are not configured until the Executive Regulations and specialist review settle them.
+- Because Article 29 ties regularisation to the issuance of the Executive Regulations, no deadline may be asserted or implied in any customer-facing statement at this time.
+- Cross-border transfer behavior under Articles 22 and 23 depends on an adequacy or safeguard assessment that is specialist work, so hosting region and provider processing locations remain decisions rather than defaults.
+- No compliance, adequacy or certification claim is made anywhere on the basis of these readings.
+
+## 7. Required Revalidation Record
 
 Every regulated task/release records: source IDs and retrieved versions; retrieval date and checksum for downloaded artefacts; effective date; applicability assumptions; differences from the prior policy; qualified reviewer; approved policy version; test fixtures; affected tenants/document types; rollback/disable plan; and next-review trigger.
 
 Revalidate on any official amendment, portal/schema/provider notice, tenant applicability change, provider onboarding/change, failed conformance test, P04/P05 exit, and production release. Regulatory drift opens an issue and disables only the affected unverified behavior where safe.
 
-## 6. Explicitly Unresolved
+## 8. Explicitly Unresolved
 
 - Tenant/legal-entity applicability and phased e-invoicing dates.
 - Selected ASP, commercial contract, environments, credentials, SLAs and exact API/status contract.
 - Final contracted PINT AE/TDD/provider versions, mapping coverage, code-list bundle and validation artefact activation (current technical candidate: `1.0.4`).
 - Tax invoice/credit-note fields, VAT treatments, calculation/rounding, evidence, adjustments and return-box mappings for the supported market scope.
-- Accounting policy, chart design, functional/multi-currency policy, period close/reopen, opening balances, retention and filing responsibility.
+- Accounting policy, chart design, functional/multi-currency policy, period close/reopen, opening balances and filing responsibility.
+- Retention **applicability mapping**: which verified period in section 5 applies to each ERP record category for a given tenant, and confirmation of the Arabic authoritative text. The periods themselves are no longer unresolved; they are recorded as `UAE-RET-001`–`UAE-RET-005`.
 
 These items are tracked in `DECISIONS_PENDING.md`; none blocks documentation drafting, but each blocks its dependent implementation or production activation.

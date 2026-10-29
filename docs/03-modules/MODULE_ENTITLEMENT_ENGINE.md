@@ -109,3 +109,28 @@ Acceptance criteria are `ENT-001`–`ENT-012` plus P02-AC-002, 006–009, 014–
 ## 15. Implementation Prompt
 
 Use [P02 orchestration](../04-agents/phase-prompts/P02_SUBSCRIPTION_ENGINE.md) and P02-T05/T06 in [P02 bounded tasks](../04-agents/phase-prompts/P02_BOUNDED_TASK_PROMPTS.md).
+
+## 16. Readiness Gate Compliance
+
+Added under `GOV-READINESS-001` gate `RDY-001`–`RDY-012`. This section is PROPOSED and unapproved.
+
+| Gate | Disposition for `entitlements` |
+|---|---|
+| RDY-001 attributes | The decision contract in section 4 and the entitlement states in section 6 define the owned structures. Effective-entitlement records carry tenant, module code, source subscription reference, effective from and to dates, dependency closure result, decision version and evaluation timestamp, with dependency definitions pinned to `../01-architecture/MODULE_DEPENDENCIES.md` |
+| RDY-002 states | Owned by section 6, covering the entitlement lifecycle and the operations that change it; evaluation order and invariants are fixed by section 5 |
+| RDY-003 testable rules | Satisfied by the business rules in section 7 with the enforcement points in section 8 |
+| RDY-004 permissions | `entitlements.view_effective_entitlement`, `entitlements.view_module_catalogue`, `entitlements.evaluate_entitlement` as an internal service capability, `entitlements.manage_module_definition` and `entitlements.manage_dependency` as platform-only capabilities. A tenant user never holds authority to change an entitlement; that authority belongs to the provider domain through `subscriptions` |
+| RDY-005 interface surfaces | Module availability indicators, the unentitled-module affordance decided by `DEC-UI-004`, and the upgrade path surface, mapped to `../01-architecture/UI_DESIGN_SYSTEM.md` `UIX-012`. Hiding a module is a usability measure and never an authorization boundary |
+| RDY-006 reports and imports | Contributes to `RPT-803` module adoption and usage, a provider-domain report. Import is not applicable; entitlement state derives from subscriptions and is never imported directly |
+| RDY-007 document numbering | Not applicable. No document type is allocated |
+| RDY-008 notifications | Registered in `../01-architecture/NOTIFICATIONS_AND_COMMUNICATIONS.md`: module entitled, module entitlement expiring, module entitlement lost, and dependency conflict detected. These are subscription-and-billing category, mandatory and never opt-out per `NTF-011`, because losing a module changes what a tenant can lawfully do in the product |
+| RDY-009 classification and retention | Entitlement state is `C2` and contains no personal data. Retention follows `RET-14` for provider-domain subscription records and `RET-09` for entitlement change audit, under `../05-quality/DATA_PROTECTION_AND_RETENTION.md` |
+| RDY-010 threats | `THR-022` direct manipulation of entitlement state to obtain unpaid modules, `THR-021` self-granting authority, `THR-012` cache key omitting tenant or entitlement scope, `THR-011` missing filter in an entitlement-aware query, `ABU-08` using an unsubscribed module through a direct endpoint or fragment |
+| RDY-011 decision dependencies | The decisions in section 14 remain open. `DEC-COM-001` governs commercial policy and `DEC-UI-004` the unentitled presentation; absent approval the engine denies rather than defaults to granting |
+| RDY-012 regulatory assertions | None |
+
+## 17. Migration, Compatibility and Recovery
+
+Entitlement evaluation is on the authorization path for every protected surface, so a change to the decision contract, the evaluation order or the cache key composition is a platform-wide breaking change requiring an ADR under ADR-006. Adding a module definition is additive; removing one requires a deprecation that preserves historical entitlement records, because they explain why past actions were permitted.
+
+A cache or dependency-definition change must invalidate every derived decision, and a stale grant is a security defect rather than a performance artefact. Restore verification confirms module definitions, dependency closure results, effective entitlement per tenant against the authoritative subscription state, that no cached decision survives the restore unvalidated, and audit continuity for entitlement changes.

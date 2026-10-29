@@ -53,6 +53,29 @@ No agent may record these approvals for the named human or specialist.
 - Exact provider/topology/contacts/secrets/SLO/RPO/RTO/capacity/thresholds/commands require decisions and implemented environments.
 - The working tree is intentionally uncommitted; this goal prohibits commit/push and remote changes.
 
+## Re-Validation After GOV-GAP-001
+
+On 29 October 2026, after the development-readiness audit added twelve specifications, the readiness assessment added `GOV-READINESS-001`, and all 24 module specifications were brought to `RDY-001`–`RDY-012` gate compliance, the local gate suite was re-executed:
+
+```text
+python scripts/quality/run_p00_gates.py --output-dir build/evidence
+```
+
+| Gate | Observed result |
+|---|---|
+| `manifest-validation` (`CI-GATE-001`) | PASS |
+| `documentation-validation` (`CI-GATE-002`) | PASS: 191 Markdown inputs, 160 document IDs, 227 internal links, zero findings |
+| `governance-validation` (`CI-GATE-003`) | PASS: 20 ADRs, 17 P00 acceptance criteria, 53/53 P01 tenant scenarios correctly `NOT_RUN`, workflow present |
+| `secret-scan` | PASS: zero findings across every scanned repository file (the file count rises with each addition, so it is read from `build/evidence/secrets.json` rather than quoted here) |
+| `validator-unit-tests` | PASS |
+| Overall | PASS on every re-run during this work |
+
+The artifact-set digest is not quoted as a fixed value here. The gate evidence hashes its documentation inputs, so every documentation edit, including this record, produces a different digest; quoting one would be stale the moment it was written. The digest for any given tree is reproduced by re-running the command above and reading `artifact_set_sha256` in `build/evidence/p00-gate-summary.json`. The last run before this entry reported `ffec2f96a5b3cb1825076335faec171ce3fc00524ab90caf44565f93f0c08972`.
+
+`git diff --check` reported line-ending conversion notices only. A supplementary check confirmed that all 403 relative-path references across the repository resolve; the documentation validator does not cover references written as code spans, which is why that check was run separately.
+
+These results validate structure and governance only. They do not prove application behavior, provider acceptance, security certification, recovery performance or UAE compliance, and the twelve added specifications remain unapproved. Hosted continuous-integration evidence for this working tree has not been produced; run 40647091699 remains the separately recorded hosted run for its own commit.
+
 ## Next Recommended Step
 
 Close this documentation goal. The next separate goal should prepare and, only after explicit APPR-P01-001 authorization, implement the first bounded P01 foundation task. Do not transition automatically under this goal.

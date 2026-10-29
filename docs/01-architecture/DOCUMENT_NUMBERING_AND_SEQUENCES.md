@@ -61,7 +61,7 @@ Each document type must appear in exactly one owning module specification with i
 |---|---|
 | SEQ-020 | A sequence declared gapless must produce an unbroken ascending series within its scope; a rolled-back transaction must not consume a value |
 | SEQ-021 | A gapless sequence therefore allocates at the point of commit of the authoritative record and never at the point of draft creation |
-| SEQ-022 | A document type whose statutory treatment is unconfirmed defaults to gapless and conservative behavior until `DEC-SEQ-002` records the confirmed requirement |
+| SEQ-022 | A document type whose statutory treatment is unconfirmed defaults to gapless and conservative behavior until `DEC-SEQ-002` records the confirmed requirement. For tax invoices specifically, `UAE-NUM-001` records that the evidenced obligation read on 29 October 2026 is a sequential number, or a unique number enabling identification and determinable order in a sequence, so the gapless default is conservative rather than minimal and already satisfies that wording |
 | SEQ-023 | A cancelled or voided document in a gapless series retains its number and a cancellation status; the number is never freed, deleted or reassigned |
 | SEQ-024 | Any detected gap in a gapless series raises an operational alert and produces an audit-reviewable record with cause analysis |
 | SEQ-025 | A non-gapless sequence must explicitly record that gaps are acceptable, and the reason, in its owning module specification |
@@ -123,9 +123,9 @@ All scenarios are `NOT_RUN` until the owning phase implements the capability.
 | ID | Decision required | Owner |
 |---|---|---|
 | DEC-SEQ-001 | Approve the number format pattern per document family, including branch and fiscal-year tokens | Product Owner / Finance |
-| DEC-SEQ-002 | Confirm, against authoritative FTA sources with a recorded verification date, which document types carry a statutory sequential or gapless numbering expectation | Tax specialist |
+| DEC-SEQ-002 | Confirm which document types carry a statutory sequential or gapless numbering expectation. Evidence is prepared: `UAE-NUM-001` to `UAE-NUM-003` in the regulatory source register record the article-level particulars read on 29 October 2026 for tax invoices, simplified tax invoices and tax credit notes. The specialist must confirm the complete particulars and decide whether gapless allocation is required, or whether identifiability with determinable order suffices per document family | Tax specialist |
 | DEC-SEQ-003 | Approve the reset policy per document family | Finance domain owner |
 | DEC-SEQ-004 | Approve whether manual number override is permitted at all, and for which document types | Product Owner / Finance |
 | DEC-SEQ-005 | Approve branch or establishment scoping, including its interaction with multiple tax registration numbers | Tax specialist / Product Owner |
 
-`DEC-SEQ-002` and `DEC-SEQ-005` are regulatory dependencies. This document asserts no statutory numbering requirement and records none as verified; the conservative defaults in section 5 apply until the named specialist records a dated, sourced confirmation. These decisions are registered in `../07-project-management/DECISIONS_PENDING.md`.
+`DEC-SEQ-002` and `DEC-SEQ-005` are regulatory dependencies. This document asserts no statutory numbering requirement of its own. The article-level wording located for tax invoices is recorded as `UAE-NUM-001` to `UAE-NUM-003` in `../00-product/UAE_REGULATORY_SOURCE_REGISTER.md` section 5.2, with its extraction caveats; the conservative defaults in section 5 continue to apply until the named specialist records a dated confirmation. These decisions are registered in `../07-project-management/DECISIONS_PENDING.md`.

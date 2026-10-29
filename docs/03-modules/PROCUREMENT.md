@@ -58,3 +58,28 @@ Monitor stale approvals, duplicate suppliers, over-receipt, unmatched/duplicate 
 ## 7. Decisions/Evidence
 
 APPR-P06-002/003/004 govern ownership, workflow/tolerances and financial integrations. Use P06 prompts; tests/evidence are in P06-TRACE-001.
+
+## 8. Readiness Gate Compliance
+
+Added under `GOV-READINESS-001` gate `RDY-001`–`RDY-012`. This section is PROPOSED and unapproved.
+
+| Gate | Disposition for `procurement` |
+|---|---|
+| RDY-001 attributes | Section 3 names the owned records and historical-integrity invariants. Every monetary field uses `NUMERIC` and `Decimal` with precision, scale and rounding approved before migration per ADR-013; every tenant-owned row carries a mandatory indexed tenant reference and UUID primary key per ADR-014; supplier, item, order, receipt and invoice-reference relationships are same-tenant foreign keys with database-level uniqueness on document numbers in their approved scope |
+| RDY-002 states | Section 4 owns the requisition, order, receipt and matching workflows. Approved and received records are immutable per ADR-011; correction is a linked amendment or reversal, never an edit |
+| RDY-003 testable rules | Satisfied by the business rules in section 5, each with a named verification method |
+| RDY-004 permissions | `procurement.view_requisition`, `procurement.add_requisition`, `procurement.submit_requisition`, `procurement.approve_requisition`, `procurement.view_order`, `procurement.add_order`, `procurement.approve_order`, `procurement.send_order`, `procurement.cancel_order`, `procurement.record_receipt`, `procurement.match_invoice`, `procurement.resolve_match_exception`, `procurement.configure_supplier`, `procurement.export_procurement_data`, `procurement.view_all_procurement`. Requisition approval, order approval, receipt recording and invoice matching are separate, with maker-checker on approvals |
+| RDY-005 interface surfaces | Requisition and order entry with a line-item editor, approval queues, receipt recording, three-way match exception review and supplier management, mapped to the line-item editor, data table, status badge and confirmation dialog components in `../01-architecture/UI_DESIGN_SYSTEM.md`, with destructive and approval actions confirmed per `UIX-036` |
+| RDY-006 reports and imports | Owns `RPT-401` purchases by period and supplier, `RPT-402` purchase order status, `RPT-403` payables ageing, `RPT-404` supplier statement and `RPT-405` goods receipt and three-way match exceptions in `../00-product/REPORT_CATALOGUE.md`. Supplier and item master import follows `../01-architecture/DATA_MIGRATION_AND_IMPORT.md` domains 2 and 3, and open purchase orders enter through domain 7; import may never create a received or matched state |
+| RDY-007 document numbering | Registered in `../01-architecture/DOCUMENT_NUMBERING_AND_SEQUENCES.md`: purchase requisition, purchase order, goods receipt and supplier invoice reference, each with its allocation point at approval or confirmation and scoped to tenant, entity and period. Gapless requirements follow `DEC-SEQ-002`, with conservative defaults until confirmed |
+| RDY-008 notifications | Registered in `../01-architecture/NOTIFICATIONS_AND_COMMUNICATIONS.md`: requisition awaiting approval, requisition approved or rejected, order approved, order sent, receipt recorded, match exception raised and order overdue. Approval-workflow messages are digest-eligible; a match exception is not digested. Outbound delivery of a purchase order to a supplier is an authorized external disclosure gated by `DEC-NTF-005` |
+| RDY-009 classification and retention | Order, receipt and pricing data is `C2`; supplier contact data is `C3`; supplier bank detail, where held, is `C4` and subject to the maker-checker change control that `ABU-03` requires. Retention classes are `RET-01` for records forming part of the accounting record, `RET-07` for bank detail and `RET-08` for supplier contacts; periods remain unresolved pending `DEC-PRIV-005` and none is asserted here |
+| RDY-010 threats | `THR-010`, `THR-011`, `THR-034` race producing duplicate receipt or match effects, `THR-021` self-approval, `ABU-03` payment diversion through altered supplier bank details, `ABU-05` self-approval across separation of duties, `ABU-07` bulk extraction of supplier and pricing data, `ABU-10` suppressing an exception |
+| RDY-011 decision dependencies | `DEC-P06-001` remains open for ownership, approval thresholds and matching tolerance. Matching tolerance defaults to zero and approval thresholds fail closed until approved |
+| RDY-012 regulatory assertions | None. Input VAT treatment on purchases is owned by `UAE_VAT.md` and is not asserted here |
+
+## 9. Migration, Compatibility and Recovery
+
+Supplier and item master changes must never rewrite the snapshot held on an approved order or recorded receipt, because those snapshots evidence what was agreed and received. A precision change to a monetary field requires before-and-after totals and recovery evidence.
+
+Restore verification confirms order and receipt counts, per-currency committed and received totals, document-number high-water marks, three-way match state, payables control-account reconciliation with Accounting, outbox age and audit completeness.

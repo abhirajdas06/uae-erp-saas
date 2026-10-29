@@ -181,6 +181,8 @@ The database must support configurable retention policies.
 
 For UAE corporate tax purposes, the FTA states that records and documents should generally be retained for at least seven years following the end of the relevant tax period.
 
+> **Source added (`ISSUE-008`, closed as a documentation defect).** The seven-year statement above originally carried no citation or verification date. On 29 October 2026 the official FTA-hosted text of Federal Decree-Law No. 47 of 2022 was read, and Article 56(1) requires a Taxable Person to maintain all records and documents for seven years following the end of the Tax Period to which they relate. The statement above is therefore correct and correctly scoped to corporate tax. It is recorded as `UAE-RET-001` in `../00-product/UAE_REGULATORY_SOURCE_REGISTER.md` section 5, together with the different periods that apply under the Tax Procedures Executive Regulation and the VAT Executive Regulation. Because several instruments can cover one record, the longest applicable obligation governs, and dispute or audit events extend it. The FTA labels its English publications unofficial translations, so the Arabic is authoritative, and applicability per record category remains specialist work under `DEC-PRIV-005`. Do not configure any period from this sentence alone; use the register and the approved policy.
+
 Other records may have different retention requirements or longer periods under applicable law.
 
 The platform must not automatically delete financial or tax records based on a generic account deletion policy.

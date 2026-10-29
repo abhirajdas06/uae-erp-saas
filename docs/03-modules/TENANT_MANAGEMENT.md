@@ -100,3 +100,28 @@ No SQLite-only result can satisfy PostgreSQL constraint or RLS criteria.
 | TEN-DEC-001 | Minimum LegalEntity/Branch scope in P01 | Product / Architecture | P01 task manifest | Include only fields needed for authorization scope |
 | TEN-DEC-002 | Suspended tenant read/export policy | Product / Security | Lifecycle implementation | Deny writes; explicitly enumerate any permitted reads |
 | TEN-DEC-003 | Tenant closure/recovery workflow | Product / Legal / DevOps | Production data handling | Retain data; design recovery before deletion |
+
+## 11. Readiness Gate Compliance
+
+Added under `GOV-READINESS-001` gate `RDY-001`–`RDY-012`. This section is PROPOSED and unapproved.
+
+| Gate | Disposition for `tenants` |
+|---|---|
+| RDY-001 attributes | Section 4 names the authoritative records and invariants. Field detail is pinned to `../01-architecture/DATABASE_DESIGN.md` sections 5.1 to 5.5, which define tenant, legal entity, branch and membership structures with naming, key, timestamp and monetary conventions; this module does not restate them and must not diverge from them |
+| RDY-002 states | Tenant lifecycle states and permitted transitions are owned by section 5; suspension and closure are deterministic and never delete records per TEN-MOD-011 |
+| RDY-003 testable rules | Satisfied by `TEN-MOD-001`–`TEN-MOD-012`, each with a named verification method, plus the 53 scenarios in the [P01 tenant isolation matrix](../02-phases/P01_CORE_PLATFORM/P01_TENANT_ISOLATION_TEST_MATRIX.md) |
+| RDY-004 permissions | `tenants.view_tenant`, `tenants.add_tenant`, `tenants.change_tenant_lifecycle`, `tenants.view_membership`, `tenants.add_membership`, `tenants.change_membership`, `tenants.remove_membership`, `tenants.configure_legal_entity`, `tenants.configure_branch`, `tenants.switch_tenant_context`, `tenants.view_all_tenants` as a platform-only capability |
+| RDY-005 interface surfaces | Tenant context indicator and switcher in the authenticated shell, tenant list and detail in the platform-administration shell, membership management, and lifecycle confirmation, all mapped to `../01-architecture/UI_DESIGN_SYSTEM.md` `UIX-001`, `UIX-004` and `UIX-036` |
+| RDY-006 reports and imports | Contributes to `RPT-801` tenant and subscription status, a provider-domain report never visible to a tenant. Tenant provisioning data entry is operator-driven; business data import is owned by `../01-architecture/DATA_MIGRATION_AND_IMPORT.md`, whose `MIG-002` requires the target tenant to be resolved server-side and never read from a file |
+| RDY-007 document numbering | Tenant code is registered in `../01-architecture/DOCUMENT_NUMBERING_AND_SEQUENCES.md` as a provider-domain identifier, strictly separate from tenant ERP document numbering per `SEQ-005`. It is non-gapless master data |
+| RDY-008 notifications | Registered in `../01-architecture/NOTIFICATIONS_AND_COMMUNICATIONS.md`: tenant provisioned, tenant suspended, tenant reactivated, tenant closure scheduled, membership granted, membership suspended and membership removed. Membership and lifecycle messages are security category, mandatory and never digested |
+| RDY-009 classification and retention | Tenant and legal-entity records are `C2`; membership links a `C3` user identity. Retention follows `RET-15` for terminated-tenant data and `RET-09` for lifecycle audit, under `../05-quality/DATA_PROTECTION_AND_RETENTION.md`. `PRIV-012` and `DEC-PRIV-011` govern the grace period, export window and disposal authority; no period is asserted here |
+| RDY-010 threats | `THR-010`, `THR-011`, `THR-015` client-supplied tenant identifier, `THR-016` cross-tenant inference, `THR-017` connection or migration path without isolation enforcement, `THR-020` tenant user reaching a platform function, `THR-022` entitlement state manipulation, and `THR-RES-01` tenant administrator authority accepted by design |
+| RDY-011 decision dependencies | `TEN-DEC-001` and `TEN-DEC-002` remain open. Suspended-tenant read and export behavior denies writes and enumerates permitted reads explicitly; absent that enumeration the behavior fails closed |
+| RDY-012 regulatory assertions | None. Data residency is unresolved under `DEC-PRIV-004` and is not asserted by this module |
+
+## 12. Migration, Compatibility and Recovery
+
+The tenant boundary is the platform's foundational contract, so a change to tenant identity, the membership uniqueness rule or the `app.current_tenant_id` context key is a platform-wide breaking change requiring an ADR and a coordinated migration plan under `AGENTS.md` section 13. The canonical context key is fixed by ADR-004 and `DEC-SEC-002` and must not be altered by an implementation convenience.
+
+Shared-database restore has a multi-tenant blast radius, recorded as `RISK-009`. Tenant-level recovery therefore requires the procedure in `../06-deployment/BACKUP_AND_RECOVERY.md`, and a restore is verified by confirming tenant and membership counts, membership uniqueness, same-tenant referential integrity across every dependent domain, row-level security policy presence and the runtime role's inability to bypass it, and audit continuity for lifecycle events.

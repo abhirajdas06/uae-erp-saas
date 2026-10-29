@@ -54,7 +54,7 @@ Tokens are defined once in the Tailwind configuration and consumed by name. Lite
 | Motion | Duration and easing steps | Honors `prefers-reduced-motion` |
 | Logical direction | Inline-start and inline-end spacing and alignment tokens | Physical left/right utilities are prohibited where a logical token exists |
 
-Token values require UX approval under `DEC-UI-001`. Until approved, a provisional neutral palette may be used for scaffolding and must not be presented as the approved brand system.
+Token values require UX approval under `DEC-UI-002`. Until approved, a provisional neutral palette may be used for scaffolding and must not be presented as the approved brand system.
 
 ## 5. Component Catalogue
 
@@ -163,9 +163,9 @@ All scenarios are `NOT_RUN` until the owning phase implements the interface.
 
 | ID | Decision required | Owner |
 |---|---|---|
-| DEC-UI-001 | Approve design token values, typography pairing and brand palette | Product Owner / UX Lead |
-| DEC-UI-002 | Approve primary navigation grouping and module-to-group mapping | Product Owner |
-| DEC-UI-003 | Approve the unentitled-module presentation: hidden or non-actionable upgrade affordance | Product Owner / Commercial |
-| DEC-UI-004 | Approve the printable document layout family and bilingual document header | Product Owner / Finance |
+| DEC-UI-002 | Approve design token values, typography pairing and brand palette | Product Owner / UX Lead |
+| DEC-UI-003 | Approve primary navigation grouping and module-to-group mapping | Product Owner |
+| DEC-UI-004 | Approve the unentitled-module presentation: hidden or non-actionable upgrade affordance | Product Owner / Commercial |
+| DEC-UI-005 | Approve the printable document layout family and bilingual document header | Product Owner / Finance |
 
 These decisions are registered in `../07-project-management/DECISIONS_PENDING.md`. No approval is recorded by this document.
