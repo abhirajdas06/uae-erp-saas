@@ -32,9 +32,9 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 | P07 | HRMS and Payroll | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated employment/payroll/WPS baseline, phase, HRMS/Payroll modules, 196-test matrix and prompts drafted; APPR-P07-001–005 precede dependent implementation |
 | P08 | Projects, Expenses and Fixed Assets | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, three modules, 175-test matrix and prompts drafted; APPR-P08-001–005 precede dependent implementation |
 | P09 | Banking and Advanced Finance | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated banking/payment source register, provider-neutral contract, module, 180-test matrix and prompts drafted; Mode A recommended and APPR-P09-001–006 gate implementation/activation |
-| P10 | Reporting, Analytics and Integrations | PLANNED | Not authorized | Depends on stable domain and authorization contracts |
-| P11 | Enterprise Readiness | PLANNED | Not authorized | Depends on implemented and verified launch scope |
-| P12 | Production Launch and Operations | PLANNED | Not authorized | Depends on approved release scope and operational evidence |
+| P10 | Reporting, Analytics and Integrations | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, two modules, 175-test matrix and prompts drafted; report/provider approvals precede implementation/activation |
+| P11 | Enterprise Readiness | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, enterprise-administration capability, 165-test matrix and prompts drafted; requires a candidate launch implementation and policy approvals |
+| P12 | Production Launch and Operations | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, 180-test matrix, prompts and complete deployment/operations specification set drafted; no provider, spend, provisioning, deployment or launch authorized |
 
 ## 4. P00 Exit Evidence Required
 
@@ -74,3 +74,4 @@ Current P00 planning evidence:
 | 29 October 2026 | Drafted the dated UAE regulatory-source register and complete P04/P05 regulated-finance documentation batches; both phases remain unapproved and implementation is not authorized. |
 | 29 October 2026 | Drafted Batch E P06/P07 phase/module/traceability/prompt packages and the dated UAE employment/payroll/WPS source baseline; implementation remains unauthorized. |
 | 29 October 2026 | Drafted Batch F P08/P09 phase/module/traceability/prompt packages, provider-neutral banking contract and dated banking/payment source register; implementation and regulated connectivity remain unauthorized. |
+| 29 October 2026 | Drafted Batch G P10–P12 phase/module/traceability/prompt packages and deployment, recovery, monitoring, incident, release, capacity, runbook and evidence specifications; production remains unauthorized. |

@@ -60,9 +60,9 @@ Every module specification must define:
 | P07 | HRMS and Payroll | HRMS, PAYROLL | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; employment/payroll/WPS/privacy approvals remain |
 | P08 | Projects, Expenses, Assets | PROJECTS, EXPENSES, FIXED_ASSETS | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; domain/finance policies remain |
 | P09 | Banking and Finance | BANKING, reconciliation and provider-neutral contract | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; Mode A recommended, connectivity/provider decisions remain |
-| P10 | Reporting and Integrations | REPORTING, INTEGRATIONS | Missing | Missing | Not started |
-| P11 | Enterprise Readiness | Platform administration, support access, security operations, scale/readiness | Missing | Missing | Not started |
-| P12 | Production Launch | Deployment, backup, restore, monitoring, incident response, release/rollback | Missing | Missing | Not started |
+| P10 | Reporting and Integrations | REPORTING, INTEGRATIONS | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; catalogue/provider approvals remain |
+| P11 | Enterprise Readiness | ENTERPRISE_ADMINISTRATION plus security/performance/experience readiness | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; launch scope and policies remain |
+| P12 | Production Launch | Deployment, backup/restore, monitoring, incident, release/rollback, capacity, runbooks/evidence | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; all production authority remains open |
 
 ## 4. Ordered documentation batches
 
@@ -145,6 +145,6 @@ Documentation completion is not implementation completion.
 
 ## 7. Current next action
 
-Complete Batch G as the next dependency-ready documentation unit: P10 Reporting/Analytics/Integrations, P11 Enterprise Readiness and P12 Production Launch/Operations phase specifications, module/capability specifications, traceability matrices and prompt packs. Reconcile deployment, backup/restore, monitoring, incident, release/rollback, capacity and cost-assumption documents without claiming operational readiness.
+Batch G is complete as a review-ready documentation set. Next perform the cross-phase documentation completion review: reconcile P01 bounded-prompt debt and stable Sales requirement identifiers, validate P00–P12 dependency/requirement/decision/evidence coverage, and prepare a grouped specification-approval sequence without implying implementation, operational readiness or production authorization.
 
 The P01 bounded-task prompt pack and stable `SALES-*` product requirement identifiers remain documentation debts before their respective implementations. P00 independent-review administration may continue separately.

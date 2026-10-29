@@ -27,7 +27,7 @@ Canonical supporting records are:
 
 The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, the Product Owner P00 approval is recorded in P00-EV-014, and APPR-P00-002 approves bounded P01 as the initial implementation increment. Formal P00 exit still requires independent reviewer approval; P01 authorization remains separate.
 
-The immediate delivery priority is completing the remaining phase, module, traceability and prompt documentation defined in `DOCUMENTATION_COMPLETION_PLAN.md`. P02 through P09 are now complete drafts ready for review. APPR-P00-001 remains a parallel governance item and does not block non-conflicting documentation drafting. No application work should begin.
+The P02–P12 phase, module/capability, traceability and prompt documentation programme is now complete as a review-ready draft set. The next priority is a cross-phase completion review, closure of the bounded P01 prompt and stable Sales-requirement identifier debts, and a grouped human specification-approval sequence. APPR-P00-001 remains a parallel governance item. No application, infrastructure provisioning or production work should begin without its separate gates.
 
 ## 3. Completed Milestones
 
@@ -71,6 +71,9 @@ The immediate delivery priority is completing the remaining phase, module, trace
 | UAE banking/payment integration source baseline | `docs/00-product/UAE_BANKING_PAYMENT_INTEGRATION_SOURCE_REGISTER.md` | Dated official-source/applicability/revalidation baseline ready for specialist review |
 | P08 Projects/Expenses/Fixed Assets batch | P08/module/prompt paths | Complete draft with 175 planned tests; domain, expense and asset policies remain |
 | P09 Banking/Advanced Finance batch | P09/module/contract/prompt paths | Complete draft with 180 planned tests; Mode A recommended and regulated connectivity separately gated |
+| P10 Reporting/Integration batch | P10/module/prompt paths | Complete draft with Reporting/Integrations modules and 175 planned tests; catalogue and providers remain gated |
+| P11 Enterprise Readiness batch | P11/module/prompt paths | Complete draft with Enterprise Administration and 165 planned tests; launch scope/policies and executed readiness evidence remain |
+| P12 Production Launch/Operations batch | P12/deployment/prompt paths | Complete draft with 180 planned tests and deployment, backup/restore, monitoring, incident, release, capacity, runbook, evidence and launch specifications; no production authority granted |
 
 ## 4. Work in Progress
 
@@ -82,23 +85,23 @@ The immediate delivery priority is completing the remaining phase, module, trace
 | Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
 | Requirements traceability | P00 matrix approved; execution evidence remains incomplete | Every mandatory criterion linked to current verified evidence |
-| Module/phase documentation completion | P01 core drafts and complete P02–P09 batches ready for review | P01 bounded prompt debt reconciled and P10–P12/module specifications completed |
+| Module/phase documentation completion | P01 core drafts and complete P02–P12 batches ready for review | P01 bounded prompt debt and stable Sales requirement identifiers reconciled; cross-phase review and approvals prepared |
 
 ## 5. Current Blockers
 
 - P00-EV-013 independent review and initial-increment scope disposition remain outstanding; Product Owner P00 approval is recorded, and P01 implementation remains unauthorized.
-- Deployment, recovery, and production-operational specifications remain incomplete.
+- Deployment, recovery and production-operational specifications are drafted; provider/topology/service targets, executable evidence and all production authorizations remain open.
 - Product, finance, UAE regulatory, provider, region/residency, retention, RPO/RTO, and API-support decisions remain open where recorded.
 - P02 commercial policies and provider selection remain unresolved; the P02 specifications require undecided flows to stay disabled and do not block later-phase documentation drafting.
 - P03 customer/item ownership and invoice financial/document policies require APPR-P03-002/003 before schema/issuance implementation.
 - P04 provider/applicability/schema decisions and P05 accounting/VAT policies are fully actionable in `DECISIONS_PENDING.md`; they block dependent implementation/activation, not P06/P07 documentation drafting.
-- P06/P07 approvals block their dependent implementation; P08 project/expense/asset policies and P09 mode/provider/reconciliation approvals now likewise block only their dependent implementation and activation.
+- P06–P10 approvals block their dependent implementation/activation. P11 requires an implemented candidate and approved support/data/performance/experience policies. P12 additionally requires provider/spend/provisioning, exact deployment and launch authorizations.
 
 See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 6. Next Recommended Action
 
-Draft Batch G: P10 Reporting/Analytics/Integrations, P11 Enterprise Readiness and P12 Production Launch/Operations specifications, matrices and prompt packs, reconciling deployment, backup/restore, monitoring, incident, release/rollback, capacity and cost-assumption documentation.
+Run the cross-phase documentation completion review: close the P01 bounded-task prompt and stable `SALES-*` requirement identifier debts, validate P00–P12 dependency/requirement/decision/evidence links, identify contradictions/duplicates, and prepare grouped human specification approvals in dependency order.
 
 Application work remains blocked by the P00 exit gate and explicit P01 authorization. Phase/module documentation drafting may continue without waiting.
 
@@ -128,3 +131,4 @@ Application work remains blocked by the P00 exit gate and explicit P01 authoriza
 | 29 October 2026 | Created the dated UAE e-invoicing/VAT regulatory-source register and completed P04/P05 phase, module, provider-contract, 144/180-test traceability and bounded-prompt batches; recorded actionable provider, regulatory, finance and tax approval gates. |
 | 29 October 2026 | Created the dated UAE employment/payroll/WPS source register and completed P06/P07 phase, four module, 170/196-test traceability and bounded-prompt batches; recorded actionable inventory, employment, payroll, WPS and privacy approval gates. |
 | 29 October 2026 | Created the dated UAE banking/payment integration source register and provider-neutral contract; completed P08/P09 phase, four module, 175/180-test traceability and bounded-prompt batches; recorded actionable project, expense, asset, banking, provider and payment gates. |
+| 29 October 2026 | Completed Batch G: P10–P12 phase/module/traceability/prompt packages plus provider-neutral deployment, infrastructure/configuration, backup/recovery, monitoring, incident, release, capacity, operations, evidence and launch specifications; production remains unauthorized. |
