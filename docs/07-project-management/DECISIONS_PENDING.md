@@ -5,7 +5,7 @@
 | Document ID | PM-DEC-001 |
 | Version | 1.0 |
 | Status | Active |
-| Last Updated | 28 October 2026 |
+| Last Updated | 29 October 2026 |
 | Decision Authority | Product Owner and designated reviewers |
 
 ## 1. Purpose and Authority
@@ -83,8 +83,20 @@ An entry marked `RECOMMENDED` or linked to a `PROPOSED` ADR is not approved. App
 | DEC-DATA-002 | Retention, deletion, legal hold, and tenant-level recovery policy | OPEN | Legal / Compliance / Security | Production handling of customer data |
 | DEC-OPS-003 | Production object-storage provider, region, scanning, encryption, quota, and lifecycle configuration | OPEN | Product / Security / Privacy / DevOps | Production file storage and customer document handling |
 | DEC-API-003 | External API consumers, support/deprecation duration, and contractual exposure | OPEN | Product / Commercial / Architecture / Operations | Public or partner API commitment |
+| DEC-P03-001 | P03 customer/party and sellable-item ownership | RECOMMENDED | Product / Architecture / CRM and Sales Owners | P03 schema implementation |
+| DEC-P03-002 | P03 quotation, acceptance, order, and fulfillment scope | RECOMMENDED | Product / Sales Operations / Security / Legal | P03 Sales workflow implementation |
+| DEC-FIN-004 | ERP invoice/credit numbering, currency, rounding, tax, correction, payment-allocation, document, and retention policies | OPEN | Product / Finance / UAE Tax and Legal / Operations | P03 invoice migrations and issue activation |
 
-## 6. Decision Recording Requirements
+## 6. Actionable P03 Approvals
+
+| Approval | Exact decision required | Authorized approver/reviewer | Evidence and alternatives | Recommendation and consequences | Recording action | Blocks |
+|---|---|---|---|---|---|---|
+| APPR-P03-001 | Approve or revise the bounded P03 implementation scope and P03-T01–T12 sequence | Product Owner, after Architecture/Security/Finance review | `P03_PHASE_SPECIFICATION.md`, matrix, three module specifications; alternative is a smaller CRM-only or CRM/Sales increment | Approve the bounded specification; this enables later task authorization but does not itself start implementation | Add dated approval to this register and use: “I approve P03-SPEC-001 as the bounded P03 implementation scope.” | P03 implementation only; not documentation |
+| APPR-P03-002 / DEC-P03-001 | Select authoritative customer/party and sellable-item ownership | Product Owner and Architecture | CRM-owner/Sales-minimal-item recommendation; alternatives are a shared party/product domain or hard CRM/Inventory dependencies, each adding scope and migration coupling | CRM owns customer/contact; Sales initially owns a minimal non-stock commercial item with explicit future Inventory mapping | Record selected option/date/approver, then reconcile Module Catalogue, dependencies, P03 specs, and task manifests | P03 customer/item schema; not P04/P05 documentation |
+| APPR-P03-003 / DEC-FIN-004 | Approve concrete invoice/credit financial and document policies and effective dates | Product Owner plus Finance and qualified UAE Tax/Legal reviewers | `ERP_CUSTOMER_INVOICING.md`, ADR-011/013, current authoritative UAE source register when prepared; alternatives include restricting P03 to drafts or enabling only explicitly reviewed document types/currencies | Enable only reviewed policies; keep issue/correction/payment behaviors disabled otherwise, avoiding incorrect financial or legal behavior | Record versioned policy decisions and reviewer/date/source evidence in this register and the owning specifications | Invoice migrations/issuance and commercial pilot; not CRM documentation |
+| APPR-P03-004 | Approve P03 exit and, separately, any controlled pilot scope | Product Owner after independent QA/Security/Privacy/Database/Finance/UX/Operations review | P03-EV-001–014 and open-risk disposition; alternatives are reject, conditional exit with only waivable exceptions, or no pilot | Separate phase exit from pilot authorization; define enabled modules, tenants, dates, limitations, monitoring, and rollback authority | Add the exact exit/pilot statement, date, approver, evidence commit/artifacts, conditions, and expiry to `PHASE_STATUS.md` and this register | P03 exit/pilot and P04 implementation transition |
+
+## 7. Decision Recording Requirements
 
 Every resolved entry must record:
 
@@ -97,7 +109,7 @@ Every resolved entry must record:
 
 Detailed decision inventories currently embedded in product and architecture documents will be mapped into this register incrementally as their owning documentation unit is reviewed. Their presence does not constitute approval.
 
-## 7. Decision Log
+## 8. Decision Log
 
 | Date | Decision ID | Outcome | Approved by | Notes |
 |---|---|---|---|---|

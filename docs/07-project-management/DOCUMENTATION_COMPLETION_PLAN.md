@@ -5,7 +5,7 @@
 | Document ID | PM-DOC-PLAN-001 |
 | Status | ACTIVE |
 | Owner | Product Owner / Documentation Governance |
-| Last Updated | 28 October 2026 |
+| Last Updated | 29 October 2026 |
 | Objective | Complete the implementation-ready ERP documentation phase by phase and module by module |
 
 ## 1. Purpose
@@ -53,7 +53,7 @@ Every module specification must define:
 | P00 | Foundation and governance | Cross-cutting architecture and quality baselines | Complete; in review | Validator/CI task defined | Substantially complete |
 | P01 | Core Platform and Multi-Tenancy | CORE, TENANTS, USERS, AUDIT foundation | Complete | Orchestration prompt drafted; bounded task pack pending | Module specifications ready for review |
 | P02 | Subscription Engine | SUBSCRIPTIONS, ENTITLEMENTS, BILLING | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW |
-| P03 | CRM, Sales, Invoicing | CRM, SALES, INVOICING | Missing | Missing | Not started |
+| P03 | CRM, Sales, Invoicing | CRM, SALES, INVOICING | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW |
 | P04 | UAE E-Invoicing | E_INVOICING and provider contract | Missing | Missing | Not started; regulatory/provider facts require verification |
 | P05 | Accounting and UAE VAT | ACCOUNTING, VAT | Missing | Missing | Not started; finance/tax policy decisions remain |
 | P06 | Procurement and Inventory | PROCUREMENT, INVENTORY | Missing | Missing | Not started |
@@ -145,12 +145,12 @@ Documentation completion is not implementation completion.
 
 ## 7. Current next action
 
-Complete Batch C as the next dependency-ready documentation unit:
+Complete Batch D as the next dependency-ready documentation unit:
 
-1. draft the bounded P03 phase specification;
-2. draft CRM, Sales, and ERP Customer Invoicing module specifications;
-3. define customer, contact, item, quotation, order, and invoice ownership/interfaces;
-4. create the P03 traceability/test matrix and orchestration/bounded-task prompts;
-5. validate P03 against P02 entitlement contracts while preserving SaaS/ERP billing separation.
+1. create a dated authoritative UAE regulatory-source register for e-invoicing and VAT;
+2. draft the P04 UAE E-Invoicing phase/module/provider-contract documentation and prompts;
+3. draft the P05 Accounting and UAE VAT phase/module documentation and prompts;
+4. define immutable invoice-to-e-invoicing and invoice-to-accounting contracts without selecting a provider or inventing tax rules;
+5. create P04/P05 traceability and test matrices and record specialist approval gates.
 
-The P01 bounded-task prompt pack remains a small documentation debt and should be reconciled before P01 implementation authorization. It does not block P03 specification drafting. P00 independent-review administration may continue separately and must not stop non-conflicting documentation drafting.
+The P01 bounded-task prompt pack and stable `SALES-*` product requirement identifiers remain documentation debts to reconcile before their respective implementations. They do not block Batch D drafting. P00 independent-review administration may continue separately.

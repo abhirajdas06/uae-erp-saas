@@ -166,8 +166,8 @@ Examples:
 
 - `crm.customer.view`
 - `crm.customer.create`
-- `sales.invoice.view`
-- `sales.invoice.approve`
+- `invoicing.invoice.view`
+- `invoicing.invoice.approve`
 - `accounting.journal.post`
 - `hrms.employee.view_sensitive`
 - `subscriptions.manage`
@@ -850,11 +850,11 @@ sales.quotation.view
 sales.quotation.create
 sales.quotation.approve
 
-sales.invoice.view
-sales.invoice.create
-sales.invoice.approve
-sales.invoice.issue
-sales.invoice.void
+invoicing.invoice.view
+invoicing.invoice.create
+invoicing.invoice.approve
+invoicing.invoice.issue
+invoicing.invoice.void
 
 accounting.journal.view
 accounting.journal.create

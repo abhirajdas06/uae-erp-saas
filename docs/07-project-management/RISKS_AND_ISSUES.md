@@ -5,7 +5,7 @@
 | Document ID | PM-RISK-001 |
 | Version | 1.0 |
 | Status | Active |
-| Last Updated | 28 October 2026 |
+| Last Updated | 29 October 2026 |
 
 ## 1. Purpose
 
@@ -42,6 +42,9 @@ Severity values are `CRITICAL`, `HIGH`, `MEDIUM`, and `LOW`. Status values are `
 | RISK-023 | Documentation traceability may be mistaken for implemented or executed control evidence | HIGH | MITIGATING | QA / Governance | P00 matrix distinguishes documentation status from `NOT_RUN` application verification and requires evidence-linked status changes |
 | RISK-024 | An approved P01 specification or test matrix may be mistaken for authorization or proof that tenant isolation is implemented | CRITICAL | MITIGATING | Product / Governance / Security | Approval is explicitly specification-only, all 53 tests are `NOT_RUN`, and entry requires P00 exit plus separate P01 authorization |
 | RISK-025 | The dependency-free P00 secret scanner may miss novel, encoded, high-entropy, or history-only credentials | HIGH | MITIGATING | Security / DevOps | Initial patterns fail closed on recognized credentials; retain Git hygiene, review findings, and select a specialist history-aware scanner before application secrets or deployment workflows are introduced |
+| RISK-026 | Missing dedicated `SALES-*` product requirements may allow Sales scope and acceptance behavior to drift | HIGH | MITIGATING | Product / Sales / Documentation | `SALESM-*` and P03 criteria provide a bounded draft baseline; reconcile stable product requirement IDs before P03 implementation approval |
+| RISK-027 | Customer, sellable-item, and downstream snapshot ownership may be duplicated across CRM, Sales, Inventory, and Invoicing | HIGH | MITIGATING | Architecture / Domain Owners | P03 specs recommend CRM customer ownership and a minimal Sales item with explicit snapshots/mapping; DEC-P03-001 must be approved before schema work |
+| RISK-028 | Invoice issuance may embed unverified numbering, tax, currency, rounding, correction, retention, or legal-document rules | CRITICAL | MITIGATING | Product / Finance / UAE Tax and Legal | P03 issuance fails closed until DEC-FIN-004 has versioned authoritative-source and specialist approval; P04/P05 source research remains required |
 
 ## 3. Active Issues
 

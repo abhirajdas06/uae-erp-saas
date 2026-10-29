@@ -5,7 +5,7 @@
 | Document ID | PM-STATUS-001 |
 | Version | 1.0 |
 | Status | Active |
-| Last Updated | 28 October 2026 |
+| Last Updated | 29 October 2026 |
 | Current Stage | Documentation and architecture planning |
 | Implementation Authorization | Not granted |
 | Owner | Product Owner |
@@ -27,7 +27,7 @@ Canonical supporting records are:
 
 The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, the Product Owner P00 approval is recorded in P00-EV-014, and APPR-P00-002 approves bounded P01 as the initial implementation increment. Formal P00 exit still requires independent reviewer approval; P01 authorization remains separate.
 
-The immediate delivery priority is completing the phase, module, traceability, and prompt documentation defined in `DOCUMENTATION_COMPLETION_PLAN.md`. The complete P02 subscription-engine documentation batch is ready for review; P03 CRM/Sales/ERP Invoicing is next. APPR-P00-001 remains a parallel governance item and does not block non-conflicting documentation drafting. No application work should begin.
+The immediate delivery priority is completing the phase, module, traceability, and prompt documentation defined in `DOCUMENTATION_COMPLETION_PLAN.md`. The complete P02 and P03 documentation batches are ready for review; P04 UAE E-Invoicing and P05 Accounting/UAE VAT are next. APPR-P00-001 remains a parallel governance item and does not block non-conflicting documentation drafting. No application work should begin.
 
 ## 3. Completed Milestones
 
@@ -59,6 +59,9 @@ The immediate delivery priority is completing the phase, module, traceability, a
 | P02 phase and traceability batch | `docs/02-phases/P02_SUBSCRIPTION_ENGINE/` | Phase specification and 122-test traceability catalogue ready for review |
 | P02 module specification batch | `docs/03-modules/` | SUBSCRIPTIONS, ENTITLEMENTS, and BILLING ready for review |
 | P02 orchestration and task prompts | `docs/04-agents/phase-prompts/` | Phase prompt and twelve bounded task prompts ready for review |
+| P03 phase and traceability batch | `docs/02-phases/P03_CRM_SALES_INVOICING/` | Phase specification and 156-test catalogue ready for review |
+| P03 module specification batch | `docs/03-modules/` | CRM, SALES, and ERP Customer Invoicing ready for review |
+| P03 orchestration and task prompts | `docs/04-agents/phase-prompts/` | Phase prompt and twelve bounded task prompts ready for review |
 
 ## 4. Work in Progress
 
@@ -70,7 +73,7 @@ The immediate delivery priority is completing the phase, module, traceability, a
 | Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
 | Requirements traceability | P00 matrix approved; execution evidence remains incomplete | Every mandatory criterion linked to current verified evidence |
-| Module/phase documentation completion | P01 core drafts and complete P02 documentation batch ready for review | P01 bounded prompt debt reconciled and P03–P12/module specifications completed |
+| Module/phase documentation completion | P01 core drafts and complete P02/P03 batches ready for review | P01 bounded prompt debt reconciled and P04–P12/module specifications completed |
 
 ## 5. Current Blockers
 
@@ -78,12 +81,13 @@ The immediate delivery priority is completing the phase, module, traceability, a
 - Deployment, recovery, and production-operational specifications remain incomplete.
 - Product, finance, UAE regulatory, provider, region/residency, retention, RPO/RTO, and API-support decisions remain open where recorded.
 - P02 commercial policies and provider selection remain unresolved; the P02 specifications require undecided flows to stay disabled and do not block later-phase documentation drafting.
+- P03 customer/item ownership and invoice financial/document policies require APPR-P03-002/003 before schema/issuance implementation; they do not block P04/P05 documentation drafting.
 
 See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 6. Next Recommended Action
 
-Draft Batch C: the P03 CRM, Sales, and ERP Customer Invoicing phase/module specifications, traceability/test matrix, and orchestration/bounded-task prompts. Validate the boundary with P02 SaaS billing and entitlement contracts.
+Draft Batch D: a dated authoritative UAE regulatory-source register followed by P04 UAE E-Invoicing and P05 Accounting/UAE VAT phase/module specifications, traceability matrices, provider-neutral contracts, and prompt packs.
 
 Application work remains blocked by the P00 exit gate and explicit P01 authorization. Phase/module documentation drafting may continue without waiting.
 
@@ -109,3 +113,4 @@ Application work remains blocked by the P00 exit gate and explicit P01 authoriza
 | 28 October 2026 | Recorded APPR-P00-002 approval of bounded P01 as the initial implementation increment while retaining DEC-PROD-001 for commercial pilot planning. |
 | 28 October 2026 | Refocused delivery on the complete phase/module documentation pack; established the documentation completion plan, reusable phase/module/task templates, four P01 core-module specifications, and the P01 orchestration prompt. |
 | 28 October 2026 | Drafted the complete P02 documentation batch: phase specification, subscription/entitlement/SaaS billing module contracts, 122-test traceability catalogue, orchestration prompt, and twelve bounded task prompts. |
+| 29 October 2026 | Drafted the complete P03 documentation batch: phase specification, CRM/Sales/ERP Customer Invoicing module contracts, 156-test traceability catalogue, orchestration prompt, and twelve bounded task prompts; recorded actionable ownership and finance approval gates. |
