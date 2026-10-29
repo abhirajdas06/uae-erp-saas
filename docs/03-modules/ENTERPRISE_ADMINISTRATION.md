@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-ENTERPRISE-ADMIN-001 |
-| Status | READY FOR REVIEW — SUPPORT AND DATA-GOVERNANCE POLICY REQUIRED |
+| Status | APPROVED SPECIFICATION — SUPPORT AND DATA-GOVERNANCE POLICY REQUIRED |
 | Owning phase | P11; cross-cutting administration services |
 
 ## 1. Purpose and Boundary

@@ -2,8 +2,8 @@
   "schema_version": "1.0.0",
   "evidence_id": "P00-EV-013",
   "title": "P00 completion and independent-review report",
-  "status": "READY_FOR_REVIEW",
-  "result": "PARTIAL",
+  "status": "VERIFIED",
+  "result": "PASS",
   "created_at": "2026-10-28T07:08:09.6658994Z",
   "producer": {
     "identity": "Codex architecture, security, QA, and governance assistant",
@@ -16,21 +16,29 @@
   },
   "artifact": {
     "path": "docs/02-phases/P00_FOUNDATION/evidence/P00-EV-013.md",
-    "sha256": "5ff28ec9499ec558517891678987d9dc956b8ea1f6667761a6f1a5ec466426ef",
+    "sha256": "37a8ef4bf796daf44439de75cf05aae06037149a10f75e61e01de7286c466110",
     "format": "Markdown"
   },
   "assessment": {
     "dependency_cycle_review": "PASS",
-    "p00_ac_015_preparer_result": "PASS_PENDING_INDEPENDENT_CONFIRMATION",
-    "p00_ac_016": "PARTIAL_PENDING_INDEPENDENT_REVIEW",
-    "p00_ac_017": "PARTIAL_PRODUCT_OWNER_AND_INITIAL_INCREMENT_APPROVED_P01_AUTHORIZATION_PENDING",
+    "p00_ac_015_preparer_result": "SATISFIED_REVIEW_ACCEPTED",
+    "p00_ac_016": "SATISFIED",
+    "p00_ac_017": "SATISFIED_FOR_P00_EXIT_P01_AUTHORIZATION_SEPARATE",
+    "appr_p00_001": "APPROVED",
     "appr_p00_002": "APPROVED"
   },
   "pending_approvals": [
-    "APPR-P00-001",
     "APPR-P01-001"
   ],
   "recorded_approvals": [
+    {
+      "approval_id": "APPR-P00-001",
+      "approver_role": "Product Owner accepting recorded independent review evidence",
+      "date": "2026-10-29",
+      "decision": "APPROVED",
+      "statement": "i approve kindly update",
+      "documentation_snapshot_sha256": "6cad6773d8536ad20843abe5f0291d96dc077ca307b0856765453ba82581298a"
+    },
     {
       "approval_id": "APPR-P00-002",
       "approver_role": "Product Owner",
@@ -42,7 +50,7 @@
   "related_criteria": ["P00-AC-004", "P00-AC-015", "P00-AC-016", "P00-AC-017"],
   "related_evidence": ["P00-EV-001", "P00-EV-002", "P00-EV-003", "P00-EV-004", "P00-EV-005", "P00-EV-006", "P00-EV-007", "P00-EV-008", "P00-EV-009", "P00-EV-010", "P00-EV-011", "P00-EV-012", "P00-EV-014"],
   "limitations": [
-    "The preparer cannot serve as the required independent reviewer of its own report.",
+    "Approval accepts the recorded independent agent reviews but is not a regulator, tax, legal, provider, or production certification.",
     "No P01 application or tenant-isolation test is represented as implemented or passed.",
     "Product Owner P00 approval does not authorize P01 implementation."
   ],

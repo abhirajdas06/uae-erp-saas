@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-PROJECTS-001 |
-| Status | READY FOR REVIEW — PROJECT POLICY REQUIRED |
+| Status | APPROVED SPECIFICATION — PROJECT POLICY REQUIRED |
 | Owning phase / app | P08 / `projects` |
 
 ## 1. Purpose and Boundary

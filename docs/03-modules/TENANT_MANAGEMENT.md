@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-TENANTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning Phase | P01 |
 | Django App | `tenants` |
 | Domain Owner | Tenant identity, lifecycle, membership, and trusted tenant context |

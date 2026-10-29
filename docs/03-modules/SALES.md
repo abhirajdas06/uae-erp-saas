@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-SALES-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning Phase | P03 |
 | Django App | `sales` |
 | Domain Owner | Sales Management |

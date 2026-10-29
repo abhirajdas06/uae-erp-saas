@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-PROCUREMENT-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning phase / app | P06 / `procurement` |
 
 ## 1. Purpose and Boundaries

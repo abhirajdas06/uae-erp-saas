@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-BANKING-001 |
-| Status | READY FOR REVIEW — CONNECTIVITY/RECONCILIATION POLICY REQUIRED |
+| Status | APPROVED SPECIFICATION — CONNECTIVITY/RECONCILIATION POLICY REQUIRED |
 | Owning phase / app | P09 / `banking` |
 
 ## 1. Purpose and Boundary

@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-HRMS-001 |
-| Status | READY FOR REVIEW — REGULATORY/PRIVACY POLICY REQUIRED |
+| Status | APPROVED SPECIFICATION — REGULATORY/PRIVACY POLICY REQUIRED |
 | Owning phase / app | P07 / `hrms` |
 
 ## 1. Purpose and Scope

@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P12-SPEC-001 |
-| Status | READY FOR REVIEW — PRODUCTION AUTHORIZATION NOT GRANTED |
+| Status | APPROVED SPECIFICATION — PRODUCTION AUTHORIZATION NOT GRANTED |
 | Implementation/deployment authorization | NOT GRANTED |
 
 ## 1. Objective and Authority

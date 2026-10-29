@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P11-PROMPTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION OR LAUNCH NOT AUTHORIZED |
 
 ## P11-T01 — Candidate Scope and Readiness Inventory
 Pin release scope, segment, policies, targets, dependencies, exclusions and evidence manifest. Evidence EV-001/014; tests 001–012.

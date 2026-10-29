@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | GOV-INVENTORY-001 |
-| Status | COMPLETE INVENTORY — HUMAN/INDEPENDENT REVIEW PENDING |
+| Status | COMPLETE INVENTORY — APPROVED DOCUMENTATION BASELINE |
 | Inventory date | 29 October 2026 |
 | Owner | Documentation / Orchestrator |
 
@@ -54,8 +54,8 @@ Counts describe the working tree at inventory time and must be regenerated after
 
 ## 4. Approval and External-Evidence Disposition
 
-- P02–P12 specifications and newly added governance/quality documents remain `READY_FOR_REVIEW`; no approval is inferred.
-- P00 formal exit and P01 implementation authorization remain separate gates.
+- P00–P12 specification baselines, matrices, modules and prompts are approved through Packet A and Packets B–G; the approval record does not authorize implementation.
+- P00 formal exit is approved. P01 implementation authorization remains a separate gate.
 - Finance, VAT, employment/payroll/WPS, e-invoicing, banking, privacy/retention and operations values remain with named specialist/human decisions.
 - PINT AE `1.0.4` is the current technical candidate; selected ASP support, applicability, conformance and production activation are `BLOCKED_EXTERNAL`.
 - Application, database, security, provider, performance, recovery and operational evidence is `NOT_RUN` until authorized implementation/rehearsal.
@@ -63,4 +63,4 @@ Counts describe the working tree at inventory time and must be regenerated after
 
 ## 5. Completion Evidence Required
 
-Repository validators, internal-link/ID/ADR/phase checks and `git diff --check` passed on 29 October 2026; independent audit findings were integrated and `GOV-COMPLETE-001` records the results. A best-effort probe assessed 112 unique external URLs: 90 were reachable and 22 remained automation-unresolved because of anti-bot responses, timeouts or access controls. Unresolved URLs are not represented as verified or broken; all external sources still require dated revalidation at the owning phase/release. Human approvals and implementation-derived evidence remain separate gates.
+Repository validators, internal-link/ID/ADR/phase checks and `git diff --check` passed on 29 October 2026; independent audit findings were integrated and `GOV-COMPLETE-001` records the results. A best-effort probe assessed 112 unique external URLs: 90 were reachable and 22 remained automation-unresolved because of anti-bot responses, timeouts or access controls. Unresolved URLs are not represented as verified or broken; all external sources still require dated revalidation at the owning phase/release. Packet A–G approval is recorded; implementation-derived and specialist evidence remains separately gated.

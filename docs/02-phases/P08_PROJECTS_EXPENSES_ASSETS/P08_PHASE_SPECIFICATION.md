@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P08-SPEC-001 |
-| Status | READY FOR REVIEW — DOMAIN AND FINANCE POLICY APPROVAL REQUIRED |
+| Status | APPROVED SPECIFICATION — DOMAIN AND FINANCE POLICY APPROVAL REQUIRED |
 | Implementation authorization | NOT GRANTED |
 
 ## 1. Objective and Authority

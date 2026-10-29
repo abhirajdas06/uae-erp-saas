@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P02-SPEC-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Phase | P02-SUBSCRIPTION-ENGINE |
 | Legacy alias | P2-SUBSCRIPTION-ENGINE |
 | Implementation Authorization | Not granted by this document |

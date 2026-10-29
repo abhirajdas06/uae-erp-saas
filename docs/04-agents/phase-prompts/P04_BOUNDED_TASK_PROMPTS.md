@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P04-PROMPTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 
 These bodies require an authorized task manifest with commit/file scope, approved decisions/versions, commands, reviewers and evidence paths.
 

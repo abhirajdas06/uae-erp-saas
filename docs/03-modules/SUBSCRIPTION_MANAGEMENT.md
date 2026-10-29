@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-SUBSCRIPTIONS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning Phase | P02 |
 | Django App | `subscriptions` |
 | Domain Owner | Subscription Management |

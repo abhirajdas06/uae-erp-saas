@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P08-PROMPTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 
 Each task requires an authorized manifest with policy/contract versions, files, migrations, tests, reviewers and evidence paths.
 

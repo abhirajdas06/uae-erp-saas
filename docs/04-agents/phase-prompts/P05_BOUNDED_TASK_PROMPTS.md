@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P05-PROMPTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 
 Each prompt requires an authorized manifest with exact policy versions, commit/file scope, migrations, tests, reviewers and evidence paths.
 

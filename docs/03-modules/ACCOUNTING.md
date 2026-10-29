@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-ACCOUNTING-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — FINANCE POLICY GATES REMAIN |
 | Owning phase / app | P05 / `accounting` |
 | Tenant-owned data | Yes; explicit legal-entity scope |
 

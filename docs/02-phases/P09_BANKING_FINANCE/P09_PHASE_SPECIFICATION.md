@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P09-SPEC-001 |
-| Status | READY FOR REVIEW — BANKING MODE AND FINANCE POLICY APPROVAL REQUIRED |
+| Status | APPROVED SPECIFICATION — BANKING MODE AND FINANCE POLICY APPROVAL REQUIRED |
 | Regulatory evidence cut-off | 29 October 2026 |
 | Implementation authorization | NOT GRANTED |
 

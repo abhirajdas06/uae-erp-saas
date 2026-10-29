@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P04-TRACE-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED VERIFICATION BASELINE — APPLICATION TESTS NOT RUN |
 | Test status | All tests `NOT_RUN` until implementation evidence exists |
 
 `PLANNED` defines a future test; it is not a pass. `VERIFIED` requires reproducible evidence for the exact commit, environment, ruleset, adapter and provider contract.

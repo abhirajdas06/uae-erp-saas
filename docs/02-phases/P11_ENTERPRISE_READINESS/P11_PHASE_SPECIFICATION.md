@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P11-SPEC-001 |
-| Status | READY FOR REVIEW — LAUNCH SCOPE AND OPERATING POLICIES REQUIRED |
+| Status | APPROVED SPECIFICATION — LAUNCH SCOPE AND OPERATING POLICIES REQUIRED |
 | Implementation authorization | NOT GRANTED |
 
 ## 1. Objective and Authority

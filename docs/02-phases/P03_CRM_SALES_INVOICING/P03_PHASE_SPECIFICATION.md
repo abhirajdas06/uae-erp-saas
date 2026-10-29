@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P03-SPEC-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Phase | P03-CRM-SALES-INVOICING |
 | Legacy alias | P3-CRM-SALES-INVOICING |
 | Implementation Authorization | Not granted by this document |

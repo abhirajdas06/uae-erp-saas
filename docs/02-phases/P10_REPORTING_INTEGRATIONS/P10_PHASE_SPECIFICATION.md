@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P10-SPEC-001 |
-| Status | READY FOR REVIEW — REPORT CATALOGUE AND INTEGRATION SCOPE APPROVAL REQUIRED |
+| Status | APPROVED SPECIFICATION — REPORT CATALOGUE AND INTEGRATION SCOPE APPROVAL REQUIRED |
 | Implementation authorization | NOT GRANTED |
 
 ## 1. Objective and Authority

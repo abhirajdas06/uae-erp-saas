@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P12-ORCH-001 |
-| Status | READY FOR REVIEW; NO PRODUCTION AUTHORIZATION |
+| Status | APPROVED PROMPT BASELINE — NO PRODUCTION AUTHORIZATION |
 
 Orchestrate only an explicitly authorized P12 rehearsal, provisioning, deployment or launch task. Read `AGENTS.md`, P12-SPEC/TRACE, all `docs/06-deployment/` specifications, release scope, phase evidence, accepted ADRs and decisions/risks.
 

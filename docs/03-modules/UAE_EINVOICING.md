@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-EINVOICING-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — PROVIDER/SPECIALIST GATES REMAIN |
 | Owning phase / app | P04 / `e_invoicing` |
 | Commercial module | Yes; entitlement plus permission required |
 

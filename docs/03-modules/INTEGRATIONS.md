@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-INTEGRATIONS-001 |
-| Status | READY FOR REVIEW — SHARED CONTRACT AND PROVIDER ACTIVATION REQUIRED |
+| Status | APPROVED SPECIFICATION — SHARED CONTRACT AND PROVIDER ACTIVATION REQUIRED |
 | Owning phase / app | P10 / `integrations` |
 
 ## 1. Purpose and Boundary

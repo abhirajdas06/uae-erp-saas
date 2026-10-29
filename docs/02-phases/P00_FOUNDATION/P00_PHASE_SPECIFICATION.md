@@ -366,8 +366,8 @@ P00 approval does not make the platform production-ready.
 | Traceability baseline | APPROVED VERIFICATION BASELINE |
 | P01 specification | APPROVED SPECIFICATION; tenant-isolation matrix approved but all tests `NOT_RUN` |
 | Manifest/CI foundation | IMPLEMENTED AND VERIFIED; local gates and hosted Actions run 40647091699 pass |
-| P00 exit evidence | IN_REVIEW; P00-EV-013 prepared, Product Owner approval recorded in P00-EV-014, and APPR-P00-002 resolves the initial-increment prerequisite; independent review remains |
-| P00 status | IN_REVIEW |
+| P00 exit evidence | VERIFIED; P00-EV-013, P00-EV-014, APPR-P00-001 and APPR-P00-002 are recorded; APPR-P01-001 remains separate |
+| P00 status | APPROVED |
 
 ## 16. Approval
 

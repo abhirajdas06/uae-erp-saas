@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P07-SPEC-001 |
-| Status | READY FOR REVIEW — REGULATORY POLICY APPROVAL REQUIRED |
+| Status | APPROVED SPECIFICATION — REGULATORY POLICY APPROVAL REQUIRED |
 | Regulatory cut-off | 29 October 2026 |
 | Implementation authorization | NOT GRANTED |
 

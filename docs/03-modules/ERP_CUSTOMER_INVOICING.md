@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-INVOICING-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning Phase | P03 |
 | Django App | `invoicing` |
 | Domain Owner | ERP Customer Invoicing |

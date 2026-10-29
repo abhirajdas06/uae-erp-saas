@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-UAE-VAT-001 |
-| Status | READY FOR REVIEW — TAX POLICY APPROVAL REQUIRED |
+| Status | APPROVED SPECIFICATION — TAX POLICY APPROVAL REQUIRED |
 | Owning phase / app | P05 / `vat` |
 | Regulatory baseline | REG-SRC-001, cut-off 29 October 2026 |
 

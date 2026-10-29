@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P11-ORCH-001 |
-| Status | READY FOR REVIEW; NOT IMPLEMENTATION OR LAUNCH AUTHORIZATION |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION OR LAUNCH NOT AUTHORIZED |
 
 Orchestrate only an authorized P11-SPEC-001 assessment or hardening task. Read `AGENTS.md`, approved launch-candidate scope, ENTERPRISE_ADMINISTRATION, P11-TRACE-001, security/testing/deployment standards and current decisions/risks.
 

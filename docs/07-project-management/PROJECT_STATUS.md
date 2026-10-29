@@ -6,7 +6,7 @@
 | Version | 1.0 |
 | Status | Active |
 | Last Updated | 29 October 2026 |
-| Current Stage | Documentation and architecture planning |
+| Current Stage | Documentation baseline complete; awaiting bounded implementation authorization |
 | Implementation Authorization | Not granted |
 | Owner | Product Owner |
 
@@ -25,9 +25,9 @@ Canonical supporting records are:
 
 ## 2. Current Summary
 
-The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, the Product Owner P00 approval is recorded in P00-EV-014, and APPR-P00-002 approves bounded P01 as the initial implementation increment. Formal P00 exit still requires independent reviewer approval; P01 authorization remains separate.
+The documentation and architecture-governance baseline is complete. No ERP application implementation is authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. APPR-P00-001, APPR-P00-002 and P00-EV-013/014 are recorded, so P00 is approved. APPR-P01-001 remains a separate mandatory implementation gate.
 
-The P00–P12 cross-phase review is complete. The P01 bounded prompt gap and stable Sales requirement gap are closed; phase dependencies, identifiers, evidence plans and grouped approvals are documented. Current PINT AE Billing/Self-Billing/TDD `1.0.4` is recorded as the technical candidate with checksummed resources and a semantic-to-UBL mapping baseline; production applicability/conformance remains unapproved. Repository-wide traceability, agent charters, quality standards and deployment governance templates are present. Inventory disposition, deterministic validation and independent agent reviews are complete; the remaining documentation-goal gates are human/independent specification approvals—not application implementation.
+The P00–P12 cross-phase review, inventory disposition, deterministic validation and independent agent reviews are complete. Product Owner approval of Packet A and Packets B–G is recorded against the validated documentation snapshot. Current PINT AE Billing/Self-Billing/TDD `1.0.4` remains only the technical candidate with checksummed resources and a semantic-to-UBL mapping baseline; production applicability/conformance remains unapproved. Domain policy, specialist, provider, implementation, deployment and launch gates remain separate.
 
 ## 3. Completed Milestones
 
@@ -82,16 +82,16 @@ The P00–P12 cross-phase review is complete. The P01 bounded prompt gap and sta
 |---|---|---|
 | Architecture decisions | ADR-001 through ADR-020 accepted; known membership and RLS-key conflicts reconciled | Remaining architecture narratives reconciled and implementation follows accepted ADRs |
 | Decision governance | Canonical register and standards approval record established | Remaining product/specialist/operational decisions have explicit outcomes |
-| Phase P00 specification | Product Owner and initial-increment approvals recorded; completion report ready; phase in review | Independent review |
+| Phase P00 specification | P00 completion evidence and APPR-P00-001/002 recorded; phase approved | Closed; preserve evidence and change control |
 | Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
 | Requirements traceability | Repository matrix, ID convention and P00–P12 matrices present; identifier/internal-link validation passes; implementation evidence remains `NOT_RUN` | Human review and ongoing maintenance during implementation |
-| Module/phase documentation completion | P00–P12 phase/module/prompt set, cross-phase review and inventory evidence complete | Grouped specification approvals |
+| Module/phase documentation completion | P00–P12 phase/module/prompt set, cross-phase review, inventory evidence and Packets A–G approval complete | Maintain under change control during implementation |
 | Agent/quality/deployment governance | Role charters, DoD, coding/performance/release standards and deployment indexes/templates added | Human review and implementation-derived values/evidence later |
 
 ## 5. Current Blockers
 
-- P00-EV-013 independent review and initial-increment scope disposition remain outstanding; Product Owner P00 approval is recorded, and P01 implementation remains unauthorized.
+- P01 implementation remains unauthorized until APPR-P01-001 names a bounded task, manifest, scope, reviewers and evidence requirements.
 - Deployment, recovery and production-operational specifications are drafted; provider/topology/service targets, executable evidence and all production authorizations remain open.
 - Product, finance, UAE regulatory, provider, region/residency, retention, RPO/RTO, and API-support decisions remain open where recorded.
 - P02 commercial policies and provider selection remain unresolved; the P02 specifications require undecided flows to stay disabled and do not block later-phase documentation drafting.
@@ -103,9 +103,9 @@ See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 6. Next Recommended Action
 
-Begin independent/human review of `FINAL_DOCUMENTATION_COMPLETION_REPORT.md` and `SPECIFICATION_APPROVAL_PACKETS.md`, starting with Packet A and APPR-P00-001. Documentation drafting/validation is complete for the approved inventory; the overall goal awaits review/approval and implementation remains unauthorized.
+Close the documentation goal. Start a separate goal for the first bounded P01 task only after the Product Owner grants APPR-P01-001 with the exact task ID, manifest/version, scope, tests, reviewers, permissions and evidence requirements.
 
-Application work remains blocked by the P00 exit gate and explicit P01 authorization. Phase/module documentation drafting may continue without waiting.
+Application work remains blocked by explicit P01 authorization, not by documentation completeness.
 
 ## 7. Change Log
 
@@ -136,3 +136,4 @@ Application work remains blocked by the P00 exit gate and explicit P01 authoriza
 | 29 October 2026 | Completed Batch G: P10–P12 phase/module/traceability/prompt packages plus provider-neutral deployment, infrastructure/configuration, backup/recovery, monitoring, incident, release, capacity, operations, evidence and launch specifications; production remains unauthorized. |
 | 29 October 2026 | Added UAE-EINV-010 and ARCH-PINT-AE-001 from the OpenPeppol `2025-Q2` publication; reconciled P04 mapping, UBL, code-list, shared/AE Schematron, provider and test contracts without approving that release or Self-Billing for implementation. |
 | 29 October 2026 | Completed the master-directive A–J completion audit, reconciled stale P01/completion-plan status, reran deterministic validators, and recorded qualified external-link evidence; named human/independent approvals remain. |
+| 29 October 2026 | Recorded Product Owner approval of APPR-P00-001/Packet A and Packets B–G against the validated documentation snapshot; marked P00 and the documentation goal complete while preserving all implementation, specialist, provider, deployment and launch gates. |

@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P07-TRACE-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED VERIFICATION BASELINE — APPLICATION TESTS NOT RUN |
 | Test status | All tests `NOT_RUN` until implementation evidence exists |
 
 ## 1. Traceability

@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-AUDIT-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning Phase | P01 |
 | Django App | `audit` |
 | Domain Owner | Security/business audit-event persistence and recording contract |

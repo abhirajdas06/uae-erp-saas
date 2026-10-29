@@ -22,19 +22,19 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 
 | Phase | Name | Status | Authorization | Evidence / Blocker |
 |---|---|---|---|---|
-| P00 | Foundation and Architecture | IN_REVIEW | Product Owner P00 approval and APPR-P00-002 initial-increment approval recorded; no P01 application authorization | P00-EV-013 is ready for independent review; APPR-P00-001 remains before formal exit |
-| P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification, full traceability, bounded prompts and isolation matrix present; depends on P00 exit and explicit implementation authorization |
-| P02 | Subscription Engine | PLANNED | Not authorized | Depends on P01 and approved entitlement/commercial rules |
-| P03 | CRM, Sales and Basic Invoicing | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | P03 phase, three module specifications, 156-test matrix, and prompt pack drafted; implementation depends on P01/P02 contracts and APPR-P03-001–003 |
-| P04 | UAE E-Invoicing Integration | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated regulatory register, phase/module/provider contract, 144-test matrix and prompt pack drafted; APPR-P04-001–003 precede dependent implementation |
-| P05 | Accounting and UAE VAT | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, Accounting/VAT modules, 180-test matrix and prompt pack drafted; APPR-P05-001–003 precede dependent implementation |
-| P06 | Procurement and Inventory | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, Procurement/Inventory modules, 170-test matrix and prompts drafted; APPR-P06-001–004 precede dependent implementation |
-| P07 | HRMS and Payroll | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated employment/payroll/WPS baseline, phase, HRMS/Payroll modules, 196-test matrix and prompts drafted; APPR-P07-001–005 precede dependent implementation |
-| P08 | Projects, Expenses and Fixed Assets | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, three modules, 175-test matrix and prompts drafted; APPR-P08-001–005 precede dependent implementation |
-| P09 | Banking and Advanced Finance | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated banking/payment source register, provider-neutral contract, module, 180-test matrix and prompts drafted; Mode A recommended and APPR-P09-001–006 gate implementation/activation |
-| P10 | Reporting, Analytics and Integrations | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, two modules, 175-test matrix and prompts drafted; report/provider approvals precede implementation/activation |
-| P11 | Enterprise Readiness | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, enterprise-administration capability, 165-test matrix and prompts drafted; requires a candidate launch implementation and policy approvals |
-| P12 | Production Launch and Operations | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, 180-test matrix, prompts and complete deployment/operations specification set drafted; no provider, spend, provisioning, deployment or launch authorized |
+| P00 | Foundation and Architecture | APPROVED | No P01 application authorization | APPR-P00-001 and P00-EV-013 verified; Product Owner approval and recorded independent reviews close P00 |
+| P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification, traceability, bounded prompts and isolation matrix approved; APPR-P01-001 remains mandatory |
+| P02 | Subscription Engine | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet B approved; entitlement/commercial policies and implementation authorization remain separate |
+| P03 | CRM, Sales and Basic Invoicing | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet C approved; APPR-P03-001–003 and predecessor implementation contracts remain |
+| P04 | UAE E-Invoicing Integration | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet D approved; provider, applicability, specialist and conformance gates remain |
+| P05 | Accounting and UAE VAT | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet D approved; finance/tax policy and implementation gates remain |
+| P06 | Procurement and Inventory | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet E approved; ownership, inventory and valuation decisions remain |
+| P07 | HRMS and Payroll | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet E approved; employment, payroll, WPS and privacy decisions remain |
+| P08 | Projects, Expenses and Fixed Assets | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet F approved; domain and finance policies remain |
+| P09 | Banking and Advanced Finance | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet F approved; Mode A remains recommended and all connectivity/payment activation is separately gated |
+| P10 | Reporting, Analytics and Integrations | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet G approved; report catalogue/provider decisions remain |
+| P11 | Enterprise Readiness | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet G approved; candidate implementation and operating-policy evidence remain prerequisites |
+| P12 | Production Launch and Operations | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet G approved; no provider, spend, provisioning, deployment or launch authorization granted |
 
 ## 4. P00 Exit Evidence Required
 
@@ -76,3 +76,4 @@ Current P00 planning evidence:
 | 29 October 2026 | Drafted Batch F P08/P09 phase/module/traceability/prompt packages, provider-neutral banking contract and dated banking/payment source register; implementation and regulated connectivity remain unauthorized. |
 | 29 October 2026 | Drafted Batch G P10–P12 phase/module/traceability/prompt packages and deployment, recovery, monitoring, incident, release, capacity, runbook and evidence specifications; production remains unauthorized. |
 | 29 October 2026 | Completed P00–P12 cross-phase review, P01 full traceability/prompts, stable Sales requirements, current PINT AE 1.0.4 evidence/mapping and grouped specification approval packets; no implementation authorization granted. |
+| 29 October 2026 | Recorded Product Owner approval of APPR-P00-001/Packet A and Packets B–G; P00 is approved and P01–P12 specification baselines are approved, while all implementation, specialist, provider, production and launch gates remain separate. |

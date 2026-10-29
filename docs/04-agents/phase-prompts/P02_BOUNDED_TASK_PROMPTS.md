@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P02-PROMPTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 | Use with | `IMPLEMENTATION_TASK_PROMPT_TEMPLATE.md` and `P02_SUBSCRIPTION_ENGINE.md` |
 
 These are task bodies, not implementation authorization. The orchestrator must add the authorization reference, exact repository scope, current commit, commands, reviewers, evidence locations, and unresolved decisions before dispatch.

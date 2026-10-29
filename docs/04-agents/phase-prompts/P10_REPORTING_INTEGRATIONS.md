@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P10-ORCH-001 |
-| Status | READY FOR REVIEW; NOT IMPLEMENTATION AUTHORIZATION |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 
 Orchestrate only an authorized P10-SPEC-001 task. Read `AGENTS.md`, REP/INT requirements, REPORTING/INTEGRATIONS, P10-TRACE-001, API/event/file/secret/audit architecture and decisions/risks.
 

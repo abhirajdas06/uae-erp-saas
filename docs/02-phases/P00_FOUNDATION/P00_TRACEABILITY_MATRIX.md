@@ -47,9 +47,9 @@ Application verification remains `NOT_RUN` until an authorized implementation ta
 | P00-AC-012 | PRD-003, PRD-004 | ADR-015 | SEC-001, SEC-015 | TST-001, TST-016 | Manifest schema/specification and validation evidence | Governance / DevOps | SATISFIED |
 | P00-AC-013 | NFR-002, NFR-008; DEP-003 | ADR-015, ADR-016, ADR-017 | SEC-011, SEC-015, SEC-016 | CI/release gates; TST-015, TST-016 | Initial CI run or explicit approved P00 exception | QA / DevOps | SATISFIED |
 | P00-AC-014 | PRD-003; TEN-001, TEN-002, TEN-003; IAM-001, IAM-002, IAM-003, IAM-004, IAM-005 | ADR-001, ADR-002, ADR-003, ADR-004, ADR-005, ADR-006, ADR-014, ADR-015 | SEC-001, SEC-002, SEC-003, SEC-004, SEC-005 | TST-001, TST-003, TST-004, TST-005, TST-006 | Bounded P01 specification and task/evidence map | Product / Architecture / Security / QA | SATISFIED |
-| P00-AC-015 | TEN-002, TEN-003; IAM-003, IAM-004, IAM-005; NFR-006, NFR-009 | ADR-002, ADR-003, ADR-004, ADR-005, ADR-011, ADR-014, ADR-017 | SEC-002, SEC-003, SEC-004, SEC-005, SEC-011, SEC-014 | TST-003, TST-004, TST-005, TST-006, TST-010, TST-014, TST-015, TST-016 | Critical finding/decision review showing no P01 blocker | Security / Architecture | PARTIAL |
-| P00-AC-016 | PRD-004 | ADR-015, ADR-018 | SEC-001, SEC-012 | TST-001; evidence format | Complete P00 evidence index and independent review | QA / Governance | PARTIAL |
-| P00-AC-017 | PRD-003; DEP-003; Roadmap §5.4 | ADR-015, ADR-016 | SEC-001, SEC-016 | Production/phase gate rules | Explicit P00 exit approval and separate P01 authorization | Product Owner | PARTIAL |
+| P00-AC-015 | TEN-002, TEN-003; IAM-003, IAM-004, IAM-005; NFR-006, NFR-009 | ADR-002, ADR-003, ADR-004, ADR-005, ADR-011, ADR-014, ADR-017 | SEC-002, SEC-003, SEC-004, SEC-005, SEC-011, SEC-014 | TST-003, TST-004, TST-005, TST-006, TST-010, TST-014, TST-015, TST-016 | Critical finding/decision review showing no P01 blocker | Security / Architecture | SATISFIED |
+| P00-AC-016 | PRD-004 | ADR-015, ADR-018 | SEC-001, SEC-012 | TST-001; evidence format | Complete P00 evidence index and independent review | QA / Governance | SATISFIED |
+| P00-AC-017 | PRD-003; DEP-003; Roadmap §5.4 | ADR-015, ADR-016 | SEC-001, SEC-016 | Production/phase gate rules | Explicit P00 exit approval with P01 authorization kept separate | Product Owner | SATISFIED |
 
 ## 4. Product Requirement Control Matrix
 
@@ -141,7 +141,7 @@ This section covers product requirements that establish foundation controls or l
 | P00-EV-010 | Manifest schema and validation evidence | Governance / DevOps | VERIFIED | Yes |
 | P00-EV-011 | Initial CI execution or approved exception | QA / DevOps | VERIFIED | Yes |
 | P00-EV-012 | Bounded P01 specification | Product / Architecture / Security / QA | VERIFIED | Yes |
-| P00-EV-013 | P00 completion and independent review report | Governance / Reviewers | READY_FOR_REVIEW | Yes |
+| P00-EV-013 | P00 completion and independent review report | Governance / Reviewers | VERIFIED | Yes |
 | P00-EV-014 | Product Owner P00 exit approval | Product Owner | APPROVED | Yes |
 | P00-EV-015 | Separate P01 implementation authorization | Product Owner | NOT_STARTED | Yes |
 
@@ -157,7 +157,7 @@ This section covers product requirements that establish foundation controls or l
 | P00-GAP-006 | Bounded P01 specification and tenant-isolation matrix | Product / Architecture / Security / QA / Database / DevOps | Resolved for specification | Approved on 28 October 2026; all tests remain `NOT_RUN` and implementation is not authorized |
 | P00-GAP-007 | Requirement-to-test evidence is design-level because application implementation has not started | QA | P01 and later exits | Populate executed evidence only through authorized tasks |
 | P00-GAP-008 | Operational objectives, retention, providers, finance policies, and regulatory details remain open | Named decision owners | Later phase/production gates | Resolve by required-by phase; do not invent values |
-| P00-GAP-009 | Independent P00 completion and P00-AC-015 review | Architecture / Security / QA / DevOps | P00 exit | Approve or reject P00-EV-013 using APPR-P00-001 |
+| P00-GAP-009 | Independent P00 completion and P00-AC-015 review | Architecture / Security / QA / DevOps | Resolved | APPR-P00-001 approved Packet A and accepted the recorded independent review evidence on 29 October 2026 |
 | P00-GAP-010 | Initial implementation increment prerequisite is not explicitly reconciled with open DEC-PROD-001 | Product Owner | Resolved | APPR-P00-002 approved bounded P01 as the initial implementation increment while DEC-PROD-001 remains open for commercial pilot planning |
 
 ## 9. Validation Rules

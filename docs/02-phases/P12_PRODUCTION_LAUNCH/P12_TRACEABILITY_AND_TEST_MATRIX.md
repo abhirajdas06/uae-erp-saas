@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P12-TRACE-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED VERIFICATION BASELINE — APPLICATION TESTS NOT RUN |
 | Evidence status | All production evidence `PLANNED`; no launch is authorized |
 
 ## 1. Traceability

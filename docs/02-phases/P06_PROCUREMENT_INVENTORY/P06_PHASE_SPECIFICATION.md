@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P06-SPEC-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Implementation authorization | NOT GRANTED |
 
 ## 1. Objective and Authority

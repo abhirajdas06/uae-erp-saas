@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-CORE-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning Phase | P01 |
 | Django App | `core` |
 | Commercial Module | No |

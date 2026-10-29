@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P12-PROMPTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED PROMPT BASELINE — NO PRODUCTION AUTHORIZATION |
 
 Every task requires explicit authorization appropriate to rehearsal, infrastructure spend/provisioning, production deployment or launch. Never infer broader authority.
 

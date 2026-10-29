@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-CRM-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning Phase | P03 |
 | Django App | `crm` |
 | Domain Owner | Customer Relationship Management |

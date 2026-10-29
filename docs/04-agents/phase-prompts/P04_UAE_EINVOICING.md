@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P04-ORCH-001 |
-| Status | READY FOR REVIEW; NOT IMPLEMENTATION AUTHORIZATION |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 
 ## Mission
 

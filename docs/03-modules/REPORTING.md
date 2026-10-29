@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-REPORTING-001 |
-| Status | READY FOR REVIEW — REPORT CATALOGUE APPROVAL REQUIRED |
+| Status | APPROVED SPECIFICATION — REPORT CATALOGUE APPROVAL REQUIRED |
 | Owning phase / app | P10 / `reporting` |
 
 ## 1. Purpose and Boundary

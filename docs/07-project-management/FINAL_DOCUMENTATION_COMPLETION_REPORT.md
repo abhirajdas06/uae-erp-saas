@@ -4,8 +4,8 @@
 |---|---|
 | Document ID | GOV-COMPLETE-001 |
 | Date | 29 October 2026 |
-| Status | READY FOR HUMAN/INDEPENDENT REVIEW — GOAL AWAITING APPROVALS |
-| Repository baseline | `e5cc69a9e05f752449db32b82c6cbf9aba6c7904` plus uncommitted documentation working tree |
+| Status | COMPLETE — APPROVED DOCUMENTATION BASELINE |
+| Repository baseline | `de1fc3c7248318ebb96f62c0d263bec88d0d00a2` plus the approval-record working tree |
 | Implementation authorization | NOT GRANTED |
 
 ## Completed
@@ -34,15 +34,15 @@
 | External URL probe | 112 unique URLs assessed; 90 were reachable by the automated probe | 22 were automation-unresolved because of anti-bot responses, timeouts or access controls. They are neither marked verified nor declared broken and require dated revalidation by the owning phase/release |
 | `git diff --check` | PASS | LF/CRLF conversion warnings only |
 | Independent documentation/quality/DevOps/architecture audits | COMPLETE | High-priority P01 evidence-link finding corrected |
+| Final P00 local gate suite after approval update | PASS: manifest, documentation, governance, secret-scan and seven validator tests; artifact-set SHA-256 `b25deb97d8aff0a5469e4279e72962f1feb5776d1cb14cd202b259637da32b8c` | Local execution; hosted CI evidence remains the separately recorded run 40647091699 |
 
 These checks do not prove application behavior, provider acceptance, security certification, recovery performance or UAE compliance. Application/provider/operational tests remain `NOT_RUN` until authorized implementation/rehearsal.
 
-## Pending Approvals
+## Remaining Post-Documentation Gates
 
-1. **Packet A / APPR-P00-001:** Product Owner plus Architecture/Security/QA/DevOps reviewers review P00/P01 baseline and P00 completion evidence. Record reviewer, date, commit/evidence digests and findings. This blocks formal P00 exit.
-2. **APPR-P01-001:** after P00 exit, the Product Owner names the exact P01 version, task(s), commit and reviewers. Example: `I authorize P01-T01 only against the approved P01 baseline; later tasks remain unauthorized.` This blocks application implementation.
-3. **Packets B–G:** use `SPECIFICATION_APPROVAL_PACKETS.md` in dependency order. Each example statement approves specifications only unless it expressly authorizes a bounded task.
-4. **Domain/regulatory/operations decisions:** use `DECISIONS_PENDING.md` for exact owner, evidence, recommendation, recording method and blocked scope—especially P04 PINT AE/TDD/ASP activation, P05 finance/VAT, P07 employment/payroll/WPS, P09 banking modes and DEC-OPS-001–005.
+1. **APPR-P01-001:** the Product Owner must name the exact P01 task, manifest version, file scope, reviewers and evidence requirements. Example: `I authorize P01-T01 only against the approved P01 baseline; later tasks remain unauthorized.` This blocks application implementation, not documentation completion.
+2. **Domain/regulatory/operations decisions:** use `DECISIONS_PENDING.md` for exact owner, evidence, recommendation, recording method and blocked scope—especially P04 PINT AE/TDD/ASP activation, P05 finance/VAT, P07 employment/payroll/WPS, P09 banking modes and DEC-OPS-001–005.
+3. **Production authority:** provider selection, spending, provisioning, production deployment and commercial launch remain explicitly unapproved.
 
 No agent may record these approvals for the named human or specialist.
 
@@ -55,6 +55,4 @@ No agent may record these approvals for the named human or specialist.
 
 ## Next Recommended Step
 
-Perform independent/human review of this report and grouped approval packets, beginning with Packet A and APPR-P00-001. Routine documentation corrections can continue, but application implementation remains unauthorized.
-
-After documentation approval and formal P00 exit, create a separate goal for the first explicitly authorized foundation/P01 task. Do not transition automatically under this goal.
+Close this documentation goal. The next separate goal should prepare and, only after explicit APPR-P01-001 authorization, implement the first bounded P01 foundation task. Do not transition automatically under this goal.

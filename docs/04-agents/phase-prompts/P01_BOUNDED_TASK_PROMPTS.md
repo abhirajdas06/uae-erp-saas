@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P01-PROMPTS-001 |
-| Status | READY FOR REVIEW — IMPLEMENTATION NOT AUTHORIZED |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 | Governing specification | [P01-SPEC-001](../../02-phases/P01_CORE_PLATFORM/P01_PHASE_SPECIFICATION.md) |
 | Verification baseline | [P01-TEN-TEST-001](../../02-phases/P01_CORE_PLATFORM/P01_TENANT_ISOLATION_TEST_MATRIX.md) |
 

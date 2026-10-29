@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-EXPENSES-001 |
-| Status | READY FOR REVIEW — EXPENSE/REIMBURSEMENT POLICY REQUIRED |
+| Status | APPROVED SPECIFICATION — EXPENSE/REIMBURSEMENT POLICY REQUIRED |
 | Owning phase / app | P08 / `expenses` |
 
 ## 1. Purpose and Boundary

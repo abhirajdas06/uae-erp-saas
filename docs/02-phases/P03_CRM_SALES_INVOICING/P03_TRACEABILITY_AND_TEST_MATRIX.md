@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P03-TRACE-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED VERIFICATION BASELINE — APPLICATION TESTS NOT RUN |
 | Governing Phase | [P03-SPEC-001](P03_PHASE_SPECIFICATION.md) |
 | Test Status | All tests `NOT_RUN` until implementation evidence exists |
 

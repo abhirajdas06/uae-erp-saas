@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P06-PROMPTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 
 Every prompt requires an authorized manifest with exact policy versions, commit/files, migrations, tests, reviewers and evidence paths.
 

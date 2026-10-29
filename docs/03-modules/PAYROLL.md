@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-PAYROLL-001 |
-| Status | READY FOR REVIEW — PAYROLL/WPS POLICY REQUIRED |
+| Status | APPROVED SPECIFICATION — PAYROLL/WPS POLICY REQUIRED |
 | Owning phase / app | P07 / `payroll` |
 
 ## 1. Purpose and Boundaries

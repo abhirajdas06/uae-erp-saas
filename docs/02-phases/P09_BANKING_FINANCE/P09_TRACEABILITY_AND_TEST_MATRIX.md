@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P09-TRACE-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED VERIFICATION BASELINE — APPLICATION TESTS NOT RUN |
 | Regulatory evidence cut-off | 29 October 2026 |
 | Test status | All tests `NOT_RUN` until implementation evidence exists |
 

@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P04-SPEC-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — PROVIDER/SPECIALIST ACTIVATION GATES REMAIN |
 | Phase | P04 |
 | Regulatory cut-off | 29 October 2026 |
 | Implementation authorization | NOT GRANTED |

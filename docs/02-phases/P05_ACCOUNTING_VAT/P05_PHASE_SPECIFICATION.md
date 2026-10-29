@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P05-SPEC-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — FINANCE/TAX POLICY GATES REMAIN |
 | Phase | P05 |
 | Regulatory cut-off | 29 October 2026 |
 | Implementation authorization | NOT GRANTED |

@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P03-PROMPTS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED PROMPT BASELINE — IMPLEMENTATION NOT AUTHORIZED |
 | Use with | `IMPLEMENTATION_TASK_PROMPT_TEMPLATE.md` and `P03_CRM_SALES_INVOICING.md` |
 
 These task bodies are not implementation authorization. The orchestrator adds the explicit authorization, exact commit/file scope, current decisions, commands, reviewers, evidence locations, and prohibited paths before dispatch.

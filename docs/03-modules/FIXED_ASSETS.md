@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-FIXED-ASSETS-001 |
-| Status | READY FOR REVIEW — ASSET/DEPRECIATION POLICY REQUIRED |
+| Status | APPROVED SPECIFICATION — ASSET/DEPRECIATION POLICY REQUIRED |
 | Owning phase / app | P08 / `fixed_assets` |
 
 ## 1. Purpose and Boundary

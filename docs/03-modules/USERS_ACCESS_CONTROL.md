@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | MOD-USERS-001 |
-| Status | READY FOR REVIEW |
+| Status | APPROVED SPECIFICATION — IMPLEMENTATION NOT AUTHORIZED |
 | Owning Phase | P01 |
 | Django App | `users` |
 | Domain Owner | User identity, authentication, roles, permissions, and membership-role assignment |
