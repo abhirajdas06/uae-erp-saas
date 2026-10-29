@@ -82,6 +82,13 @@ An entry marked `RECOMMENDED` or linked to a `PROPOSED` ADR is not approved. App
 | DEC-INT-002 | UAE e-invoicing ASP and exact contracted technical/operational capabilities | OPEN | Product / Security / Legal / Finance / Operations | Provider-dependent P04 implementation and activation |
 | DEC-FIN-005 | P05 legal-entity, chart, functional/multi-currency, posting, reversal, close/reopen and opening-balance policy | OPEN | Product / Finance / Architecture | P05 accounting schema and posting implementation |
 | DEC-TAX-001 | P05 supported UAE VAT treatments, evidence, calculations, rounding, corrections, periods and workpaper mappings | OPEN | Product / Finance / qualified UAE Tax reviewer | P05 VAT schema, calculation and reporting activation |
+| DEC-P06-001 | P06 supplier/item ownership and purchasing document scope | OPEN | Product / Architecture / Procurement and Inventory Owners | P06 schema/workflows |
+| DEC-INV-001 | UOM, negative-stock, reservation, count/adjustment and backdate policy | OPEN | Product / Operations / Finance | Inventory movement implementation |
+| DEC-INV-002 | Inventory costing/valuation, corrections and Accounting/VAT mappings | OPEN | Finance / Tax / Architecture / Operations | Valuation and financial posting |
+| DEC-HR-001 | Supported employer jurisdiction, employee/work-pattern categories and HR/leave rules | OPEN | Product / HR / qualified UAE Legal | P07 HRMS/leave implementation |
+| DEC-PAY-001 | Payroll components, proration, rounding, retroactivity, corrections, end-of-service and pension cohorts | OPEN | Product / HR / Finance / qualified UAE Payroll/Legal | Payroll schema/calculation |
+| DEC-PAY-002 | WPS applicability, bank/agent, technical contract and status/reconciliation meanings | OPEN | Product / Finance / Security / Legal / Operations | WPS export/integration |
+| DEC-PRIV-001 | Employee/payroll data classification, lawful basis, notices, access, retention, transfer and deletion policy | OPEN | Product / Privacy / Legal / Security | Production employee data handling |
 | DEC-OPS-001 | Hosting region and data-residency requirements | OPEN | Product / Legal / Security / DevOps | Production infrastructure selection |
 | DEC-OPS-002 | Availability, backup RPO, and recovery RTO | OPEN | Product / DevOps | Production architecture approval |
 | DEC-DATA-002 | Retention, deletion, legal hold, and tenant-level recovery policy | OPEN | Legal / Compliance / Security | Production handling of customer data |
@@ -113,7 +120,23 @@ An entry marked `RECOMMENDED` or linked to a `PROPOSED` ADR is not approved. App
 | APPR-P05-003 / DEC-TAX-001 | Approve bounded UAE VAT policy | Qualified UAE Tax reviewer plus Finance/Product | REG-SRC-001 and operative legislation/guidance; alternatives are disabled VAT or fewer supported treatments | Enable only reviewed transaction types/treatments with exact calculation/rounding/evidence/workpaper versions | Sign/version VAT policy with source IDs/checksums, effective date, examples, exclusions and reviewer/date | VAT schema/calculation/report activation |
 | APPR-P05-004 | Approve P05 exit and separately production accounting/VAT scope | Product Owner after Finance/Tax/Security/Database/Operations/independent QA review | P05-EV-001–015, reconciliations and risks; alternatives are conditional or accounting-only exit | Approve exact enabled scope; keep filing/payment outside unless separately authorized | Add exact exit/production statement, evidence commit/artifacts, limitations, monitoring and rollback | P05 exit / production scope |
 
-## 8. Decision Recording Requirements
+## 8. Actionable P06 and P07 Approvals
+
+| Approval | Exact decision required | Authorized approver/reviewer | Evidence and alternatives | Recommendation and consequences | Recording action | Blocks |
+|---|---|---|---|---|---|---|
+| APPR-P06-001 | Approve/revise bounded P06 implementation scope | Product Owner after Architecture/Finance/Operations/Security review | P06-SPEC/TRACE and Procurement/Inventory specs; alternative is procurement-only or stock-without-valuation increment | Approve bounded scope with advanced/unapproved tracking and valuation disabled | “I approve P06-SPEC-001 as the bounded P06 implementation scope, subject to its named gates.” | P06 implementation |
+| APPR-P06-002 / DEC-P06-001 | Supplier/item ownership and requisition/PO/receipt/bill/return scope | Product/Architecture/Operations | P03 Sales item boundary and P06 specs; alternatives include shared product master or hard Inventory dependency | Inventory owns stock items with versioned Sales mapping; Procurement owns supplier/purchase intent | Versioned ownership/workflow decision with approvers/date and reconciled contracts | Schema/workflows |
+| APPR-P06-003 / DEC-INV-001 | UOM, negative, reservation, adjustment/count/backdate behavior | Product/Operations/Finance | P06 specs and operational scenarios; alternative is narrower movement-only scope | Enable only precise reviewed behaviors; default advanced/negative behavior disabled | Versioned inventory-control policy with fixtures, limits, approvers/date | Movement activation |
+| APPR-P06-004 / DEC-INV-002 | Costing/valuation and Accounting/VAT contracts | Finance/Tax/Architecture/Operations | ADR-011/013, P05/P06 contracts; alternatives include quantity-only first increment | Defer value/posting until method, precision, cutoff and corrections are approved | Versioned valuation/posting policy and reconciliation examples | Valuation/posting |
+| APPR-P06-005 | Phase exit and separate production inventory scope | Product Owner after independent reviews | P06-EV-001–014 and risks; alternatives are conditional or quantity-only exit | Name enabled items/warehouses/features, limitations, monitoring and rollback | Exact exit and separate activation statements with evidence commit/artifacts | Exit/production |
+| APPR-P07-001 | Approve/revise bounded P07 implementation scope | Product Owner after HR/Finance/Security/Architecture review | P07-SPEC/TRACE and HRMS/Payroll specs; alternative is HRMS-only foundation | Approve bounded MoHRE-private-sector candidate scope with all regulated behavior gated | “I approve P07-SPEC-001 as the bounded P07 implementation scope, subject to its named gates.” | P07 implementation |
+| APPR-P07-002 / DEC-HR-001 | Employer/employee applicability and employment/leave rules | Product/HR/qualified UAE Legal | REG-HR-001 operative sources/checksums; alternatives are narrower employee categories or HR master without calculated leave | Start MoHRE private-sector only; keep government/domestic/free-zone-specific rules excluded | Signed/versioned HR ruleset with sources, effective dates, categories, exclusions and reviewer/date | HR/leave schema/activation |
+| APPR-P07-003 / DEC-PAY-001 | Payroll/end-of-service/pension calculation policy | Product/HR/Finance/qualified UAE Payroll/Legal | REG-HR-001, payroll fixtures and pension-cohort evidence; alternative is non-statutory draft payroll only | Enable only reviewed components/categories; defer end-of-service/pension where authority/cohort unresolved | Signed/versioned payroll policy with formulas, precision, examples, sources and reviewers | Payroll calculation |
+| APPR-P07-004 / DEC-PAY-002 | WPS applicability, provider and exact technical/status contract | Product/Finance/Security/Legal/Operations | MoHRE/CBUAE sources, current agent/bank SIF/responses, security/SLA/support; alternatives are secure export-only or no WPS | Select only after exact contract and test evidence; never equate export/upload to settlement | Dated provider-contract record naming employer scope, agent, versions, credentials, statuses, limitations and approvers | WPS export/integration |
+| APPR-P07-005 / DEC-PRIV-001 | Employee/payroll privacy and retention policy | Privacy/Legal/Security/Product | REG-HR-001, ADR-018/019 and data inventory; alternatives include narrower fields/retention/export scope | Apply purpose/field access, minimization and category retention; exclude biometrics initially | Signed data-classification/processing/retention/transfer policy with reviewer/date | Production employee data |
+| APPR-P07-006 | Phase exit and separate production payroll/WPS scope | Product Owner after specialist and independent reviews | P07-EV-001–015 and risks; alternatives are HRMS-only/conditional/no-WPS exit | Name employer/employee categories, rulesets, WPS environment, limitations and rollback | Exact exit and separate activation statements with evidence commit/artifacts | Exit/production |
+
+## 9. Decision Recording Requirements
 
 Every resolved entry must record:
 
@@ -126,7 +149,7 @@ Every resolved entry must record:
 
 Detailed decision inventories currently embedded in product and architecture documents will be mapped into this register incrementally as their owning documentation unit is reviewed. Their presence does not constitute approval.
 
-## 9. Decision Log
+## 10. Decision Log
 
 | Date | Decision ID | Outcome | Approved by | Notes |
 |---|---|---|---|---|

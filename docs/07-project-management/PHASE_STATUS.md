@@ -28,8 +28,8 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 | P03 | CRM, Sales and Basic Invoicing | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | P03 phase, three module specifications, 156-test matrix, and prompt pack drafted; implementation depends on P01/P02 contracts and APPR-P03-001–003 |
 | P04 | UAE E-Invoicing Integration | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated regulatory register, phase/module/provider contract, 144-test matrix and prompt pack drafted; APPR-P04-001–003 precede dependent implementation |
 | P05 | Accounting and UAE VAT | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, Accounting/VAT modules, 180-test matrix and prompt pack drafted; APPR-P05-001–003 precede dependent implementation |
-| P06 | Procurement and Inventory | PLANNED | Not authorized | Depends on accounting and inventory policy decisions |
-| P07 | HRMS and Payroll | PLANNED | Not authorized | Payroll, privacy, and employment requirements unresolved |
+| P06 | Procurement and Inventory | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, Procurement/Inventory modules, 170-test matrix and prompts drafted; APPR-P06-001–004 precede dependent implementation |
+| P07 | HRMS and Payroll | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated employment/payroll/WPS baseline, phase, HRMS/Payroll modules, 196-test matrix and prompts drafted; APPR-P07-001–005 precede dependent implementation |
 | P08 | Projects, Expenses and Fixed Assets | PLANNED | Not authorized | Depends on accounting and approval workflow decisions |
 | P09 | Banking and Advanced Finance | PLANNED | Not authorized | Banking integration and reconciliation scope unresolved |
 | P10 | Reporting, Analytics and Integrations | PLANNED | Not authorized | Depends on stable domain and authorization contracts |
@@ -72,3 +72,4 @@ Current P00 planning evidence:
 | 28 October 2026 | Recorded APPR-P00-002: bounded P01 Core Platform and Multi-Tenancy is the initial implementation increment; DEC-PROD-001 remains open for commercial pilot planning. |
 | 29 October 2026 | Drafted the complete P03 phase/module/traceability/prompt batch; P03 remains unapproved and implementation is not authorized. |
 | 29 October 2026 | Drafted the dated UAE regulatory-source register and complete P04/P05 regulated-finance documentation batches; both phases remain unapproved and implementation is not authorized. |
+| 29 October 2026 | Drafted Batch E P06/P07 phase/module/traceability/prompt packages and the dated UAE employment/payroll/WPS source baseline; implementation remains unauthorized. |

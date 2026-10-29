@@ -56,8 +56,8 @@ Every module specification must define:
 | P03 | CRM, Sales, Invoicing | CRM, SALES, INVOICING | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW |
 | P04 | UAE E-Invoicing | E_INVOICING and provider contract | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; provider/applicability approvals remain |
 | P05 | Accounting and UAE VAT | ACCOUNTING, VAT | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; finance/tax policy approvals remain |
-| P06 | Procurement and Inventory | PROCUREMENT, INVENTORY | Missing | Missing | Not started |
-| P07 | HRMS and Payroll | HRMS, PAYROLL | Missing | Missing | Not started; UAE employment/payroll facts require verification |
+| P06 | Procurement and Inventory | PROCUREMENT, INVENTORY | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; ownership/inventory/valuation approvals remain |
+| P07 | HRMS and Payroll | HRMS, PAYROLL | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; employment/payroll/WPS/privacy approvals remain |
 | P08 | Projects, Expenses, Assets | PROJECTS, EXPENSES, FIXED_ASSETS | Missing | Missing | Not started |
 | P09 | Banking and Finance | BANKING and reconciliation | Missing | Missing | Not started; provider/scope decisions remain |
 | P10 | Reporting and Integrations | REPORTING, INTEGRATIONS | Missing | Missing | Not started |
@@ -145,6 +145,6 @@ Documentation completion is not implementation completion.
 
 ## 7. Current next action
 
-Complete Batch E as the next dependency-ready documentation unit: P06 Procurement/Inventory and P07 HRMS/Payroll phase specifications, four module specifications, traceability/test matrices and prompt packs. Begin with dated authoritative UAE employment/payroll/WPS and relevant inventory/customs/source assumptions; keep unverified statutory behavior disabled.
+Complete Batch F as the next dependency-ready documentation unit: P08 Projects/Expenses/Fixed Assets and P09 Banking/Advanced Finance phase specifications, four module specifications, traceability/test matrices and prompt packs. Add dated authoritative UAE banking/payment-provider evidence only where external regulated integrations are specified; keep unverified provider/statutory behavior disabled.
 
 The P01 bounded-task prompt pack and stable `SALES-*` product requirement identifiers remain documentation debts before their respective implementations. P00 independent-review administration may continue separately.
