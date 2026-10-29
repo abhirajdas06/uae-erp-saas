@@ -26,8 +26,8 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 | P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification and isolation matrix approved; depends on P00 exit, launch scope, and explicit implementation authorization |
 | P02 | Subscription Engine | PLANNED | Not authorized | Depends on P01 and approved entitlement/commercial rules |
 | P03 | CRM, Sales and Basic Invoicing | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | P03 phase, three module specifications, 156-test matrix, and prompt pack drafted; implementation depends on P01/P02 contracts and APPR-P03-001–003 |
-| P04 | UAE E-Invoicing Integration | PLANNED | Not authorized | Provider and regulatory validation unresolved |
-| P05 | Accounting and UAE VAT | PLANNED | Not authorized | Financial and tax decisions unresolved |
+| P04 | UAE E-Invoicing Integration | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Dated regulatory register, phase/module/provider contract, 144-test matrix and prompt pack drafted; APPR-P04-001–003 precede dependent implementation |
+| P05 | Accounting and UAE VAT | PLANNED — DOCUMENTATION READY FOR REVIEW | Not authorized | Phase, Accounting/VAT modules, 180-test matrix and prompt pack drafted; APPR-P05-001–003 precede dependent implementation |
 | P06 | Procurement and Inventory | PLANNED | Not authorized | Depends on accounting and inventory policy decisions |
 | P07 | HRMS and Payroll | PLANNED | Not authorized | Payroll, privacy, and employment requirements unresolved |
 | P08 | Projects, Expenses and Fixed Assets | PLANNED | Not authorized | Depends on accounting and approval workflow decisions |
@@ -71,3 +71,4 @@ Current P00 planning evidence:
 | 28 October 2026 | Prepared P00-EV-013, recorded Product Owner P00 approval as P00-EV-014, and moved P00 to IN_REVIEW; independent review and initial-increment scope disposition remain mandatory. |
 | 28 October 2026 | Recorded APPR-P00-002: bounded P01 Core Platform and Multi-Tenancy is the initial implementation increment; DEC-PROD-001 remains open for commercial pilot planning. |
 | 29 October 2026 | Drafted the complete P03 phase/module/traceability/prompt batch; P03 remains unapproved and implementation is not authorized. |
+| 29 October 2026 | Drafted the dated UAE regulatory-source register and complete P04/P05 regulated-finance documentation batches; both phases remain unapproved and implementation is not authorized. |

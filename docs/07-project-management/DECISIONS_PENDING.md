@@ -78,6 +78,10 @@ An entry marked `RECOMMENDED` or linked to a `PROPOSED` ADR is not approved. App
 | DEC-INT-001 | SaaS payment provider | OPEN | Product / Finance / Security | Payment integration implementation |
 | DEC-REG-001 | Current UAE e-invoicing applicability, effective requirements, and provider selection | OPEN | Product / Compliance / Architecture / Legal | P04 implementation and production release |
 | DEC-FIN-001 | Concrete precision/scale matrix, VAT rounding, exchange-rate source, and residual-allocation policies | OPEN | Finance / UAE Tax / Product / Architecture | Financial model migrations and calculation acceptance |
+| DEC-REG-002 | P04 supported document/applicability ruleset, PINT AE and mandatory-field/status-map versions | OPEN | Product / qualified UAE Tax and Legal / Integration | P04 schema, adapter mapping and submission activation |
+| DEC-INT-002 | UAE e-invoicing ASP and exact contracted technical/operational capabilities | OPEN | Product / Security / Legal / Finance / Operations | Provider-dependent P04 implementation and activation |
+| DEC-FIN-005 | P05 legal-entity, chart, functional/multi-currency, posting, reversal, close/reopen and opening-balance policy | OPEN | Product / Finance / Architecture | P05 accounting schema and posting implementation |
+| DEC-TAX-001 | P05 supported UAE VAT treatments, evidence, calculations, rounding, corrections, periods and workpaper mappings | OPEN | Product / Finance / qualified UAE Tax reviewer | P05 VAT schema, calculation and reporting activation |
 | DEC-OPS-001 | Hosting region and data-residency requirements | OPEN | Product / Legal / Security / DevOps | Production infrastructure selection |
 | DEC-OPS-002 | Availability, backup RPO, and recovery RTO | OPEN | Product / DevOps | Production architecture approval |
 | DEC-DATA-002 | Retention, deletion, legal hold, and tenant-level recovery policy | OPEN | Legal / Compliance / Security | Production handling of customer data |
@@ -96,7 +100,20 @@ An entry marked `RECOMMENDED` or linked to a `PROPOSED` ADR is not approved. App
 | APPR-P03-003 / DEC-FIN-004 | Approve concrete invoice/credit financial and document policies and effective dates | Product Owner plus Finance and qualified UAE Tax/Legal reviewers | `ERP_CUSTOMER_INVOICING.md`, ADR-011/013, current authoritative UAE source register when prepared; alternatives include restricting P03 to drafts or enabling only explicitly reviewed document types/currencies | Enable only reviewed policies; keep issue/correction/payment behaviors disabled otherwise, avoiding incorrect financial or legal behavior | Record versioned policy decisions and reviewer/date/source evidence in this register and the owning specifications | Invoice migrations/issuance and commercial pilot; not CRM documentation |
 | APPR-P03-004 | Approve P03 exit and, separately, any controlled pilot scope | Product Owner after independent QA/Security/Privacy/Database/Finance/UX/Operations review | P03-EV-001–014 and open-risk disposition; alternatives are reject, conditional exit with only waivable exceptions, or no pilot | Separate phase exit from pilot authorization; define enabled modules, tenants, dates, limitations, monitoring, and rollback authority | Add the exact exit/pilot statement, date, approver, evidence commit/artifacts, conditions, and expiry to `PHASE_STATUS.md` and this register | P03 exit/pilot and P04 implementation transition |
 
-## 7. Decision Recording Requirements
+## 7. Actionable P04 and P05 Approvals
+
+| Approval | Exact decision required | Authorized approver/reviewer | Evidence and alternatives | Recommendation and consequences | Recording action | Blocks |
+|---|---|---|---|---|---|---|
+| APPR-P04-001 | Approve or revise bounded P04 provider-neutral implementation scope | Product Owner after Architecture/Security/Finance review | P04-SPEC-001, P04-TRACE-001, module/contract specs; alternative is research/contracts only | Approve bounded scope with all unverified/provider-dependent flows disabled; enables later task authorization only | “I approve P04-SPEC-001 as the bounded P04 implementation scope, subject to its named gates.” Record date/approver | P04 implementation; not further documentation |
+| APPR-P04-002 / DEC-INT-002 | Select ASP and approve exact contract/capabilities | Product, Security, Legal, Finance, Operations | Current MoF listing snapshot; contract, privacy/security/data/SLA/exit and technical artefacts; alternatives are defer or assess another listed ASP | Select only after complete due diligence; provider-neutral work avoids premature lock-in | Create dated provider-selection record naming legal entity, services, versions, environments, limitations, evidence and approvers | Provider adapter, credentials, sandbox/production activation |
+| APPR-P04-003 / DEC-REG-001/002 | Approve applicability, dates, document types, fields/schema, statuses and retention policy | Qualified UAE Tax/Legal reviewers plus Product | REG-SRC-001, operative texts and checksummed PINT AE/mandatory-field/provider artefacts; alternative is disable affected flows | Approve an effective-dated bounded ruleset; never generalize beyond reviewed scope | Sign/version P04 policy record with source IDs/checksums, facts, exclusions, effective date, reviewer/date | P04 schema/mapping/submission activation |
+| APPR-P04-004 | Approve P04 exit and separately any production provider traffic | Product Owner after independent QA/Security/Privacy/Finance/Operations/regulatory review | P04-EV-001–014 and open risks; alternatives are reject, conditional exit, or sandbox-only | Separate exit from production activation and name tenants/documents/environment/rollback | Add exact exit and separate activation statements, evidence commit/artifacts, conditions and expiry | P04 exit / production traffic |
+| APPR-P05-001 | Approve or revise bounded P05 accounting/VAT implementation scope | Product Owner after Architecture/Finance/Security review | P05-SPEC-001, P05-TRACE-001 and module specs; alternative is accounting-only foundation | Approve ledger plus validated VAT-workpaper scope; keep filing/advanced finance excluded | “I approve P05-SPEC-001 as the bounded P05 implementation scope, subject to its named gates.” Record date/approver | P05 implementation |
+| APPR-P05-002 / DEC-FIN-001/005 | Approve concrete accounting/currency/period policy | Product Owner, Finance and Architecture | ADR-011/013, ACCOUNTING spec; alternatives include AED-only/no FX and narrower chart/dimensions | Start with explicitly approved functional currency and minimal policy; disable advanced FX/opening behavior until reviewed | Create versioned finance-policy record covering precision, chart, dimensions, source/posting/reversal, close/reopen, opening and FX scope | Accounting migrations/posting |
+| APPR-P05-003 / DEC-TAX-001 | Approve bounded UAE VAT policy | Qualified UAE Tax reviewer plus Finance/Product | REG-SRC-001 and operative legislation/guidance; alternatives are disabled VAT or fewer supported treatments | Enable only reviewed transaction types/treatments with exact calculation/rounding/evidence/workpaper versions | Sign/version VAT policy with source IDs/checksums, effective date, examples, exclusions and reviewer/date | VAT schema/calculation/report activation |
+| APPR-P05-004 | Approve P05 exit and separately production accounting/VAT scope | Product Owner after Finance/Tax/Security/Database/Operations/independent QA review | P05-EV-001–015, reconciliations and risks; alternatives are conditional or accounting-only exit | Approve exact enabled scope; keep filing/payment outside unless separately authorized | Add exact exit/production statement, evidence commit/artifacts, limitations, monitoring and rollback | P05 exit / production scope |
+
+## 8. Decision Recording Requirements
 
 Every resolved entry must record:
 
@@ -109,7 +126,7 @@ Every resolved entry must record:
 
 Detailed decision inventories currently embedded in product and architecture documents will be mapped into this register incrementally as their owning documentation unit is reviewed. Their presence does not constitute approval.
 
-## 8. Decision Log
+## 9. Decision Log
 
 | Date | Decision ID | Outcome | Approved by | Notes |
 |---|---|---|---|---|

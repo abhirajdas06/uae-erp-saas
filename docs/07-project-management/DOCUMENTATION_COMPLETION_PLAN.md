@@ -54,8 +54,8 @@ Every module specification must define:
 | P01 | Core Platform and Multi-Tenancy | CORE, TENANTS, USERS, AUDIT foundation | Complete | Orchestration prompt drafted; bounded task pack pending | Module specifications ready for review |
 | P02 | Subscription Engine | SUBSCRIPTIONS, ENTITLEMENTS, BILLING | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW |
 | P03 | CRM, Sales, Invoicing | CRM, SALES, INVOICING | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW |
-| P04 | UAE E-Invoicing | E_INVOICING and provider contract | Missing | Missing | Not started; regulatory/provider facts require verification |
-| P05 | Accounting and UAE VAT | ACCOUNTING, VAT | Missing | Missing | Not started; finance/tax policy decisions remain |
+| P04 | UAE E-Invoicing | E_INVOICING and provider contract | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; provider/applicability approvals remain |
+| P05 | Accounting and UAE VAT | ACCOUNTING, VAT | Complete draft | Orchestration and bounded task prompts complete | READY_FOR_REVIEW; finance/tax policy approvals remain |
 | P06 | Procurement and Inventory | PROCUREMENT, INVENTORY | Missing | Missing | Not started |
 | P07 | HRMS and Payroll | HRMS, PAYROLL | Missing | Missing | Not started; UAE employment/payroll facts require verification |
 | P08 | Projects, Expenses, Assets | PROJECTS, EXPENSES, FIXED_ASSETS | Missing | Missing | Not started |
@@ -145,12 +145,6 @@ Documentation completion is not implementation completion.
 
 ## 7. Current next action
 
-Complete Batch D as the next dependency-ready documentation unit:
+Complete Batch E as the next dependency-ready documentation unit: P06 Procurement/Inventory and P07 HRMS/Payroll phase specifications, four module specifications, traceability/test matrices and prompt packs. Begin with dated authoritative UAE employment/payroll/WPS and relevant inventory/customs/source assumptions; keep unverified statutory behavior disabled.
 
-1. create a dated authoritative UAE regulatory-source register for e-invoicing and VAT;
-2. draft the P04 UAE E-Invoicing phase/module/provider-contract documentation and prompts;
-3. draft the P05 Accounting and UAE VAT phase/module documentation and prompts;
-4. define immutable invoice-to-e-invoicing and invoice-to-accounting contracts without selecting a provider or inventing tax rules;
-5. create P04/P05 traceability and test matrices and record specialist approval gates.
-
-The P01 bounded-task prompt pack and stable `SALES-*` product requirement identifiers remain documentation debts to reconcile before their respective implementations. They do not block Batch D drafting. P00 independent-review administration may continue separately.
+The P01 bounded-task prompt pack and stable `SALES-*` product requirement identifiers remain documentation debts before their respective implementations. P00 independent-review administration may continue separately.
