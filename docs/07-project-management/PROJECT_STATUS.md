@@ -27,7 +27,7 @@ Canonical supporting records are:
 
 The repository remains in foundation mode with no ERP application implementation authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest, and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. P00-EV-013 is ready for independent review, the Product Owner P00 approval is recorded in P00-EV-014, and APPR-P00-002 approves bounded P01 as the initial implementation increment. Formal P00 exit still requires independent reviewer approval; P01 authorization remains separate.
 
-The immediate delivery priority is completing the phase, module, traceability, and prompt documentation defined in `DOCUMENTATION_COMPLETION_PLAN.md`. The complete P02 and P03 documentation batches are ready for review; P04 UAE E-Invoicing and P05 Accounting/UAE VAT are next. APPR-P00-001 remains a parallel governance item and does not block non-conflicting documentation drafting. No application work should begin.
+The immediate delivery priority is completing the remaining phase, module, traceability and prompt documentation defined in `DOCUMENTATION_COMPLETION_PLAN.md`. P02 through P09 are now complete drafts ready for review. APPR-P00-001 remains a parallel governance item and does not block non-conflicting documentation drafting. No application work should begin.
 
 ## 3. Completed Milestones
 
@@ -68,6 +68,9 @@ The immediate delivery priority is completing the phase, module, traceability, a
 | UAE employment/payroll/WPS source baseline | `docs/00-product/UAE_EMPLOYMENT_PAYROLL_WPS_SOURCE_REGISTER.md` | Dated official-source/applicability/revalidation baseline ready for specialist review |
 | P06 Procurement/Inventory batch | P06/module/prompt paths | Complete draft with 170 planned tests; ownership, movement and valuation approvals remain |
 | P07 HRMS/Payroll batch | P07/module/prompt paths | Complete draft with 196 planned tests; employment, payroll, WPS and privacy approvals remain |
+| UAE banking/payment integration source baseline | `docs/00-product/UAE_BANKING_PAYMENT_INTEGRATION_SOURCE_REGISTER.md` | Dated official-source/applicability/revalidation baseline ready for specialist review |
+| P08 Projects/Expenses/Fixed Assets batch | P08/module/prompt paths | Complete draft with 175 planned tests; domain, expense and asset policies remain |
+| P09 Banking/Advanced Finance batch | P09/module/contract/prompt paths | Complete draft with 180 planned tests; Mode A recommended and regulated connectivity separately gated |
 
 ## 4. Work in Progress
 
@@ -79,7 +82,7 @@ The immediate delivery priority is completing the phase, module, traceability, a
 | Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
 | Requirements traceability | P00 matrix approved; execution evidence remains incomplete | Every mandatory criterion linked to current verified evidence |
-| Module/phase documentation completion | P01 core drafts and complete P02–P07 batches ready for review | P01 bounded prompt debt reconciled and P08–P12/module specifications completed |
+| Module/phase documentation completion | P01 core drafts and complete P02–P09 batches ready for review | P01 bounded prompt debt reconciled and P10–P12/module specifications completed |
 
 ## 5. Current Blockers
 
@@ -89,13 +92,13 @@ The immediate delivery priority is completing the phase, module, traceability, a
 - P02 commercial policies and provider selection remain unresolved; the P02 specifications require undecided flows to stay disabled and do not block later-phase documentation drafting.
 - P03 customer/item ownership and invoice financial/document policies require APPR-P03-002/003 before schema/issuance implementation.
 - P04 provider/applicability/schema decisions and P05 accounting/VAT policies are fully actionable in `DECISIONS_PENDING.md`; they block dependent implementation/activation, not P06/P07 documentation drafting.
-- P06 ownership/inventory/valuation and P07 employment/payroll/WPS/privacy approvals block their dependent implementation, not P08/P09 documentation drafting.
+- P06/P07 approvals block their dependent implementation; P08 project/expense/asset policies and P09 mode/provider/reconciliation approvals now likewise block only their dependent implementation and activation.
 
 See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 6. Next Recommended Action
 
-Draft Batch F: P08 Projects/Expenses/Fixed Assets and P09 Banking/Advanced Finance phase/module specifications, traceability matrices and prompt packs, with provider-neutral banking contracts and dated official-source evidence where regulated integration behavior is proposed.
+Draft Batch G: P10 Reporting/Analytics/Integrations, P11 Enterprise Readiness and P12 Production Launch/Operations specifications, matrices and prompt packs, reconciling deployment, backup/restore, monitoring, incident, release/rollback, capacity and cost-assumption documentation.
 
 Application work remains blocked by the P00 exit gate and explicit P01 authorization. Phase/module documentation drafting may continue without waiting.
 
@@ -124,3 +127,4 @@ Application work remains blocked by the P00 exit gate and explicit P01 authoriza
 | 29 October 2026 | Drafted the complete P03 documentation batch: phase specification, CRM/Sales/ERP Customer Invoicing module contracts, 156-test traceability catalogue, orchestration prompt, and twelve bounded task prompts; recorded actionable ownership and finance approval gates. |
 | 29 October 2026 | Created the dated UAE e-invoicing/VAT regulatory-source register and completed P04/P05 phase, module, provider-contract, 144/180-test traceability and bounded-prompt batches; recorded actionable provider, regulatory, finance and tax approval gates. |
 | 29 October 2026 | Created the dated UAE employment/payroll/WPS source register and completed P06/P07 phase, four module, 170/196-test traceability and bounded-prompt batches; recorded actionable inventory, employment, payroll, WPS and privacy approval gates. |
+| 29 October 2026 | Created the dated UAE banking/payment integration source register and provider-neutral contract; completed P08/P09 phase, four module, 175/180-test traceability and bounded-prompt batches; recorded actionable project, expense, asset, banking, provider and payment gates. |
