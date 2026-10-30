@@ -21,7 +21,7 @@
 | Module Markdown | 25 | COMPLETE: 24 substantive module/capability specs plus template |
 | Agent/prompt Markdown | 34 | COMPLETE: eight role charters, task template, README and 24 phase prompt files |
 | Quality Markdown | 12 | COMPLETE; five PROPOSED standards added by `GOV-GAP-001` cover accessibility, threat model, privacy/retention, test data and developer workflow |
-| Deployment/operations Markdown | 17 | COMPLETE as provider-neutral specifications/templates |
+| Deployment/operations Markdown | 18 | COMPLETE as provider-neutral specifications/templates; `EXTERNAL_API_AND_ACCESS_REQUIREMENTS.md` adds the external access and acquisition register |
 | Project-management Markdown | 17 | COMPLETE; `DOCUMENTATION_GAP_AUDIT.md`, `DEVELOPMENT_READINESS_CHECKLIST.md` and `OUTSTANDING_APPROVALS_PACKET.md` record the audit, the tested readiness criterion and the actionable approval set |
 | Repository traceability Markdown | 2 | COMPLETE / implementation evidence remains planned |
 

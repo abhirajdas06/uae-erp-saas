@@ -23,7 +23,7 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 | Phase | Name | Status | Authorization | Evidence / Blocker |
 |---|---|---|---|---|
 | P00 | Foundation and Architecture | APPROVED | No P01 application authorization | APPR-P00-001 and P00-EV-013 verified; Product Owner approval and recorded independent reviews close P00 |
-| P01 | Core Platform and Multi-Tenancy | AWAITING_APPROVAL | Not authorized | Specification, traceability, bounded prompts and isolation matrix approved; APPR-P01-001 remains mandatory |
+| P01 | Core Platform and Multi-Tenancy | AUTHORIZED | Implementation authorized at phase level | APPR-P01-001 recorded on 29 October 2026 by Product Owner blanket approval; each dispatched task must still name its task ID, manifest version, file scope, reviewers and evidence per QUAL-DEVWF-001. All 53 isolation scenarios remain NOT_RUN |
 | P02 | Subscription Engine | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet B approved; entitlement/commercial policies and implementation authorization remain separate |
 | P03 | CRM, Sales and Basic Invoicing | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet C approved; APPR-P03-001–003 and predecessor implementation contracts remain |
 | P04 | UAE E-Invoicing Integration | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet D approved; provider, applicability, specialist and conformance gates remain |
@@ -77,3 +77,4 @@ Current P00 planning evidence:
 | 29 October 2026 | Drafted Batch G P10–P12 phase/module/traceability/prompt packages and deployment, recovery, monitoring, incident, release, capacity, runbook and evidence specifications; production remains unauthorized. |
 | 29 October 2026 | Completed P00–P12 cross-phase review, P01 full traceability/prompts, stable Sales requirements, current PINT AE 1.0.4 evidence/mapping and grouped specification approval packets; no implementation authorization granted. |
 | 29 October 2026 | Recorded Product Owner approval of APPR-P00-001/Packet A and Packets B–G; P00 is approved and P01–P12 specification baselines are approved, while all implementation, specialist, provider, production and launch gates remain separate. |
+| 29 October 2026 | Recorded the Product Owner blanket approval: APPR-P01-001 granted at phase level and P01 moved to AUTHORIZED. Qualified-professional and provider decisions, and every APPR-Pnn phase evidence gate for P02-P12, remain open per DECISIONS_PENDING section 11.6. |

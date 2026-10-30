@@ -54,7 +54,7 @@ The P00 workflow and dependency-free quality scripts have local-equivalence evid
 |---|---|---|---|
 | CI-GATE-001 | Repository and manifest validation | Required once validator exists | Blocks merge |
 | CI-GATE-002 | Markdown links and identifier integrity | Required | Blocks merge for internal failures |
-| CI-GATE-003 | ADR/status/approval consistency | Required | Blocks merge |
+| CI-GATE-003 | ADR/status/approval consistency | Required | Blocks merge. Includes the P01 authorization interlock: P01 may be `AWAITING_APPROVAL` or `AUTHORIZED`, and `AUTHORIZED` requires a recorded `APPR-P01-001` in the decision register, so a phase cannot be self-authorized by an agent or by an edit to the status table alone |
 | CI-GATE-004 | Secret scanning | Required | Blocks merge; exposed secret triggers incident handling |
 | CI-GATE-005 | Dependency and lock integrity | Required when dependency files exist | Blocks merge on unsupported/unlocked state |
 | CI-GATE-006 | Python lint and format | Required when Python source exists | Blocks merge |

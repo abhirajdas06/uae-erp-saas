@@ -6,8 +6,8 @@
 | Version | 1.0 |
 | Status | Active |
 | Last Updated | 29 October 2026 |
-| Current Stage | Documentation baseline complete; awaiting bounded implementation authorization |
-| Implementation Authorization | Not granted |
+| Current Stage | Documentation baseline approved; P01 implementation authorized |
+| Implementation Authorization | P01 granted 29 October 2026 (`APPR-P01-001`); P02–P12 remain gated |
 | Owner | Product Owner |
 
 ## 1. Purpose
@@ -112,11 +112,17 @@ The P00–P12 cross-phase review, inventory disposition, deterministic validatio
 
 See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
+## 5.1 Approval of 29 October 2026
+
+The Product Owner approved the documentation set and authorized P01. Fifty-seven decisions moved to `APPROVED`; thirty-seven remain open because they require a qualified professional opinion or an external provider, and every `APPR-Pnn` phase gate for P02 to P12 remains open because its evidence is `NOT_RUN`. `DECISIONS_PENDING.md` section 11.6 records the scope and the limits.
+
+Implementation of P01 may now begin. It depends on none of the open items, and `DEP-API-001` confirms P01 needs no external API, account or credential.
+
 ## 6. Next Recommended Action
 
-Close the documentation goal. Start a separate goal for the first bounded P01 task only after the Product Owner grants APPR-P01-001 with the exact task ID, manifest/version, scope, tests, reviewers, permissions and evidence requirements.
+Begin P01-T01, the toolchain and Django bootstrap task, naming its manifest version, file scope and reviewers at dispatch per `QUAL-DEVWF-001`. P01 needs no external access, so no procurement is on its critical path.
 
-Application work remains blocked by explicit P01 authorization, not by documentation completeness.
+In parallel, start the two longest external lead times, because neither blocks P01 but both will block later phases: engage a qualified tax and legal reviewer for the decisions in `DECISIONS_PENDING.md` section 11.6, and begin accredited e-invoicing provider selection under `DEC-INT-002`, for which a dated appointment deadline already exists in `UAE-EINV-003`.
 
 ## 7. Change Log
 
@@ -150,5 +156,6 @@ Application work remains blocked by explicit P01 authorization, not by documenta
 | 29 October 2026 | Recorded Product Owner approval of APPR-P00-001/Packet A and Packets B–G against the validated documentation snapshot; marked P00 and the documentation goal complete while preserving all implementation, specialist, provider, deployment and launch gates. |
 | 29 October 2026 | Completed the `GOV-GAP-001` development-readiness audit and closed twelve unowned implementation-critical specification gaps with owning documents; registered the associated decisions, risks and the resolved governance issue. Verified regulatory facts by search and recorded the unresolved personal-data and retention-period conflicts instead of asserting figures. No approval, implementation authorization or compliance claim was added. |
 | 29 October 2026 | Added `GOV-READINESS-001`, an explicit tested readiness criterion with per-item and per-phase verdicts. Recorded P01 as implementation-ready pending approvals, measured nine module specifications as contract-level only, proposed the `RDY-001`–`RDY-012` phase-entry gate as `DEC-GOV-007`, and registered `ISSUE-008` for the conflicting unsourced retention statement in `DATABASE_DESIGN.md`. |
+| 29 October 2026 | Recorded the Product Owner blanket approval: 57 decisions moved to APPROVED, `APPR-P01-001` granted at phase level and P01 moved to AUTHORIZED, while 37 qualified-professional and provider decisions and every P02–P12 phase evidence gate remain open per `DECISIONS_PENDING.md` section 11.6. Added `DEP-API-001` recording every external API, service and account the build needs, what each blocks and how to obtain it, with all costs and lead times marked as requiring a written quotation. |
 | 29 October 2026 | Read the official FTA and UAE legislation portal texts at article level and recorded `UAE-RET-001`–`UAE-RET-005` and `UAE-PDP-001`–`UAE-PDP-004` in the regulatory source register, closing ISSUE-008, correcting the capital-asset retention misconception, and adding the Decision 4 of 2026 record-form requirements as `PRIV-046`–`PRIV-051`. Added `GOV-APPROVAL-002` so every remaining approval is actionable with its exact recording statement. No approval was recorded and no compliance claim was made. |
 | 29 October 2026 | Deepened the nine contract-level module specifications to benchmark depth and brought all 24 to `RDY-001`–`RDY-012` compliance, adding field-level attributes and constraints, state sets with transition authority, permission codenames, numbering, notification, report, classification, retention and threat registrations, with every policy-dependent behavior failing closed against its named open decision. Resolved RISK-064, narrowed ISSUE-008 using Article 56 of Federal Decree-Law No. 47 of 2022, and registered ISSUE-009. No approval, implementation authorization or regulatory claim was added. |

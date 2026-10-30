@@ -55,8 +55,17 @@ def validate(root: Path, docs_root: Path) -> tuple[list[dict[str, object]], dict
     phase_text = _read(phase_status)
     if not re.search(r"^\| P00 \|.*\| (?:SPECIFICATION_IN_PROGRESS|IN_PROGRESS|IN_REVIEW|AWAITING_HUMAN_APPROVAL|APPROVED) \|", phase_text, re.MULTILINE):
         findings.append(finding("GOV_P00_STATUS", "P00 phase status is not an allowed lifecycle state"))
-    if not re.search(r"^\| P01 \|.*\| AWAITING_APPROVAL \| Not authorized \|", phase_text, re.MULTILINE):
-        findings.append(finding("GOV_P01_GUARD", "P01 must remain awaiting approval and not authorized"))
+    p01_awaiting = re.search(r"^\| P01 \|.*\| AWAITING_APPROVAL \| Not authorized \|", phase_text, re.MULTILINE)
+    p01_authorized = re.search(r"^\| P01 \|.*\| AUTHORIZED \|", phase_text, re.MULTILINE)
+    if not (p01_awaiting or p01_authorized):
+        findings.append(finding("GOV_P01_GUARD", "P01 phase status is not an allowed lifecycle state"))
+    elif p01_authorized and not re.search(r"APPR-P01-001", decision_text):
+        findings.append(
+            finding(
+                "GOV_P01_GUARD",
+                "P01 is AUTHORIZED but no APPR-P01-001 authorization is recorded in the decision register",
+            )
+        )
 
     p00_text = _read(p00_matrix)
     p00_ids = sorted(set(re.findall(r"\bP00-AC-[0-9]{3}\b", p00_text)))

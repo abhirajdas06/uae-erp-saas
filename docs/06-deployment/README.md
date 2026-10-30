@@ -19,6 +19,7 @@
 | `CAPACITY_AND_PERFORMANCE.md` | Capacity/load evidence; product targets are in QUAL-PERF-001 |
 | `OPERATIONAL_EVIDENCE_SPECIFICATION.md` | Required evidence metadata and integrity |
 | `PRODUCTION_LAUNCH_CHECKLIST.md` | P12 deployment and separate business-launch checklist |
+| `EXTERNAL_API_AND_ACCESS_REQUIREMENTS.md` | Every external API, service and account the build needs, what is blocked without each, and how to obtain it |
 
 Actual provider, region, topology, contacts, secrets backend, SLO/RPO/RTO, capacity, alert thresholds and commands remain blocked on `DEC-OPS-*`, implementation and measured rehearsal. Documentation does not authorize infrastructure purchase, deployment or launch.
 

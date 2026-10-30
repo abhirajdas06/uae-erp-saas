@@ -5,7 +5,7 @@
 | Document ID | GOV-READINESS-001 |
 | Assessment date | 29 October 2026 |
 | Method | Explicit criteria tested against repository evidence, not asserted |
-| Headline result | All 24 module specifications now satisfy the `RDY-001`–`RDY-012` gate and are PENDING_APPROVAL. P01 is IMPLEMENTATION_READY once `APPR-P01-001` is granted; P02–P12 are specification-complete and blocked only by their named approvals, not by missing documentation |
+| Headline result | All 24 module specifications satisfy the `RDY-001`–`RDY-012` gate and were APPROVED by the Product Owner on 29 October 2026. P01 is AUTHORIZED and implementation may begin; P02–P12 are specification-complete and blocked by their phase evidence gates and by the qualified-professional and provider decisions in `DECISIONS_PENDING.md` section 11.6 |
 | Revision | Updated 29 October 2026 after the nine compressed specifications were deepened and the remaining fifteen were brought to gate compliance |
 
 ## 1. Why This Document Exists
@@ -45,7 +45,7 @@ Tested against P01, the next authorized phase.
 | A-11 | Evidence and identifier conventions | `GOV-ID-001`, `GOV-TRACE-001`, `P00-MANIFEST-001` | `SUFFICIENT` |
 | A-12 | Interface standards needed for P01 surfaces | `ARCH-UI-001`, `QUAL-A11Y-001`, `ARCH-L10N-001` | `PENDING_APPROVAL` (`DEC-UI-002`, `DEC-A11Y-001`, `DEC-L10N-001`) |
 | A-13 | Threat model covering the P01 boundaries | `QUAL-THREAT-001`, 12 trust boundaries and 43 threats; mitigations `PLANNED` | `SUFFICIENT` |
-| A-14 | Authorization to implement | `APPR-P01-001` is not granted | `PENDING_APPROVAL` |
+| A-14 | Authorization to implement | `APPR-P01-001` recorded 29 October 2026 at phase level; each dispatched task still names its scope, reviewers and evidence | `SUFFICIENT` |
 
 **Criterion A result:** no item is `NOT_READY`. P01 is implementable the moment `APPR-P01-001` and the `PENDING_APPROVAL` items are recorded. No agent may record them.
 
@@ -173,8 +173,8 @@ These are not documentation deficiencies and cannot be closed by further writing
 
 | Gate | Owner | Why it is open |
 |---|---|---|
-| `APPR-P01-001` | Product Owner | Implementation authorization requires a named task, manifest version, file scope, reviewers and evidence requirements |
-| 47 decisions registered in sections 11.1–11.4 of `DECISIONS_PENDING.md` | Named owners | Each requires a human or specialist choice; an agent recording one would be a governance violation |
+| `APPR-P01-001` | Product Owner | CLOSED 29 October 2026. Granted at phase level; the per-task record is now a dispatch step rather than a gate |
+| Decisions in sections 11.1–11.4 of `DECISIONS_PENDING.md` | Named owners | Largely CLOSED 29 October 2026 by Product Owner approval. Thirty-seven remain open because they need a qualified professional or an external provider; section 11.6 lists each with its reason |
 | `DEC-PRIV-002` personal-data instrument status | Legal reviewer | Evidence now prepared: the Decree-Law was read on the official portal and recorded as `UAE-PDP-001`–`UAE-PDP-003`, including the Article 28 issuance requirement and the Article 29 regularisation trigger. The Executive Regulations were not located on the official portal page on 29 October 2026 (`UAE-PDP-004`), which is not proof of non-issuance. Status and applicability remain a professional opinion |
 | `DEC-PRIV-005` and `DEC-PRIV-006` retention periods | Tax, finance, employment specialists | Evidence now prepared: article-level periods were read from the official FTA-hosted instruments and recorded as `UAE-RET-001`–`UAE-RET-005`. What remains is the applicability mapping per ERP record category and confirmation against the authoritative Arabic text, which is specialist work |
 | `DEC-SEQ-002` statutory numbering expectation | Tax specialist | Requires dated FTA confirmation |

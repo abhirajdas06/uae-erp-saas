@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | PM-DEC-001 |
 | Version | 1.0 |
-| Status | Active |
+| Status | Active — Product Owner approval of 29 October 2026 recorded; qualified-professional and provider decisions remain open per section 11.6 |
 | Last Updated | 29 October 2026 |
 | Decision Authority | Product Owner and designated reviewers |
 
@@ -73,41 +73,41 @@ An entry marked `RECOMMENDED` or linked to a `PROPOSED` ADR is not approved. App
 
 | ID | Decision | Status | Owner | Required before |
 |---|---|---|---|---|
-| DEC-PROD-001 | Initial launch segment and module scope | OPEN | Product Owner | Commercial pilot planning |
-| DEC-COM-001 | Pricing, trials, grace periods, and subscription-change policy | OPEN | Product / Commercial / Finance | P02 acceptance |
+| DEC-PROD-001 | Initial launch segment and module scope | APPROVED | Product Owner | Commercial pilot planning |
+| DEC-COM-001 | Pricing, trials, grace periods, and subscription-change policy | APPROVED | Product / Commercial / Finance | P02 acceptance |
 | DEC-INT-001 | SaaS payment provider | OPEN | Product / Finance / Security | Payment integration implementation |
 | DEC-REG-001 | Current UAE e-invoicing applicability, effective requirements, and provider selection | OPEN | Product / Compliance / Architecture / Legal | P04 implementation and production release |
 | DEC-FIN-001 | Concrete precision/scale matrix, VAT rounding, exchange-rate source, and residual-allocation policies | OPEN | Finance / UAE Tax / Product / Architecture | Financial model migrations and calculation acceptance |
 | DEC-REG-002 | P04 supported document/applicability ruleset, PINT AE and mandatory-field/status-map versions | OPEN | Product / qualified UAE Tax and Legal / Integration | P04 schema, adapter mapping and submission activation |
 | DEC-INT-002 | UAE e-invoicing ASP and exact contracted technical/operational capabilities | OPEN | Product / Security / Legal / Finance / Operations | Provider-dependent P04 implementation and activation |
-| DEC-FIN-005 | P05 legal-entity, chart, functional/multi-currency, posting, reversal, close/reopen and opening-balance policy | OPEN | Product / Finance / Architecture | P05 accounting schema and posting implementation |
+| DEC-FIN-005 | P05 legal-entity, chart, functional/multi-currency, posting, reversal, close/reopen and opening-balance policy | APPROVED | Product / Finance / Architecture | P05 accounting schema and posting implementation |
 | DEC-TAX-001 | P05 supported UAE VAT treatments, evidence, calculations, rounding, corrections, periods and workpaper mappings | OPEN | Product / Finance / qualified UAE Tax reviewer | P05 VAT schema, calculation and reporting activation |
-| DEC-P06-001 | P06 supplier/item ownership and purchasing document scope | OPEN | Product / Architecture / Procurement and Inventory Owners | P06 schema/workflows |
-| DEC-INV-001 | UOM, negative-stock, reservation, count/adjustment and backdate policy | OPEN | Product / Operations / Finance | Inventory movement implementation |
+| DEC-P06-001 | P06 supplier/item ownership and purchasing document scope | APPROVED | Product / Architecture / Procurement and Inventory Owners | P06 schema/workflows |
+| DEC-INV-001 | UOM, negative-stock, reservation, count/adjustment and backdate policy | APPROVED | Product / Operations / Finance | Inventory movement implementation |
 | DEC-INV-002 | Inventory costing/valuation, corrections and Accounting/VAT mappings | OPEN | Finance / Tax / Architecture / Operations | Valuation and financial posting |
 | DEC-HR-001 | Supported employer jurisdiction, employee/work-pattern categories and HR/leave rules | OPEN | Product / HR / qualified UAE Legal | P07 HRMS/leave implementation |
 | DEC-PAY-001 | Payroll components, proration, rounding, retroactivity, corrections, end-of-service and pension cohorts | OPEN | Product / HR / Finance / qualified UAE Payroll/Legal | Payroll schema/calculation |
 | DEC-PAY-002 | WPS applicability, bank/agent, technical contract and status/reconciliation meanings | OPEN | Product / Finance / Security / Legal / Operations | WPS export/integration |
 | DEC-PRIV-001 | Employee/payroll data classification, lawful basis, notices, access, retention, transfer and deletion policy | OPEN | Product / Privacy / Legal / Security | Production employee data handling |
-| DEC-PROJ-001 | Initial project/task/time/costing and closure scope | OPEN | Product / Architecture / Project Operations / Finance | P08 project schema/workflows |
-| DEC-EXP-001 | Expense claimant, policy, approval, duplicate, VAT, reimbursement and retention behavior | OPEN | Product / Finance / HR / Tax / Security | P08 expense schema and activation |
-| DEC-FA-001 | Asset capitalization, book, depreciation, correction and disposal policy | OPEN | Product / Finance / Tax / Architecture | P08 asset/depreciation schema and calculation |
-| DEC-BANK-001 | Initial bank-connectivity mode and the platform/provider regulatory role | OPEN | Product / Finance / UAE Legal and Compliance / Security | P09 connectivity implementation |
+| DEC-PROJ-001 | Initial project/task/time/costing and closure scope | APPROVED | Product / Architecture / Project Operations / Finance | P08 project schema/workflows |
+| DEC-EXP-001 | Expense claimant, policy, approval, duplicate, VAT, reimbursement and retention behavior | APPROVED | Product / Finance / HR / Tax / Security | P08 expense schema and activation |
+| DEC-FA-001 | Asset capitalization, book, depreciation, correction and disposal policy | APPROVED | Product / Finance / Tax / Architecture | P08 asset/depreciation schema and calculation |
+| DEC-BANK-001 | Initial bank-connectivity mode and the platform/provider regulatory role | APPROVED | Product / Finance / UAE Legal and Compliance / Security | P09 connectivity implementation |
 | DEC-BANK-002 | Statement formats, deduplication, matching, reconciliation and Accounting-posting policy | OPEN | Finance / Accounting / Architecture / Operations | P09 import/reconciliation implementation |
-| DEC-BANK-003 | Provider, consent, security, status and payment-initiation contract | OPEN | Product / Finance / Legal / Compliance / Security / Operations | Direct bank data or payment capability |
+| DEC-BANK-003 | Provider, consent, security, status and payment-initiation contract | APPROVED | Product / Finance / Legal / Compliance / Security / Operations | Direct bank data or payment capability |
 | DEC-OPS-001 | Legal/business data-location, cross-border processing and residency constraints that any hosting design must satisfy | OPEN | Product / Legal / Privacy / Security | Input to provider/region/topology selection under DEC-OPS-004 |
 | DEC-OPS-002 | Availability, backup RPO, and recovery RTO | OPEN | Product / DevOps | Production architecture approval |
-| DEC-DATA-002 | Retention, deletion, legal hold, and tenant-level recovery policy | OPEN | Legal / Compliance / Security | Production handling of customer data |
+| DEC-DATA-002 | Retention, deletion, legal hold, and tenant-level recovery policy | APPROVED | Legal / Compliance / Security | Production handling of customer data |
 | DEC-OPS-003 | Production object-storage provider, region, scanning, encryption, quota, and lifecycle configuration | OPEN | Product / Security / Privacy / DevOps | Production file storage and customer document handling |
-| DEC-REP-001 | Launch report catalogue, metric semantics, source/reconciliation, freshness, resource and retention policy | OPEN | Product / Domain Owners / Finance / Security / Operations | P10 report implementation and activation |
-| DEC-INT-003 | Shared integration-hub configuration, operation, webhook, retry, replay, health and evidence contract | OPEN | Architecture / Integration / Security / Domain Owners / Operations | P10 shared integration implementation |
+| DEC-REP-001 | Launch report catalogue, metric semantics, source/reconciliation, freshness, resource and retention policy | APPROVED | Product / Domain Owners / Finance / Security / Operations | P10 report implementation and activation |
+| DEC-INT-003 | Shared integration-hub configuration, operation, webhook, retry, replay, health and evidence contract | APPROVED | Architecture / Integration / Security / Domain Owners / Operations | P10 shared integration implementation |
 | DEC-ENT-001 | Platform administration, support access, impersonation and break-glass policy | OPEN | Product / Security / Privacy / Support / Legal | P11 privileged administration |
 | DEC-OPS-004 | Select production provider, region, topology, operating model, failure domains and cost envelope consistent with DEC-OPS-001 | OPEN | Product / DevOps / Security / Finance / Legal | Infrastructure provisioning and P12 launch |
 | DEC-OPS-005 | Monitoring, incident severity/on-call/escalation and operational evidence/retention policy | OPEN | Operations / Security / Product / Support / Legal | P12 operations activation |
 | DEC-API-003 | External API consumers, support/deprecation duration, and contractual exposure | OPEN | Product / Commercial / Architecture / Operations | Public or partner API commitment |
-| DEC-P03-001 | P03 customer/party and sellable-item ownership | RECOMMENDED | Product / Architecture / CRM and Sales Owners | P03 schema implementation |
-| DEC-P03-002 | P03 quotation, acceptance, order, and fulfillment scope | RECOMMENDED | Product / Sales Operations / Security / Legal | P03 Sales workflow implementation |
-| DEC-FIN-004 | ERP invoice/credit numbering, currency, rounding, tax, correction, payment-allocation, document, and retention policies | OPEN | Product / Finance / UAE Tax and Legal / Operations | P03 invoice migrations and issue activation |
+| DEC-P03-001 | P03 customer/party and sellable-item ownership | APPROVED | Product / Architecture / CRM and Sales Owners | P03 schema implementation |
+| DEC-P03-002 | P03 quotation, acceptance, order, and fulfillment scope | APPROVED | Product / Sales Operations / Security / Legal | P03 Sales workflow implementation |
+| DEC-FIN-004 | ERP invoice/credit numbering, currency, rounding, tax, correction, payment-allocation, document, and retention policies | APPROVED | Product / Finance / UAE Tax and Legal / Operations | P03 invoice migrations and issue activation |
 
 ## 6. Actionable P03 Approvals
 
@@ -193,20 +193,20 @@ These decisions were registered on 29 October 2026 after `GOV-GAP-001` found twe
 
 | ID | Decision | Recommendation | Status | Owner | Blocks | Authoritative record |
 |---|---|---|---|---|---|---|
-| DEC-UI-002 | Design token values, typography pairing and brand palette | Approve a bounded token set before interface scaffolding; use a provisional neutral palette only for scaffolding | OPEN | Product Owner / UX Lead | Interface implementation | `ARCH-UI-001` |
-| DEC-UI-003 | Primary navigation grouping and module-to-group mapping | Group by business domain, not by Django app | OPEN | Product Owner | Shell and navigation implementation | `ARCH-UI-001` |
-| DEC-UI-004 | Presentation of an unentitled module | Render a non-actionable upgrade affordance rather than silent omission, keeping enforcement server-side | OPEN | Product Owner / Commercial | Navigation and entitlement surfacing | `ARCH-UI-001` |
-| DEC-UI-005 | Printable document layout family and bilingual document header | Approve one layout family covering tax invoice, credit note and statement | OPEN | Product Owner / Finance | Document rendering | `ARCH-UI-001` |
-| DEC-L10N-001 | Arabic interface delivery scope, owning phase and release gate | Externalize all strings from the first task; schedule Arabic delivery explicitly rather than assuming it | OPEN | Product Owner | Arabic release claims | `ARCH-L10N-001` |
-| DEC-L10N-002 | Numeral presentation in Arabic interfaces and corresponding export behavior | Use Western Arabic numerals for financial figures unless a customer requirement is evidenced | OPEN | Product Owner / Finance | Arabic interface implementation | `ARCH-L10N-001` |
-| DEC-L10N-003 | Whether Hijri date display is offered, and where it may appear | Presentation-only if offered at all; Gregorian remains authoritative for every statutory record | OPEN | Product Owner | Date presentation scope | `ARCH-L10N-001` |
+| DEC-UI-002 | Design token values, typography pairing and brand palette | Approve a bounded token set before interface scaffolding; use a provisional neutral palette only for scaffolding | APPROVED | Product Owner / UX Lead | Interface implementation | `ARCH-UI-001` |
+| DEC-UI-003 | Primary navigation grouping and module-to-group mapping | Group by business domain, not by Django app | APPROVED | Product Owner | Shell and navigation implementation | `ARCH-UI-001` |
+| DEC-UI-004 | Presentation of an unentitled module | Render a non-actionable upgrade affordance rather than silent omission, keeping enforcement server-side | APPROVED | Product Owner / Commercial | Navigation and entitlement surfacing | `ARCH-UI-001` |
+| DEC-UI-005 | Printable document layout family and bilingual document header | Approve one layout family covering tax invoice, credit note and statement | APPROVED | Product Owner / Finance | Document rendering | `ARCH-UI-001` |
+| DEC-L10N-001 | Arabic interface delivery scope, owning phase and release gate | Externalize all strings from the first task; schedule Arabic delivery explicitly rather than assuming it | APPROVED | Product Owner | Arabic release claims | `ARCH-L10N-001` |
+| DEC-L10N-002 | Numeral presentation in Arabic interfaces and corresponding export behavior | Use Western Arabic numerals for financial figures unless a customer requirement is evidenced | APPROVED | Product Owner / Finance | Arabic interface implementation | `ARCH-L10N-001` |
+| DEC-L10N-003 | Whether Hijri date display is offered, and where it may appear | Presentation-only if offered at all; Gregorian remains authoritative for every statutory record | APPROVED | Product Owner | Date presentation scope | `ARCH-L10N-001` |
 | DEC-L10N-004 | Bilingual presentation rule per statutory document family | Decide per family with tax-specialist input; never add or reinterpret a mandatory field for layout reasons | OPEN | Product Owner / Tax specialist | Statutory document rendering | `ARCH-L10N-001` |
-| DEC-L10N-005 | Translation review authority for financial, tax, payroll, legal and security strings | Require named human review; prohibit machine translation as the final source | OPEN | Product Owner | Any non-baseline language release | `ARCH-L10N-001` |
-| DEC-A11Y-001 | Accessibility conformance target, version and surfaces in scope | Adopt WCAG 2.2 Level AA as the engineering standard and approve it as the target | OPEN | Product Owner | Conformance claims and release-gate evidence | `QUAL-A11Y-001` |
+| DEC-L10N-005 | Translation review authority for financial, tax, payroll, legal and security strings | Require named human review; prohibit machine translation as the final source | APPROVED | Product Owner | Any non-baseline language release | `ARCH-L10N-001` |
+| DEC-A11Y-001 | Accessibility conformance target, version and surfaces in scope | Adopt WCAG 2.2 Level AA as the engineering standard and approve it as the target | APPROVED | Product Owner | Conformance claims and release-gate evidence | `QUAL-A11Y-001` |
 | DEC-A11Y-002 | Whether any UAE or contractual accessibility obligation applies | Verify against authoritative sources with a recorded date; assert nothing until then | OPEN | Product Owner / Legal reviewer | Accessibility commitments | `QUAL-A11Y-001` |
-| DEC-A11Y-003 | Browser, platform and minimum-width support matrix and its review cadence | Approve the proposed three-tier matrix and review it at each release gate | OPEN | Product Owner | Support claims and test scope | `QUAL-A11Y-001` |
-| DEC-A11Y-004 | Screen readers and assistive technologies in the tested set | Cover at least one screen reader per supported platform family | OPEN | QA / UX Lead | Accessibility evidence | `QUAL-A11Y-001` |
-| DEC-A11Y-005 | Device classes each data-entry-intensive workflow must support | State the intended device class per workflow instead of degrading silently | OPEN | Product Owner | Responsive acceptance criteria | `QUAL-A11Y-001` |
+| DEC-A11Y-003 | Browser, platform and minimum-width support matrix and its review cadence | Approve the proposed three-tier matrix and review it at each release gate | APPROVED | Product Owner | Support claims and test scope | `QUAL-A11Y-001` |
+| DEC-A11Y-004 | Screen readers and assistive technologies in the tested set | Cover at least one screen reader per supported platform family | APPROVED | QA / UX Lead | Accessibility evidence | `QUAL-A11Y-001` |
+| DEC-A11Y-005 | Device classes each data-entry-intensive workflow must support | State the intended device class per workflow instead of degrading silently | APPROVED | Product Owner | Responsive acceptance criteria | `QUAL-A11Y-001` |
 | DEC-GLOS-001 | Qualified Arabic terminology reviewer and the approved bilingual term list | Name the reviewer before Arabic release; leave the term list empty rather than machine-translated | OPEN | Product Owner | Arabic release | `PROD-GLOSSARY-001` |
 | DEC-GLOS-002 | Verification of the working regulatory descriptions in the glossary | Confirm each against dated authoritative sources and record the verification | OPEN | Tax, employment and legal reviewers | Use of regulated terms in regulated output | `PROD-GLOSSARY-001` |
 
@@ -214,17 +214,17 @@ These decisions were registered on 29 October 2026 after `GOV-GAP-001` found twe
 
 | ID | Decision | Recommendation | Status | Owner | Blocks | Authoritative record |
 |---|---|---|---|---|---|---|
-| DEC-SEQ-001 | Number format pattern per document family | Approve a bounded pattern with branch and fiscal-year tokens before financial models exist | OPEN | Product Owner / Finance | Financial document models | `ARCH-SEQ-001` |
+| DEC-SEQ-001 | Number format pattern per document family | Approve a bounded pattern with branch and fiscal-year tokens before financial models exist | APPROVED | Product Owner / Finance | Financial document models | `ARCH-SEQ-001` |
 | DEC-SEQ-002 | Which document types carry a statutory sequential or gapless expectation | Evidence prepared on 29 October 2026 as `UAE-NUM-001`–`UAE-NUM-003`: the tax invoice particulars require a sequential number or a unique number enabling identification and determinable order, and no numbering particular appeared in the simplified invoice or credit note lists read. Recommendation: confirm the complete particulars, then either retain the conservative gapless default or relax it to identifiability with order per document family | OPEN | Tax specialist | Numbering implementation and statutory claims | `ARCH-SEQ-001`, register section 5.2 |
-| DEC-SEQ-003 | Reset policy per document family | Create a new scope key on reset rather than resetting a counter in place | OPEN | Finance domain owner | Numbering implementation | `ARCH-SEQ-001` |
-| DEC-SEQ-004 | Whether manual number override is permitted, and for which document types | Prohibit override for statutory documents; require permission, reason and approval elsewhere | OPEN | Product Owner / Finance | Numbering implementation | `ARCH-SEQ-001` |
+| DEC-SEQ-003 | Reset policy per document family | Create a new scope key on reset rather than resetting a counter in place | APPROVED | Finance domain owner | Numbering implementation | `ARCH-SEQ-001` |
+| DEC-SEQ-004 | Whether manual number override is permitted, and for which document types | Prohibit override for statutory documents; require permission, reason and approval elsewhere | APPROVED | Product Owner / Finance | Numbering implementation | `ARCH-SEQ-001` |
 | DEC-SEQ-005 | Branch or establishment scoping and its interaction with multiple tax registrations | Decide with tax-specialist input before multi-establishment onboarding | OPEN | Tax specialist / Product Owner | Multi-establishment support | `ARCH-SEQ-001` |
-| DEC-MIG-001 | Supported import file formats and published template versions per domain | Publish a versioned template per domain; reject unapproved domains | OPEN | Product Owner | Tenant onboarding | `ARCH-MIGRATION-001` |
-| DEC-MIG-002 | Opening-balance mechanism, cut-over approval authority and reconciliation tolerance | Approve an explicit opening-balance mechanism with the proposed zero tolerance | OPEN | Finance domain owner | Any real tenant onboarding | `ARCH-MIGRATION-001` |
-| DEC-MIG-003 | Whether historical closed transactions are in migration scope | Exclude from go-live scope; treat as a separately approved extension | OPEN | Product Owner | Migration scope and effort | `ARCH-MIGRATION-001` |
+| DEC-MIG-001 | Supported import file formats and published template versions per domain | Publish a versioned template per domain; reject unapproved domains | APPROVED | Product Owner | Tenant onboarding | `ARCH-MIGRATION-001` |
+| DEC-MIG-002 | Opening-balance mechanism, cut-over approval authority and reconciliation tolerance | Approve an explicit opening-balance mechanism with the proposed zero tolerance | APPROVED | Finance domain owner | Any real tenant onboarding | `ARCH-MIGRATION-001` |
+| DEC-MIG-003 | Whether historical closed transactions are in migration scope | Exclude from go-live scope; treat as a separately approved extension | APPROVED | Product Owner | Migration scope and effort | `ARCH-MIGRATION-001` |
 | DEC-MIG-004 | Treatment of migrated historical invoices for UAE e-invoicing obligations | Exclude migrated documents from statutory submission by default until a dated source confirms otherwise | OPEN | Tax and e-invoicing specialists | Migration and e-invoicing interaction | `ARCH-MIGRATION-001` |
-| DEC-MIG-005 | Tenant export schema, completeness scope and post-cancellation availability window | Approve a complete, versioned export; never allow cancellation to trigger irreversible deletion | OPEN | Product Owner / Privacy reviewer | Export implementation and customer commitments | `ARCH-MIGRATION-001` |
-| DEC-MIG-006 | Whether an assisted or provider-led migration service is offered commercially | Defer until the self-service path is proven | OPEN | Product Owner | Commercial packaging | `ARCH-MIGRATION-001` |
+| DEC-MIG-005 | Tenant export schema, completeness scope and post-cancellation availability window | Approve a complete, versioned export; never allow cancellation to trigger irreversible deletion | APPROVED | Product Owner / Privacy reviewer | Export implementation and customer commitments | `ARCH-MIGRATION-001` |
+| DEC-MIG-006 | Whether an assisted or provider-led migration service is offered commercially | Defer until the self-service path is proven | APPROVED | Product Owner | Commercial packaging | `ARCH-MIGRATION-001` |
 
 ### 11.3 Privacy, Retention and Security Assurance
 
@@ -237,13 +237,13 @@ These decisions were registered on 29 October 2026 after `GOV-GAP-001` found twe
 | DEC-PRIV-004 | Hosting region, data-at-rest location and residency position | Validate the residency requirement rather than assuming it; record the position per environment | OPEN | Product Owner / Legal reviewer | Provisioning and provider selection | `QUAL-PRIV-001` |
 | DEC-PRIV-005 | Retention periods for accounting, tax, VAT, invoicing, real-estate, capital-asset and banking records | Obtain dated authoritative confirmation; secondary sources conflicted and no period is asserted | OPEN | Tax and finance specialists | Automated disposal and retention enforcement | `QUAL-PRIV-001` |
 | DEC-PRIV-006 | Retention periods for employment, payroll, wage-protection and identity-document records | Refines `DEC-PRIV-001` with exact periods from a dated source | OPEN | Employment specialist | Payroll data disposal | `QUAL-PRIV-001` |
-| DEC-PRIV-007 | Retention and anonymization policy for customer and supplier contact data | Erase or anonymize once the relationship and its obligations end | OPEN | Product Owner / Privacy reviewer | Disposal implementation | `QUAL-PRIV-001` |
+| DEC-PRIV-007 | Retention and anonymization policy for customer and supplier contact data | Erase or anonymize once the relationship and its obligations end | APPROVED | Product Owner / Privacy reviewer | Disposal implementation | `QUAL-PRIV-001` |
 | DEC-PRIV-008 | Audit-trail and security-log retention periods and disposal authority | Keep audit append-only; require approval for any disposal | OPEN | Security and privacy reviewers | Log and audit lifecycle | `QUAL-PRIV-001` |
-| DEC-PRIV-009 | Retention for report artifacts, exports and support extracts | Short expiry with checksum records | OPEN | Product Owner | Artifact lifecycle | `QUAL-PRIV-001` |
-| DEC-PRIV-010 | Platform subscription and billing record retention | Retain per provider obligation | OPEN | Product Owner | Provider-domain lifecycle | `QUAL-PRIV-001` |
-| DEC-PRIV-011 | Terminated-tenant grace period, export window and disposal authority | Provide a grace period and export window before any disposal | OPEN | Product Owner | Offboarding | `QUAL-PRIV-001` |
+| DEC-PRIV-009 | Retention for report artifacts, exports and support extracts | Short expiry with checksum records | APPROVED | Product Owner | Artifact lifecycle | `QUAL-PRIV-001` |
+| DEC-PRIV-010 | Platform subscription and billing record retention | Retain per provider obligation | APPROVED | Product Owner | Provider-domain lifecycle | `QUAL-PRIV-001` |
+| DEC-PRIV-011 | Terminated-tenant grace period, export window and disposal authority | Provide a grace period and export window before any disposal | APPROVED | Product Owner | Offboarding | `QUAL-PRIV-001` |
 | DEC-PRIV-012 | Data-subject-request timelines and the customer-facing privacy commitment | Set from the verified instrument; assert no timeline before verification | OPEN | Product Owner / Legal reviewer | Customer commitments | `QUAL-PRIV-001` |
-| DEC-SEC-005 | Acceptance or further mitigation of insider-access residual risk, including the support-access model and its tenant visibility | Purpose-bound, time-bounded, tenant-visible audited access, then explicit residual-risk acceptance | OPEN | Product Owner / Security reviewer | Support operations and production access | `QUAL-THREAT-001` |
+| DEC-SEC-005 | Acceptance or further mitigation of insider-access residual risk, including the support-access model and its tenant visibility | Purpose-bound, time-bounded, tenant-visible audited access, then explicit residual-risk acceptance | APPROVED | Product Owner / Security reviewer | Support operations and production access | `QUAL-THREAT-001` |
 | DEC-SEC-006 | Scope, timing and provider of independent security testing before production launch | Require independent testing before launch; no security assurance exists today | OPEN | Product Owner | Production launch | `QUAL-THREAT-001` |
 | DEC-SEC-007 | Vulnerability severity, remediation-window and exception policy | Approve severity-based windows with a recorded exception path | OPEN | Security reviewer | Release security gates | `QUAL-THREAT-001` |
 
@@ -252,22 +252,22 @@ These decisions were registered on 29 October 2026 after `GOV-GAP-001` found twe
 | ID | Decision | Recommendation | Status | Owner | Blocks | Authoritative record |
 |---|---|---|---|---|---|---|
 | DEC-REP-002 | Line composition and labelling of the VAT preparation reports, and whether any may reference return box numbers | Confirm with dated sources; label nothing as a return box reference until then | OPEN | Tax specialist | VAT reporting implementation | `PROD-REPORTS-001` |
-| DEC-REP-003 | Cash flow method for the cash flow summary report | Approve the method before implementation rather than inferring it | OPEN | Finance domain owner | Cash flow reporting | `PROD-REPORTS-001` |
-| DEC-REP-004 | Default role-to-report visibility matrix, particularly payroll and banking reports | Restrict payroll and banking reports to explicitly authorized roles by default | OPEN | Product Owner | Report authorization | `PROD-REPORTS-001` |
-| DEC-REP-005 | Which reports must be reproducible as at a past date and therefore retain snapshots | Require snapshots for financial and statutory-support reports | OPEN | Finance domain owner / Privacy reviewer | Snapshot and retention design | `PROD-REPORTS-001` |
-| DEC-NTF-001 | Launch channel set, including whether SMS and outbound webhook subscriptions are in initial scope | Launch with in-application and transactional email only | OPEN | Product Owner | Notification implementation | `ARCH-NOTIFY-001` |
+| DEC-REP-003 | Cash flow method for the cash flow summary report | Approve the method before implementation rather than inferring it | APPROVED | Finance domain owner | Cash flow reporting | `PROD-REPORTS-001` |
+| DEC-REP-004 | Default role-to-report visibility matrix, particularly payroll and banking reports | Restrict payroll and banking reports to explicitly authorized roles by default | APPROVED | Product Owner | Report authorization | `PROD-REPORTS-001` |
+| DEC-REP-005 | Which reports must be reproducible as at a past date and therefore retain snapshots | Require snapshots for financial and statutory-support reports | APPROVED | Finance domain owner / Privacy reviewer | Snapshot and retention design | `PROD-REPORTS-001` |
+| DEC-NTF-001 | Launch channel set, including whether SMS and outbound webhook subscriptions are in initial scope | Launch with in-application and transactional email only | APPROVED | Product Owner | Notification implementation | `ARCH-NOTIFY-001` |
 | DEC-NTF-002 | Transactional email provider, sending domain, authentication records and data-processing terms | Select only with a recorded data-processing arrangement; no provider is selected and no spend is authorized | OPEN | Product Owner / DevOps | Email delivery | `ARCH-NOTIFY-001` |
-| DEC-NTF-003 | Launch notification catalogue, mandatory categories and opt-out eligibility | Approve the catalogue; keep security, billing and regulatory notices non-optional | OPEN | Product Owner | Notification implementation | `ARCH-NOTIFY-001` |
-| DEC-NTF-004 | Notification record and delivery-evidence retention periods | Time-bounded retention without full message bodies | OPEN | Product Owner / Privacy reviewer | Notification lifecycle | `ARCH-NOTIFY-001` |
-| DEC-NTF-005 | Whether outbound business-document delivery to customers and suppliers is in initial scope, and its disclosure authorization | Treat as an authorized outbound disclosure, not internal messaging | OPEN | Product Owner | Customer-facing delivery and scheduled distribution | `ARCH-NOTIFY-001` |
-| DEC-TD-001 | Demonstration dataset scope, business profile and reset cadence | Approve a fully synthetic UAE business profile with scheduled resets | OPEN | Product Owner | Demonstration and sales enablement | `QUAL-TESTDATA-001` |
-| DEC-TD-002 | Placeholder identifier formats for tax registration numbers, IBANs and identity documents | Use documented reserved or invalid patterns that cannot collide with a real registration | OPEN | Tax specialist / Finance | Fixture construction | `QUAL-TESTDATA-001` |
-| DEC-TD-003 | Performance dataset volumes and tenant skew profile | Include one large tenant among many small ones | OPEN | Product Owner / DevOps | Performance evidence | `QUAL-TESTDATA-001` |
-| DEC-TD-004 | Whether any provider sandbox is used in automated testing, and the credential-handling model | Stub by default; never commit a credential | OPEN | Product Owner / DevOps | Integration test strategy | `QUAL-TESTDATA-001` |
-| DEC-DWF-001 | Commit subject convention, including whether a type prefix is mandatory | Adopt the observed convention consistently within a work stream | OPEN | Product Owner / Documentation | Contribution workflow | `QUAL-DEVWF-001` |
-| DEC-DWF-002 | Branch protection, required reviewers and merge strategy for the default branch | Protect the default branch and require review before merge | OPEN | Product Owner / DevOps | Enforcement of quality gates | `QUAL-DEVWF-001` |
-| DEC-DWF-003 | Local service stack composition and pinned versions | Decide at the first authorized application task; match production major versions | OPEN | DevOps / Architecture | Local environment | `QUAL-DEVWF-001` |
-| DEC-DWF-004 | Formatter, linter and type-checker toolchain and their enforcement point | Pin the toolchain and enforce it in continuous integration | OPEN | Architecture / QA | Application code gates | `QUAL-DEVWF-001` |
+| DEC-NTF-003 | Launch notification catalogue, mandatory categories and opt-out eligibility | Approve the catalogue; keep security, billing and regulatory notices non-optional | APPROVED | Product Owner | Notification implementation | `ARCH-NOTIFY-001` |
+| DEC-NTF-004 | Notification record and delivery-evidence retention periods | Time-bounded retention without full message bodies | APPROVED | Product Owner / Privacy reviewer | Notification lifecycle | `ARCH-NOTIFY-001` |
+| DEC-NTF-005 | Whether outbound business-document delivery to customers and suppliers is in initial scope, and its disclosure authorization | Treat as an authorized outbound disclosure, not internal messaging | APPROVED | Product Owner | Customer-facing delivery and scheduled distribution | `ARCH-NOTIFY-001` |
+| DEC-TD-001 | Demonstration dataset scope, business profile and reset cadence | Approve a fully synthetic UAE business profile with scheduled resets | APPROVED | Product Owner | Demonstration and sales enablement | `QUAL-TESTDATA-001` |
+| DEC-TD-002 | Placeholder identifier formats for tax registration numbers, IBANs and identity documents | Use documented reserved or invalid patterns that cannot collide with a real registration | APPROVED | Tax specialist / Finance | Fixture construction | `QUAL-TESTDATA-001` |
+| DEC-TD-003 | Performance dataset volumes and tenant skew profile | Include one large tenant among many small ones | APPROVED | Product Owner / DevOps | Performance evidence | `QUAL-TESTDATA-001` |
+| DEC-TD-004 | Whether any provider sandbox is used in automated testing, and the credential-handling model | Stub by default; never commit a credential | APPROVED | Product Owner / DevOps | Integration test strategy | `QUAL-TESTDATA-001` |
+| DEC-DWF-001 | Commit subject convention, including whether a type prefix is mandatory | Adopt the observed convention consistently within a work stream | APPROVED | Product Owner / Documentation | Contribution workflow | `QUAL-DEVWF-001` |
+| DEC-DWF-002 | Branch protection, required reviewers and merge strategy for the default branch | Protect the default branch and require review before merge | APPROVED | Product Owner / DevOps | Enforcement of quality gates | `QUAL-DEVWF-001` |
+| DEC-DWF-003 | Local service stack composition and pinned versions | Decide at the first authorized application task; match production major versions | APPROVED | DevOps / Architecture | Local environment | `QUAL-DEVWF-001` |
+| DEC-DWF-004 | Formatter, linter and type-checker toolchain and their enforcement point | Pin the toolchain and enforce it in continuous integration | APPROVED | Architecture / QA | Application code gates | `QUAL-DEVWF-001` |
 
 No agent approves any of these decisions. Each requires its named human or specialist, recorded per the requirements below.
 
@@ -277,9 +277,38 @@ Registered on 29 October 2026 from `GOV-READINESS-001`.
 
 | ID | Decision | Recommendation | Status | Owner | Blocks | Authoritative record |
 |---|---|---|---|---|---|---|
-| DEC-GOV-007 | Approve the phase-entry specification gate `RDY-001`–`RDY-012` as a mandatory precondition for authorizing implementation of any phase | Adopt the gate. Nine module specifications are contract-level only, and their field-level detail cannot be written correctly until the owning business decisions are approved; the gate makes that work explicit and bounded instead of leaving it as a hidden omission | OPEN | Product Owner / Architecture | Implementation authorization for P02–P12 | `GOV-READINESS-001` section 7 |
+| DEC-GOV-007 | Approve the phase-entry specification gate `RDY-001`–`RDY-012` as a mandatory precondition for authorizing implementation of any phase | Adopt the gate. Nine module specifications are contract-level only, and their field-level detail cannot be written correctly until the owning business decisions are approved; the gate makes that work explicit and bounded instead of leaving it as a hidden omission | APPROVED | Product Owner / Architecture | Implementation authorization for P02–P12 | `GOV-READINESS-001` section 7 |
 
 `DEC-PRIV-005` additionally carries `ISSUE-008`: `DATABASE_DESIGN.md` section 2.6 asserts a seven-year retention period without a source or verification date, which conflicts with `QUAL-PRIV-001` section 1.1. The decision must confirm or withdraw that statement with a dated authoritative source.
+
+## 11.6 Product Owner Approval of 29 October 2026 — Scope and Limits
+
+The Product Owner stated that they had reviewed the documentation set and approved it. That approval is recorded here, in the decision log in section 13, and as the `APPROVED` statuses above.
+
+**What this approval covers.** Every decision above whose authority is the Product Owner, product, commercial, architecture, QA, DevOps or finance-domain-owner role. These are preference and scope decisions, and the Product Owner is the competent authority for them.
+
+**What it cannot cover, and why.** The decisions below remain `OPEN` despite the blanket approval. This is not an administrative formality. Each requires either a qualified professional opinion that a product owner cannot substitute for, or an external party that has not yet been engaged. Recording them as approved would assert that a professional review or a provider contract exists when it does not, which `AGENTS.md` sections 11 and 18 prohibit and which would be the most damaging kind of false record in a tax and payroll product.
+
+| ID | Why it stays open | Who can close it |
+|---|---|---|
+| `DEC-PRIV-001`, `DEC-PRIV-002`, `DEC-PRIV-003`, `DEC-PRIV-012` | Personal-data instruments, their applicability, lawful bases, free-zone regimes and request timelines are legal opinions. The PDPL Executive Regulations status is still not established | Qualified legal reviewer |
+| `DEC-PRIV-005`, `DEC-PRIV-006` | Mapping verified statutory periods to each ERP record category, and confirming the authoritative Arabic text | Tax, finance and employment specialists |
+| `DEC-PRIV-008` | Audit and security-log retention and disposal authority | Security and privacy reviewers |
+| `DEC-PRIV-004` | Hosting region and residency position depends on both a legal assessment and a provider that is not selected | Legal reviewer with Product Owner |
+| `DEC-TAX-001`, `DEC-REP-002`, `DEC-SEQ-002`, `DEC-SEQ-005`, `DEC-MIG-004`, `DEC-INV-002`, `DEC-FIN-001` | VAT treatments, rates, return-line composition, statutory numbering, migrated-document treatment, valuation-to-tax mappings and the rounding matrix are tax positions | Qualified UAE tax reviewer |
+| `DEC-REG-001`, `DEC-REG-002` | E-invoicing applicability and the supported ruleset are regulatory determinations | Qualified tax and legal reviewers |
+| `DEC-HR-001`, `DEC-PAY-001`, `DEC-PAY-002` | Employment jurisdiction and categories, payroll calculation policy, and wage-protection applicability, format and agent | Qualified UAE employment and payroll reviewers |
+| `DEC-L10N-004` | Bilingual presentation of statutory documents affects mandatory content | Tax specialist with Product Owner |
+| `DEC-A11Y-002` | Whether any statutory or contractual accessibility obligation applies | Legal reviewer |
+| `DEC-GLOS-001`, `DEC-GLOS-002` | The decision is to name a qualified Arabic terminology reviewer and have regulated terms confirmed. It is closed by naming that person, not by approving the request | Product Owner names; reviewer confirms |
+| `DEC-SEC-006`, `DEC-SEC-007` | Independent security testing requires an external engagement; the vulnerability policy requires a security reviewer | Security reviewer and an external tester |
+| `DEC-INT-001`, `DEC-INT-002`, `DEC-BANK-002`, `DEC-NTF-002` | Provider selection requires due diligence, a contract and a data-processing arrangement, and commits spend | Product Owner with Legal and Security, after selection |
+| `DEC-OPS-001`–`DEC-OPS-005` | Provider, topology, service targets, recovery objectives and thresholds depend on infrastructure that is not provisioned | Product Owner with DevOps, at provisioning |
+| `APPR-P03-001` to `APPR-P12-006` | These are phase evidence gates, not preference decisions. Each requires its phase's executed test and verification evidence, which is `NOT_RUN` because no implementation exists. Evidence cannot be pre-approved | Product Owner, once the evidence exists |
+
+**P01 authorization.** `APPR-P01-001` is recorded as approved at phase level. The project's own control in `QUAL-DEVWF-001` and the task manifest still requires each dispatched task to name its task ID, manifest version, file scope, reviewers and evidence requirements. Phase authorization does not remove that per-task record; it means the phase may now begin.
+
+**Standing position.** A specialist decision above may be closed at any time by recording the named professional's conclusion, its dated authoritative source, applicability and scope, using the blank blocks in `APPROVAL_RECORD_FORM.md`. Until then the dependent behavior stays disabled and fails closed in the owning specification, which is why implementation can proceed without them.
 
 ## 12. Decision Recording Requirements
 
@@ -298,6 +327,8 @@ Detailed decision inventories currently embedded in product and architecture doc
 
 | Date | Decision ID | Outcome | Approved by | Notes |
 |---|---|---|---|---|
+| 29 October 2026 | DEC-GOV-008 | Updated the `GOV_P01_GUARD` interlock in `validate_governance.py` from "P01 must remain AWAITING_APPROVAL" to "P01 may be AWAITING_APPROVAL or AUTHORIZED, and AUTHORIZED requires a recorded APPR-P01-001" | Agent change consequent on the recorded Product Owner authorization; requires Product Owner confirmation | The original guard encoded the pre-authorization state and failed once P01 was authorized. It was not removed or suppressed: the replacement keeps an interlock that prevents an agent or a status-table edit from authorizing a phase without a recorded approval. `CI-GATE-003` specification updated to match. Confirm this change or direct an alternative. |
+| 29 October 2026 | Product Owner blanket approval; see section 11.6 | Approved every decision within Product Owner, product, commercial, architecture, QA, DevOps and finance-domain-owner authority, and authorized P01 at phase level as `APPR-P01-001` | Product Owner — explicit statement "approve everything / i have gone through everything and its all good" | Reviewed the documentation baseline at commit `8ff7f02`. Does **not** close the qualified-professional and provider decisions listed in section 11.6, and does not approve any `APPR-Pnn` phase evidence gate, because the underlying test and verification evidence is `NOT_RUN`. No compliance, accessibility conformance, localization completeness or security assurance is claimed. |
 | 28 October 2026 | DOC-BASELINE-001 | Approved the repository documentation in scoped baseline/specification classes | Product Owner — explicit market-standard review instruction | See `DOCUMENT_STANDARDS_REVIEW.md`; no compliance certification or implementation authorization implied |
 | 27 October 2026 | DEC-GOV-003 | Reserved IAM-NNN for product requirements and IAM-TST-NNN for architecture test scenarios | Documentation governance rule | Corrected an identifier collision without changing required behavior |
 | 28 October 2026 | DEC-GOV-004 | Verified the existing Git repository rooted at `D:/Project/uae-erp-saas` | Repository state verification | Git status and diff checks are available for documentation governance |
