@@ -23,7 +23,7 @@ Use the status vocabulary defined in `docs/00-product/DEVELOPMENT_ROADMAP.md`. A
 | Phase | Name | Status | Authorization | Evidence / Blocker |
 |---|---|---|---|---|
 | P00 | Foundation and Architecture | APPROVED | No P01 application authorization | APPR-P00-001 and P00-EV-013 verified; Product Owner approval and recorded independent reviews close P00 |
-| P01 | Core Platform and Multi-Tenancy | AUTHORIZED | P01-T01 only; P01-T02–P01-T13 unauthorized | Product Owner explicitly authorized P01-T01 against the approved P01 baseline. Its canonical manifest task is `P01-T-001`; the task record retains bounded scope, reviewers, permissions and evidence requirements. All 53 isolation scenarios remain NOT_RUN |
+| P01 | Core Platform and Multi-Tenancy | AUTHORIZED | P01-T01 only; P01-T02–P01-T13 unauthorized | P01-T01 is implemented locally and IN_REVIEW with P01-EV-002/009/010 task-scoped evidence. Independent review remains required. All 53 isolation scenarios remain NOT_RUN |
 | P02 | Subscription Engine | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet B approved; entitlement/commercial policies and implementation authorization remain separate |
 | P03 | CRM, Sales and Basic Invoicing | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet C approved; APPR-P03-001–003 and predecessor implementation contracts remain |
 | P04 | UAE E-Invoicing Integration | APPROVED SPECIFICATION — PLANNED | Not authorized | Packet D approved; provider, applicability, specialist and conformance gates remain |
@@ -60,6 +60,7 @@ Current P00 planning evidence:
 
 | Date | Change |
 |---|---|
+| 30 October 2026 | Recorded P01-T01 local implementation and evidence as IN_REVIEW; no later task or phase transition was authorized. |
 | 27 October 2026 | Established the phase register; no implementation phase was authorized. |
 | 28 October 2026 | Recorded completion of the initial ADR drafting and cross-review milestone; no implementation authorization was granted. |
 | 28 October 2026 | Recorded acceptance of ADR-001 through ADR-020 and drafting of security/testing baselines; P00 remains in progress and implementation is not authorized. |

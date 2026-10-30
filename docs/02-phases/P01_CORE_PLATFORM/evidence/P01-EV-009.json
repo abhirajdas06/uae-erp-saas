@@ -1,0 +1,35 @@
+{
+  "evidence_id": "P01-EV-009",
+  "task_id": "P01-T-001",
+  "status": "PARTIAL_PHASE_EVIDENCE_COMPLETE_FOR_P01_T01",
+  "recorded_at": "2026-10-30",
+  "authorization_reference": "APPR-P01-001-P01-T01-ONLY",
+  "implementation_revision": "4f30e1becb29c1e6be6fad14970b65bee8217f48",
+  "source_sha256": {
+    "manage.py": "d97b6797a2f0a26c4c8f7d6fa2ba246b191bbc54fd8f42c8fadb775960885051",
+    "config/settings.py": "d57c3f35237d39ba1b07d8dbeec9fc4dfe68a6aa7e02d1580fab27c493d1baff",
+    "apps/core/apps.py": "41fb63c33670430911a777fe4705fb1ca213a54086f872a8ff30a5e8c2b5020f"
+  },
+  "checks": [
+    {
+      "command": "python manage.py check",
+      "result": "PASS",
+      "summary": "System check identified no issues (0 silenced)."
+    },
+    {
+      "command": "python -m ruff format --check .",
+      "result": "PASS",
+      "summary": "15 files already formatted."
+    },
+    {
+      "command": "python -m ruff check .",
+      "result": "PASS",
+      "summary": "All checks passed."
+    }
+  ],
+  "scope_notes": [
+    "The Ruff boundary includes the new application/bootstrap code and excludes pre-existing documentation and dependency-free P00 validator code.",
+    "No container assets exist in P01-T01; container inspection remains NOT_RUN for later authorized tasks.",
+    "Typed production settings and security hardening belong to P01-T02 and remain unauthorized."
+  ]
+}
