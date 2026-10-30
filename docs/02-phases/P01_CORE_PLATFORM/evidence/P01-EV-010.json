@@ -16,13 +16,22 @@
     "result": "PASS",
     "summary": "10 passed."
   },
+  "hosted_ci": {
+    "provider": "GitHub Actions",
+    "pull_request": "https://github.com/abhirajdas06/uae-erp-saas/pull/1",
+    "run_id": 41050133049,
+    "run_url": "https://github.com/abhirajdas06/uae-erp-saas/actions/runs/41050133049",
+    "tested_revision": "105fed408aad5ef1c9efbe8e6a2c8270fd81e2f4",
+    "workflow": "P00 Quality Gates",
+    "result": "PASS"
+  },
   "bootstrap_assertions": [
     "Django is locked to 6.1.2.",
     "The minimal apps.core application is registered.",
     "tenants, users, and audit applications were not speculatively scaffolded."
   ],
   "limitations": [
-    "This is local P01-T01 evidence, not the complete P01 CI run required by P01-T12.",
+    "The hosted P00 governance workflow passed for the P01-T01 pull request; this is not the complete P01 CI suite required by P01-T12.",
     "All 53 tenant-isolation scenarios remain NOT_RUN because tenant functionality is outside P01-T01."
   ]
 }
