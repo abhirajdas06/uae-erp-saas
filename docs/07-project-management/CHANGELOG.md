@@ -27,4 +27,6 @@
 
 | 30 Oct 2026 | Added `PROD-CONFIG-001` recording the Product Owner configuration proposal, and repositioned the decision register to 98 APPROVED, 9 RECOMMENDED, 13 DEFERRED and 6 OPEN | The value-dependent decisions are now reviewable proposals rather than open questions; three discrepancies against the verified register were raised rather than adopted |
 
+| 30 Oct 2026 | Product Owner confirmed the `DEC-ENT-001` supersession and the `DEC-API-003` deferral, closing `ISSUE-009` | The decision register carries no duplicate identifier and no unconfirmed agent-initiated change; four decisions remain open, each needing a legal or specialist opinion |
+
 Future entries describe material outcomes and link owning specifications/evidence; do not duplicate file-by-file Git history.
