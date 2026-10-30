@@ -5,9 +5,9 @@
 | Document ID | PM-STATUS-001 |
 | Version | 1.0 |
 | Status | Active |
-| Last Updated | 29 October 2026 |
-| Current Stage | Documentation baseline approved; P01 implementation authorized |
-| Implementation Authorization | P01 granted 29 October 2026 (`APPR-P01-001`); P02–P12 remain gated |
+| Last Updated | 30 October 2026 |
+| Current Stage | Documentation baseline approved; P01-T01 implementation authorized |
+| Implementation Authorization | P01-T01 only (`APPR-P01-001`); P01-T02–P12 remain gated |
 | Owner | Product Owner |
 
 ## 1. Purpose
@@ -25,9 +25,9 @@ Canonical supporting records are:
 
 ## 2. Current Summary
 
-The documentation and architecture-governance baseline is complete. No ERP application implementation is authorized. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00/P01, manifest and CI specifications are approved. P00-T-001 and hosted CI evidence are verified. APPR-P00-001, APPR-P00-002 and P00-EV-013/014 are recorded, so P00 is approved. APPR-P01-001 remains a separate mandatory implementation gate.
+The documentation and architecture-governance baseline is complete. ADR-001 through ADR-020 and the bounded product, architecture, quality, P00–P12, manifest and CI specifications are approved as documentation baselines. Fourteen cross-cutting documents were explicitly approved as documentation baselines on 30 October 2026 under `APPR-DOC-014`. This approval is not regulatory certification and does not approve providers, compliance claims, deployment or production. P00-T-001 and hosted CI evidence are verified, and P00 is approved. Only P01-T01 is authorized for implementation; P01-T02 onward remains unauthorized.
 
-On 29 October 2026 an independent development-readiness audit (`GOV-GAP-001`) tested whether the approved baseline is sufficient to begin implementation, rather than whether every planned document exists. It found twelve implementation-critical specifications that no document owned, several of which the approved documents had explicitly deferred, and those twelve specifications were added: UI design system, localization and bilingual interface, document numbering, notifications, data migration and tenant export, accessibility and browser support, threat model, data protection and retention, test data and fixtures, developer onboarding and workflow, glossary, and the launch report catalogue. All twelve are `PROPOSED` and await their named approvers; `RISK-054`–`RISK-063` and the new decisions in sections 11.1 to 11.4 of `DECISIONS_PENDING.md` record what remains.
+On 29 October 2026 an independent development-readiness audit (`GOV-GAP-001`) identified twelve previously unowned implementation-critical specifications. Those specifications, plus `PROD-CONFIG-001` and `DEP-API-001`, are now approved documentation baselines under `APPR-DOC-014`. Their embedded specialist, provider, activation and evidence gates remain effective; baseline approval does not convert unverified facts or proposed configuration into professional conclusions.
 
 The P00–P12 cross-phase review, inventory disposition, deterministic validation and independent agent reviews are complete. Product Owner approval of Packet A and Packets B–G is recorded against the validated documentation snapshot. Current PINT AE Billing/Self-Billing/TDD `1.0.4` remains only the technical candidate with checksummed resources and a semantic-to-UBL mapping baseline; production applicability/conformance remains unapproved. Domain policy, specialist, provider, implementation, deployment and launch gates remain separate.
 
@@ -49,7 +49,7 @@ The P00–P12 cross-phase review, inventory disposition, deterministic validatio
 | P00 requirements-to-control-to-test matrix | `docs/02-phases/P00_FOUNDATION/P00_TRACEABILITY_MATRIX.md` | APPROVED VERIFICATION BASELINE |
 | Phase/task manifest schema and validators | `orchestration/`; `scripts/quality/`; P00-EV-010 | IMPLEMENTED; local validation PASS |
 | Initial CI quality gates | `.github/workflows/p00-quality.yml`; P00-EV-011 | IMPLEMENTED AND VERIFIED; local-equivalence and hosted run 40647091699 PASS |
-| Bounded P01 phase specification | `docs/02-phases/P01_CORE_PLATFORM/P01_PHASE_SPECIFICATION.md` | APPROVED SPECIFICATION; implementation not authorized |
+| Bounded P01 phase specification | `docs/02-phases/P01_CORE_PLATFORM/P01_PHASE_SPECIFICATION.md` | APPROVED SPECIFICATION; P01-T01 only authorized |
 | P01 tenant-isolation test matrix | `docs/02-phases/P01_CORE_PLATFORM/P01_TENANT_ISOLATION_TEST_MATRIX.md` | APPROVED VERIFICATION BASELINE; all tests NOT_RUN |
 | Initial repository audit | Current project handover record | Complete |
 | Canonical ADR numbering | ADR register and `SYSTEM_ARCHITECTURE.md` | Reconciled |
@@ -57,7 +57,7 @@ The P00–P12 cross-phase review, inventory disposition, deterministic validatio
 | Notion operational dashboard | [UAE ERP SaaS — Project Hub](https://app.notion.com/p/40714ff52961817d9b27f4dbb4a2ddca) | Established as a derived view; repository remains authoritative |
 | Documentation completion plan and reusable templates | `DOCUMENTATION_COMPLETION_PLAN.md`; phase/module/task templates | Established |
 | P01 core module specification batch | `docs/03-modules/` | CORE, TENANTS, USERS, and AUDIT drafts ready for review |
-| P01 orchestration prompt | `docs/04-agents/phase-prompts/P01_CORE_PLATFORM.md` | Drafted; implementation remains unauthorized |
+| P01 orchestration prompt | `docs/04-agents/phase-prompts/P01_CORE_PLATFORM.md` | Approved baseline; P01-T01 only authorized |
 | P02 phase and traceability batch | `docs/02-phases/P02_SUBSCRIPTION_ENGINE/` | Phase specification and 122-test traceability catalogue ready for review |
 | P02 module specification batch | `docs/03-modules/` | SUBSCRIPTIONS, ENTITLEMENTS, and BILLING ready for review |
 | P02 orchestration and task prompts | `docs/04-agents/phase-prompts/` | Phase prompt and twelve bounded task prompts ready for review |
@@ -78,11 +78,7 @@ The P00–P12 cross-phase review, inventory disposition, deterministic validatio
 | P11 Enterprise Readiness batch | P11/module/prompt paths | Complete draft with Enterprise Administration and 165 planned tests; launch scope/policies and executed readiness evidence remain |
 | P12 Production Launch/Operations batch | P12/deployment/prompt paths | Complete draft with 180 planned tests and deployment, backup/restore, monitoring, incident, release, capacity, runbook, evidence and launch specifications; no production authority granted |
 | Development-readiness gap audit | `DOCUMENTATION_GAP_AUDIT.md` (`GOV-GAP-001`) | COMPLETE; twelve unowned implementation-critical specifications identified and closed |
-| Interface, localization and numbering specifications | `ARCH-UI-001`, `ARCH-L10N-001`, `ARCH-SEQ-001` | PROPOSED; `DEC-UI-002`–`DEC-UI-005`, `DEC-L10N-001`–`DEC-L10N-005` and `DEC-SEQ-001`–`DEC-SEQ-005` required |
-| Notification and data-migration specifications | `ARCH-NOTIFY-001`, `ARCH-MIGRATION-001` | PROPOSED; channel/provider and opening-balance decisions required |
-| Accessibility, threat model and privacy/retention standards | `QUAL-A11Y-001`, `QUAL-THREAT-001`, `QUAL-PRIV-001` | PROPOSED; no conformance, security assurance or compliance claim is made and all mitigations remain `PLANNED` |
-| Test data and developer workflow standards | `QUAL-TESTDATA-001`, `QUAL-DEVWF-001`, root `CONTRIBUTING.md` | PROPOSED; executable today for documentation work, application environment pending `APPR-P01-001` |
-| Glossary and launch report catalogue | `PROD-GLOSSARY-001`, `PROD-REPORTS-001` | PROPOSED; Arabic terminology reviewer and `DEC-REP-001` required |
+| Fourteen cross-cutting specifications | `APPR-DOC-014` | APPROVED DOCUMENTATION BASELINES; specialist, provider, activation and evidence gates remain separate |
 
 ## 4. Work in Progress
 
@@ -91,7 +87,7 @@ The P00–P12 cross-phase review, inventory disposition, deterministic validatio
 | Architecture decisions | ADR-001 through ADR-020 accepted; known membership and RLS-key conflicts reconciled | Remaining architecture narratives reconciled and implementation follows accepted ADRs |
 | Decision governance | Canonical register and standards approval record established | Remaining product/specialist/operational decisions have explicit outcomes |
 | Phase P00 specification | P00 completion evidence and APPR-P00-001/002 recorded; phase approved | Closed; preserve evidence and change control |
-| Phase P01 specification | Specification and 53-scenario matrix approved; implementation not authorized | P00 exit, separate P01 authorization, implemented controls, and executed evidence |
+| Phase P01 specification | Specification and 53-scenario matrix approved; P01-T01 only authorized | Complete bounded P01-T01 with evidence; obtain separate authorization for every later task |
 | Quality governance | Initial tools/workflow verified locally and in hosted GitHub Actions | Protected-branch configuration and later application gates |
 | Requirements traceability | Repository matrix, ID convention and P00–P12 matrices present; identifier/internal-link validation passes; implementation evidence remains `NOT_RUN` | Human review and ongoing maintenance during implementation |
 | Module/phase documentation completion | P00–P12 phase/module/prompt set, cross-phase review, inventory evidence and Packets A–G approval complete | Maintain under change control during implementation |
@@ -99,14 +95,14 @@ The P00–P12 cross-phase review, inventory disposition, deterministic validatio
 
 ## 5. Current Blockers
 
-- P01 implementation remains unauthorized until APPR-P01-001 names a bounded task, manifest, scope, reviewers and evidence requirements.
+- P01-T01 is authorized under `APPR-P01-001`; P01-T02 through P01-T13 remain unauthorized and require separate bounded authorization.
 - Deployment, recovery and production-operational specifications are drafted; provider/topology/service targets, executable evidence and all production authorizations remain open.
 - Product, finance, UAE regulatory, provider, region/residency, retention, RPO/RTO, and API-support decisions remain open where recorded.
 - P02 commercial policies and provider selection remain unresolved; the P02 specifications require undecided flows to stay disabled and do not block later-phase documentation drafting.
 - P03 customer/item ownership and invoice financial/document policies require APPR-P03-002/003 before schema/issuance implementation.
 - P04 provider/applicability/schema decisions and P05 accounting/VAT policies are fully actionable in `DECISIONS_PENDING.md`; they block dependent implementation/activation, not P06/P07 documentation drafting.
 - P06–P10 approvals block their dependent implementation/activation. P11 requires an implemented candidate and approved support/data/performance/experience policies. P12 additionally requires provider/spend/provisioning, exact deployment and launch authorizations.
-- The twelve specifications added by `GOV-GAP-001` are unapproved. Interface scaffolding is blocked by `DEC-UI-002`, personal and payroll data storage by `DEC-PRIV-002`, financial document models by `DEC-SEQ-001`, tenant onboarding by `DEC-MIG-002`, and any Arabic or accessibility claim by `DEC-L10N-001` and `DEC-A11Y-001`. `DEC-PRIV-002` has the longest external lead time because the applicable personal-data instrument status could not be confirmed from primary sources.
+- The fourteen cross-cutting documents are approved as documentation baselines. Their specialist and activation gates still apply: personal and payroll data behavior remains gated by privacy decisions, regulated financial behavior by finance/tax decisions, Arabic release by its terminology review, and accessibility claims by executed evidence.
 - `GOV-READINESS-001` records that all 24 module specifications now satisfy the `RDY-001`–`RDY-012` gate. P01 is implementation-ready once its approvals are recorded, and P02–P12 are specification-complete, blocked by their named approvals and, for P04 and P09, by external provider and regulatory dependencies rather than by missing documentation.
 - `GOV-APPROVAL-002` makes the remaining blockers actionable: it orders every outstanding approval by owner, states the recommended option and the exact recording statement, and names the four decisions on the critical path. Retention and personal-data evidence is now article-level and dated, so the specialist gates are review tasks rather than research tasks.
 
@@ -114,9 +110,9 @@ See `DECISIONS_PENDING.md` and `RISKS_AND_ISSUES.md` for ownership and impact.
 
 ## 5.1 Approval of 29 October 2026
 
-The Product Owner approved the documentation set and authorized P01. Fifty-seven decisions moved to `APPROVED`; thirty-seven remain open because they require a qualified professional opinion or an external provider, and every `APPR-Pnn` phase gate for P02 to P12 remains open because its evidence is `NOT_RUN`. `DECISIONS_PENDING.md` section 11.6 records the scope and the limits.
+The Product Owner approved the documentation set and later approved the fourteen cross-cutting documents as documentation baselines. Specialist and provider decisions remain separate. P01 authorization is bounded to P01-T01 only, while every later task and every P02–P12 implementation gate remains unauthorized.
 
-Implementation of P01 may now begin. It depends on none of the open items, and `DEP-API-001` confirms P01 needs no external API, account or credential.
+Implementation of P01-T01 may begin. It depends on none of the open specialist items, and `DEP-API-001` confirms P01-T01 needs no external API, account or credential. Completion does not authorize P01-T02.
 
 ## 5.2 Configuration Submission of 30 October 2026
 
@@ -126,7 +122,7 @@ Decision position after the 30 October verification round: 98 `APPROVED`, 9 `REC
 
 ## 6. Next Recommended Action
 
-Begin P01-T01, the toolchain and Django bootstrap task, naming its manifest version, file scope and reviewers at dispatch per `QUAL-DEVWF-001`. P01 needs no external access, so no procurement is on its critical path.
+Begin only P01-T01, the authorized toolchain and Django bootstrap task, against its bounded task record and evidence requirements. P01-T02 and later tasks require new authorization. P01-T01 needs no external access, so no procurement is on its critical path.
 
 In parallel, start the two longest external lead times, because neither blocks P01 but both will block later phases: engage a qualified tax and legal reviewer for the decisions in `DECISIONS_PENDING.md` section 11.6, and begin accredited e-invoicing provider selection under `DEC-INT-002`, for which a dated appointment deadline already exists in `UAE-EINV-003`.
 
@@ -134,6 +130,7 @@ In parallel, start the two longest external lead times, because neither blocks P
 
 | Date | Change |
 |---|---|
+| 30 October 2026 | Recorded `APPR-DOC-014` approval of fourteen cross-cutting documentation baselines and reconciled implementation authorization to P01-T01 only. Specialist, provider, compliance, later implementation, deployment and production gates remain separate. |
 | 27 October 2026 | Established the persistent status record after the repository audit and canonical ADR-number reconciliation. |
 | 27 October 2026 | Drafted ADR-003 through ADR-006 and updated their approval entries to awaiting human review. |
 | 27 October 2026 | Corrected the IAM test identifier collision, completed missing ADR-002 format sections, and drafted ADR-007 and ADR-008. |

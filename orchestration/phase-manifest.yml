@@ -94,7 +94,7 @@
       "id": "P01",
       "title": "Core Platform and Multi-Tenancy",
       "aliases": ["P1", "P1-CORE-PLATFORM"],
-      "status": "AWAITING_APPROVAL",
+      "status": "READY",
       "specification": "docs/02-phases/P01_CORE_PLATFORM/P01_PHASE_SPECIFICATION.md",
       "owner_roles": ["Product", "Architecture", "Security", "QA", "Database", "DevOps"],
       "dependencies": ["P00"],
@@ -102,13 +102,21 @@
       "exit_criteria": [],
       "required_decisions": ["DEC-PHASE-002", "DEC-QA-004"],
       "required_adrs": ["ADR-002", "ADR-003", "ADR-004", "ADR-005", "ADR-014", "ADR-015"],
-      "tasks": [],
+      "tasks": ["P01-T-001"],
       "evidence": [],
-      "approvals": [],
-      "implementation_authorized": false,
-      "authorization_reference": null,
+      "approvals": [
+        {
+          "role": "Product Owner",
+          "scope": "P01-T01 only against the approved P01 baseline; P01-T02 through P01-T13 remain unauthorized",
+          "decision": "APPROVED",
+          "date": "2026-10-30",
+          "evidence_reference": "APPR-P01-001"
+        }
+      ],
+      "implementation_authorized": true,
+      "authorization_reference": "APPR-P01-001-P01-T01-ONLY",
       "exceptions": [],
-      "updated_at": "2026-10-28T00:00:00Z"
+      "updated_at": "2026-10-30T00:00:00Z"
     }
   ]
 }

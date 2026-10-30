@@ -95,6 +95,117 @@
       "authorization_reference": "USER-2026-10-28-P00-VALIDATORS-CI",
       "exceptions": [],
       "updated_at": "2026-10-28T06:15:00Z"
+    },
+    {
+      "id": "P01-T-001",
+      "aliases": ["P01-T01"],
+      "phase_id": "P01",
+      "title": "Toolchain and Django project bootstrap",
+      "objective": "Establish only the approved Django project and locked Python, Django, and test toolchain.",
+      "status": "READY",
+      "scope": {
+        "included": [
+          "Version constraints and dependency lock",
+          "Django project package",
+          "Minimal core application",
+          "pytest bootstrap",
+          "Reproducible local commands"
+        ],
+        "excluded": [
+          "P01-T02 through P01-T13",
+          "Tenant, membership, authentication, authorization, RLS, and business-domain models",
+          "Speculative migrations or later domain applications",
+          "External provider integration",
+          "Deployment or production access"
+        ]
+      },
+      "owner_role": "Developer",
+      "reviewer_roles": ["Architecture", "QA", "Security", "DevOps"],
+      "dependencies": [],
+      "requirements": ["P01-AC-001", "P01-AC-002", "P01-AC-030"],
+      "adrs": ["ADR-001", "ADR-003", "ADR-015", "ADR-016", "ADR-017"],
+      "risks": ["RISK-007", "RISK-024"],
+      "decisions": ["DEC-PHASE-002"],
+      "acceptance_criteria": [
+        {
+          "id": "P01-T-001-AC-001",
+          "statement": "A clean environment can install the locked approved dependencies and report the supported runtime and framework versions.",
+          "state": "NOT_STARTED",
+          "mandatory": true,
+          "verification": "CLEAN_INSTALL_AND_VERSION_CHECK",
+          "evidence_refs": ["P01-EV-002"],
+          "owner_roles": ["QA", "DevOps"]
+        },
+        {
+          "id": "P01-T-001-AC-002",
+          "statement": "The bounded Django bootstrap passes framework system checks and test discovery without creating later domain applications or speculative models.",
+          "state": "NOT_STARTED",
+          "mandatory": true,
+          "verification": "SYSTEM_CHECK_AND_TEST_DISCOVERY",
+          "evidence_refs": ["P01-EV-009", "P01-EV-010"],
+          "owner_roles": ["QA", "Architecture", "Security"]
+        }
+      ],
+      "commands": [
+        {
+          "id": "P01-T01-CMD-001",
+          "purpose": "Run the framework system check after the authorized bootstrap exists",
+          "run_from": ".",
+          "command": "python manage.py check",
+          "image_or_runtime": "Approved locked P01 Python environment",
+          "network": "disabled after dependency installation",
+          "expected_exit": 0,
+          "produces": ["P01-EV-009"]
+        },
+        {
+          "id": "P01-T01-CMD-002",
+          "purpose": "Verify test discovery after the authorized bootstrap exists",
+          "run_from": ".",
+          "command": "python -m pytest --collect-only",
+          "image_or_runtime": "Approved locked P01 Python environment",
+          "network": "disabled after dependency installation",
+          "expected_exit": 0,
+          "produces": ["P01-EV-010"]
+        }
+      ],
+      "permissions": {
+        "repository": "write within bounded P01-T01 scope",
+        "pull_requests": "create or update bounded review only",
+        "actions": "read",
+        "id_token": "none",
+        "secrets": [],
+        "database_role": "none",
+        "object_storage": "none",
+        "deployment_environment": "none"
+      },
+      "evidence_requirements": [
+        {
+          "id": "P01-EV-002",
+          "format": "Lock file, version inventory, and clean-install log",
+          "producer": "P01-T01 dependency/bootstrap checks",
+          "retention_class": "P01_PHASE_EVIDENCE",
+          "sensitivity": "INTERNAL"
+        },
+        {
+          "id": "P01-EV-009",
+          "format": "Framework system-check log",
+          "producer": "python manage.py check",
+          "retention_class": "P01_PHASE_EVIDENCE",
+          "sensitivity": "INTERNAL"
+        },
+        {
+          "id": "P01-EV-010",
+          "format": "Test-discovery and dependency/license/security review evidence",
+          "producer": "P01-T01 verification commands and review",
+          "retention_class": "P01_PHASE_EVIDENCE",
+          "sensitivity": "INTERNAL"
+        }
+      ],
+      "rollback_or_recovery": "Revert only the bounded P01-T01 bootstrap and dependency files through reviewed version control; preserve evidence and do not touch P00 records or later-phase specifications.",
+      "implementation_authorized": true,
+      "authorization_reference": "APPR-P01-001-P01-T01-ONLY",
+      "exceptions": [],
+      "updated_at": "2026-10-30T00:00:00Z"
     }
   ]
 }

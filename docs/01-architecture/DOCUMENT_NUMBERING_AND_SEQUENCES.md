@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | ARCH-SEQ-001 |
-| Status | PROPOSED SPECIFICATION — NUMBERING POLICY AND STATUTORY CONFIRMATION REQUIRED |
+| Status | APPROVED DOCUMENTATION BASELINE — NUMBERING POLICY AND STATUTORY CONFIRMATION REQUIRED |
 | Owner | Product Architect / Finance domain owner |
 | Governing decisions | ADR-011, ADR-014, ADR-002, ADR-004 |
 | Related documents | `DATABASE_DESIGN.md`, `API_STANDARDS.md`, `../03-modules/UAE_VAT.md`, `../03-modules/UAE_EINVOICING.md`, `../03-modules/ACCOUNTING.md` |

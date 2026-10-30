@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | ARCH-UI-001 |
-| Status | PROPOSED SPECIFICATION — DESIGN TOKEN AND COMPONENT APPROVAL REQUIRED |
+| Status | APPROVED DOCUMENTATION BASELINE — IMPLEMENTATION EVIDENCE REQUIRED |
 | Owner | Product Architect / UX Lead |
 | Governing decisions | ADR-007, ADR-006, ADR-005 |
 | Related documents | `ARCHITECTURAL_DECISIONS/ADR-007-server-rendered-ui-with-htmx-and-tailwind.md`, `API_STANDARDS.md`, `LOCALIZATION_AND_BILINGUAL_UI.md`, `../05-quality/ACCESSIBILITY_AND_BROWSER_SUPPORT.md` |

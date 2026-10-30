@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | ARCH-MIGRATION-001 |
-| Status | PROPOSED SPECIFICATION — OPENING BALANCE POLICY AND FORMAT APPROVAL REQUIRED |
+| Status | APPROVED DOCUMENTATION BASELINE — OPENING BALANCE POLICY AND FORMAT APPROVAL REQUIRED |
 | Owner | Product Architect / Finance domain owner |
 | Governing decisions | ADR-011, ADR-013, ADR-004, ADR-019 |
 | Related documents | `DATABASE_DESIGN.md`, `DOCUMENT_NUMBERING_AND_SEQUENCES.md`, `../03-modules/ACCOUNTING.md`, `../05-quality/DATA_PROTECTION_AND_RETENTION.md` |

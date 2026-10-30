@@ -27,7 +27,7 @@ class ManifestValidatorTests(unittest.TestCase):
         findings, metrics = validate_manifests.validate(self.phase, self.task, ROOT)
         self.assertEqual([], findings)
         self.assertEqual(2, metrics["phase_count"])
-        self.assertEqual(1, metrics["task_count"])
+        self.assertEqual(2, metrics["task_count"])
 
     def test_dependency_cycle_fails(self) -> None:
         phase = copy.deepcopy(self.phase)

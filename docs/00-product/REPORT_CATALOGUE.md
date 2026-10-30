@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | PROD-REPORTS-001 |
-| Status | PROPOSED CATALOGUE — `DEC-REP-001` APPROVAL REQUIRED |
+| Status | APPROVED DOCUMENTATION BASELINE — REPORT ACTIVATION REMAINS SEPARATELY GATED |
 | Owner | Product Owner / Reporting domain owner |
 | Related documents | `MASTER_PRODUCT_SPECIFICATION.md`, `../03-modules/REPORTING.md`, `../03-modules/ACCOUNTING.md`, `../05-quality/DATA_PROTECTION_AND_RETENTION.md` |
 

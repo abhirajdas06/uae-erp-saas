@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | QUAL-PRIV-001 |
-| Status | PROPOSED FRAMEWORK — LEGAL REVIEW AND RETENTION PERIOD CONFIRMATION REQUIRED |
+| Status | APPROVED DOCUMENTATION BASELINE — LEGAL REVIEW AND RETENTION CONFIRMATION REQUIRED |
 | Owner | Product Owner / Privacy reviewer |
 | Governing decisions | ADR-018, ADR-019, ADR-004, ADR-017 |
 | Related documents | `SECURITY_REQUIREMENTS.md`, `THREAT_MODEL.md`, `../01-architecture/DATA_MIGRATION_AND_IMPORT.md`, `../06-deployment/BACKUP_AND_RECOVERY.md`, `../00-product/UAE_REGULATORY_SOURCE_REGISTER.md` |

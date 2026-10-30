@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | QUAL-A11Y-001 |
-| Status | PROPOSED STANDARD — CONFORMANCE TARGET AND SUPPORT MATRIX APPROVAL REQUIRED |
+| Status | APPROVED DOCUMENTATION BASELINE — CONFORMANCE CLAIMS REQUIRE EXECUTED EVIDENCE |
 | Owner | QA / UX Lead |
 | Governing decisions | ADR-007 |
 | Related documents | `../01-architecture/UI_DESIGN_SYSTEM.md`, `../01-architecture/LOCALIZATION_AND_BILINGUAL_UI.md`, `TESTING_STRATEGY.md`, `DEFINITION_OF_DONE.md` |

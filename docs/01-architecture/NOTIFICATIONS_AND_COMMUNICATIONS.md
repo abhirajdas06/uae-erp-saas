@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | ARCH-NOTIFY-001 |
-| Status | PROPOSED SPECIFICATION — CHANNEL SCOPE AND PROVIDER SELECTION REQUIRED |
+| Status | APPROVED DOCUMENTATION BASELINE — CHANNEL SCOPE AND PROVIDER SELECTION REQUIRED |
 | Owner | Product Architect / Platform domain owner |
 | Governing decisions | ADR-009, ADR-010, ADR-018, ADR-019 |
 | Related documents | `EVENT_AND_TASK_PROCESSING.md`, `../03-modules/INTEGRATIONS.md`, `LOCALIZATION_AND_BILINGUAL_UI.md`, `../05-quality/DATA_PROTECTION_AND_RETENTION.md` |

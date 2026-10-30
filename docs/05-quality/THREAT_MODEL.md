@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | QUAL-THREAT-001 |
-| Status | PROPOSED BASELINE — SECURITY REVIEW APPROVAL REQUIRED |
+| Status | APPROVED DOCUMENTATION BASELINE — CONTROL IMPLEMENTATION AND SECURITY EVIDENCE REQUIRED |
 | Owner | Security Review Agent / Product Architect |
 | Method | STRIDE applied per trust boundary, with multi-tenant and financial abuse cases |
 | Related documents | `SECURITY_REQUIREMENTS.md`, `../01-architecture/MULTI_TENANCY.md`, `../01-architecture/AUTHENTICATION_AND_PERMISSIONS.md`, `../01-architecture/API_STANDARDS.md`, `DATA_PROTECTION_AND_RETENTION.md` |

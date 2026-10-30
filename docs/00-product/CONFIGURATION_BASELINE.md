@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | PROD-CONFIG-001 |
-| Status | PROPOSED CONFIGURATION — ADVISER APPROVAL REQUIRED; NOT A PROFESSIONAL OPINION |
+| Status | APPROVED DOCUMENTATION BASELINE — ADVISER APPROVAL REQUIRED; NOT A PROFESSIONAL OPINION |
 | Proposed by | Product Owner, 30 October 2026 |
 | Adviser | **Pending appointment.** No qualified adviser has reviewed any value in this document |
 | Related documents | `UAE_REGULATORY_SOURCE_REGISTER.md`, `../03-modules/UAE_VAT.md`, `../03-modules/ACCOUNTING.md`, `../03-modules/HRMS.md`, `../03-modules/PAYROLL.md`, `../03-modules/INVENTORY.md`, `../03-modules/UAE_EINVOICING.md` |

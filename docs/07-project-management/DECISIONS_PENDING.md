@@ -306,7 +306,26 @@ The Product Owner stated that they had reviewed the documentation set and approv
 | `DEC-OPS-001`–`DEC-OPS-005` | Provider, topology, service targets, recovery objectives and thresholds depend on infrastructure that is not provisioned | Product Owner with DevOps, at provisioning |
 | `APPR-P03-001` to `APPR-P12-006` | These are phase evidence gates, not preference decisions. Each requires its phase's executed test and verification evidence, which is `NOT_RUN` because no implementation exists. Evidence cannot be pre-approved | Product Owner, once the evidence exists |
 
-**P01 authorization.** `APPR-P01-001` is recorded as approved at phase level. The project's own control in `QUAL-DEVWF-001` and the task manifest still requires each dispatched task to name its task ID, manifest version, file scope, reviewers and evidence requirements. Phase authorization does not remove that per-task record; it means the phase may now begin.
+**P01 authorization.** `APPR-P01-001` is narrowed by the Product Owner's later explicit instruction to `P01-T01` only, against the approved P01 baseline and its specified scope, tests, reviewers, permissions and evidence requirements. `P01-T02` through `P01-T13` remain unauthorized. Completion of P01-T01 does not imply authorization of the next task.
+
+**APPR-DOC-014 — cross-cutting documentation baseline approval (30 October 2026).** The Product Owner explicitly approved the following fourteen documents as documentation baselines only:
+
+1. `PROD-CONFIG-001` — `../00-product/CONFIGURATION_BASELINE.md`.
+2. `PROD-GLOSSARY-001` — `../00-product/GLOSSARY.md`.
+3. `PROD-REPORTS-001` — `../00-product/REPORT_CATALOGUE.md`.
+4. `ARCH-MIGRATION-001` — `../01-architecture/DATA_MIGRATION_AND_IMPORT.md`.
+5. `ARCH-SEQ-001` — `../01-architecture/DOCUMENT_NUMBERING_AND_SEQUENCES.md`.
+6. `ARCH-L10N-001` — `../01-architecture/LOCALIZATION_AND_BILINGUAL_UI.md`.
+7. `ARCH-NOTIFY-001` — `../01-architecture/NOTIFICATIONS_AND_COMMUNICATIONS.md`.
+8. `ARCH-UI-001` — `../01-architecture/UI_DESIGN_SYSTEM.md`.
+9. `QUAL-A11Y-001` — `../05-quality/ACCESSIBILITY_AND_BROWSER_SUPPORT.md`.
+10. `QUAL-PRIV-001` — `../05-quality/DATA_PROTECTION_AND_RETENTION.md`.
+11. `QUAL-DEVWF-001` — `../05-quality/DEVELOPER_ONBOARDING_AND_WORKFLOW.md`.
+12. `QUAL-TESTDATA-001` — `../05-quality/TEST_DATA_AND_FIXTURES.md`.
+13. `QUAL-THREAT-001` — `../05-quality/THREAT_MODEL.md`.
+14. `DEP-API-001` — `../06-deployment/EXTERNAL_API_AND_ACCESS_REQUIREMENTS.md`.
+
+This approval confirms that the documents may govern later bounded work. It does not validate a proposed configuration as professional advice, close any specialist or provider decision, establish compliance, authorize implementation beyond P01-T01, authorize deployment, or authorize production launch. Every narrower gate embedded in these documents remains effective.
 
 **Routes chosen on 30 October 2026.** The Product Owner directed how the two remaining sets are to be closed, and the substantive inputs are outstanding rather than the authority.
 
@@ -347,6 +366,8 @@ Detailed decision inventories currently embedded in product and architecture doc
 
 | Date | Decision ID | Outcome | Approved by | Notes |
 |---|---|---|---|---|
+| 30 October 2026 | APPR-DOC-014 | APPROVED DOCUMENTATION BASELINES. Approved the fourteen documents listed in the approval record below as documentation baselines only | Product Owner — explicit approval on 30 October 2026 | Specialist validation, provider selection, compliance claims, implementation beyond P01-T01, deployment and production launch remain separately gated. |
+| 30 October 2026 | APPR-P01-001 scope reconciliation | P01-T01 only is authorized against the approved P01 baseline, with its specified scope, tests, reviewers, permissions and evidence requirements. P01-T02 through P01-T13 remain unauthorized | Product Owner — explicit authorization preceding APPR-DOC-014 | Supersedes broader wording that described P01 as authorized at phase level; it does not revoke or expand P01-T01. |
 | 30 October 2026 | DEC-ENT-001 supersession; DEC-API-003 deferral | CONFIRMED. The duplicate `DEC-ENT-001` platform administration row is superseded by `DEC-SEC-005` and `DEC-DATA-002`, with no separate administration decision created, and `DEC-API-003` is deferred until a public or partner API commitment is contemplated | Product Owner — explicit confirmation on 30 October 2026 | Closes `ISSUE-009`. The approved module entitlement enforcement decision in section 3 remains the sole live meaning of `DEC-ENT-001`, and no identifier was reassigned. |
 | 30 October 2026 | CONF-REV-001, CONF-REV-002, DEC-ENT-001 duplicate, DEC-API-003 | Read the UAE Electronic Invoicing Guidelines V2.0 text and verified the model as five corners with the Federal Tax Authority as Corner 5, correcting the proposed four-corner description. Confirmed MD No. 243 of 2025 exists and governs scope exclusions through its Article 4, recorded as `UAE-EINV-013`, so the submission's citation was right and the register was incomplete. Marked the duplicate `DEC-ENT-001` administration row SUPERSEDED and deferred `DEC-API-003` with a trigger | Agent verification against official sources; `DEC-ENT-001` supersession and `DEC-API-003` deferral require Product Owner confirmation | No approval is recorded. Category B and C e-invoicing deadlines remain unverified because the Guidelines do not state them. |
 | 30 October 2026 | PROD-CONFIG-001 submission; see section 11.6 | Recorded the Product Owner configuration proposal for VAT, financial precision and FX, employer jurisdiction, payroll components, wage protection, e-invoicing applicability and inventory valuation. Nine decisions APPROVED on the conservative option, nine moved to RECOMMENDED awaiting a named professional, eleven DEFERRED with triggers | Product Owner — submission of 30 October 2026 | The submission states the adviser is pending appointment and that adviser approval is required for every area, so it is a proposal and not a professional opinion. Three discrepancies against the verified register were raised as CONF-REV-001 to CONF-REV-003 rather than adopted. No dependent behavior is enabled and no compliance claim is made. |
