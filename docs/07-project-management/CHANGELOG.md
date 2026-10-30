@@ -25,4 +25,6 @@
 
 | 29 Oct 2026 | Recorded the Product Owner approval of the documentation set and P01 authorization, and added `DEP-API-001` external API and access requirements | Implementation of P01 may begin with no external dependency; remaining blockers are 37 professional or provider decisions and the P02–P12 evidence gates |
 
+| 30 Oct 2026 | Added `PROD-CONFIG-001` recording the Product Owner configuration proposal, and repositioned the decision register to 98 APPROVED, 9 RECOMMENDED, 13 DEFERRED and 6 OPEN | The value-dependent decisions are now reviewable proposals rather than open questions; three discrepancies against the verified register were raised rather than adopted |
+
 Future entries describe material outcomes and link owning specifications/evidence; do not duplicate file-by-file Git history.

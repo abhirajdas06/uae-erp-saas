@@ -15,7 +15,7 @@
 
 | Area | Actual inventory | Disposition |
 |---|---:|---|
-| Product/regulatory Markdown | 12 | COMPLETE; glossary and launch report catalogue added by `GOV-GAP-001` and PROPOSED |
+| Product/regulatory Markdown | 13 | COMPLETE; glossary and launch report catalogue added by `GOV-GAP-001`, plus `CONFIGURATION_BASELINE.md` recording the proposed configuration values awaiting adviser review |
 | Architecture/ADR Markdown | 41 | COMPLETE; 20 numbered ADR files plus template/register, and five PROPOSED development-readiness specifications |
 | Phase Markdown | 30 | COMPLETE: 13 phase specs, 13 phase trace/matrix records plus P00/P01 supporting records |
 | Module Markdown | 25 | COMPLETE: 24 substantive module/capability specs plus template |

@@ -254,6 +254,7 @@ Location: `docs/00-product/`
 | `DEVELOPMENT_ROADMAP.md` | Implementation phases and sequencing |
 | `GLOSSARY.md` | Controlled vocabulary for platform, financial and UAE regulatory terms |
 | `REPORT_CATALOGUE.md` | Proposed launch report catalogue and report definition contract |
+| `CONFIGURATION_BASELINE.md` | Proposed VAT, precision, jurisdiction, payroll, wage-protection, e-invoicing and valuation configuration awaiting adviser approval |
 | `UAE_REGULATORY_SOURCE_REGISTER.md` | Dated regulatory sources, verification dates and revalidation requirements |
 
 ### Architecture
