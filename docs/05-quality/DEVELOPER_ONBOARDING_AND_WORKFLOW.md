@@ -20,9 +20,9 @@ The repository is in the documentation-controlled stage described in `AGENTS.md`
 
 | Fact | Detail |
 |---|---|
-| Application code | No Django project, settings module, app package, model or migration exists yet |
-| Database | No database is required or configured for current work |
-| Runnable tooling | Python validation scripts under `scripts/quality/` and their tests under `tests/quality/` |
+| Application code | Authorized P01-T01 bootstrap: Django project package, minimal `apps.core`, and no business models or migrations |
+| Database | SQLite is bootstrap-only in P01-T01; PostgreSQL configuration remains owned by unauthorized P01-T03 |
+| Runnable tooling | P00 validators plus the hash-locked P01-T01 Django/pytest/Ruff toolchain |
 | Continuous integration | `.github/workflows/p00-quality.yml` runs the P00 gate suite on pull request, on push to the default branch, and on manual dispatch |
 | Pinned runtime | Python 3.14.7, as pinned in the workflow |
 | Authorization state | P01 application implementation requires the separate `APPR-P01-001` authorization recorded in `../07-project-management/DECISIONS_PENDING.md` |
@@ -70,7 +70,22 @@ python scripts/quality/validate_governance.py --root docs --format json --output
 git diff --check
 ```
 
-The gate suite is the authoritative local check. It runs five gates in one command: manifest validation, documentation validation, governance validation, the secret scan and the validator unit tests. A separate `pytest` invocation is therefore not required, and `pytest` is not part of the pinned toolchain today, so `python -m pytest tests/quality` works only where a contributor has installed it themselves into the project virtual environment.
+The P00 gate suite remains the authoritative governance/documentation check. It runs five gates in one command: manifest validation, documentation validation, governance validation, the secret scan and the validator unit tests. P01-T01 now additionally pins pytest, pytest-django, Ruff and pip-audit for the bounded application bootstrap checks below.
+
+For the authorized P01-T01 bootstrap, create a Python 3.14.7 virtual environment and install the verified lock:
+
+```bash
+python -m pip install --require-hashes -r requirements-dev.lock
+python manage.py check
+python -m pytest --collect-only
+python -m pytest
+python -m ruff format --check .
+python -m ruff check .
+python -m pip check
+python -m pip_audit --local
+```
+
+The P01-T01 commands do not authorize later settings, PostgreSQL, tenant, user, audit, container or deployment work.
 
 | ID | Requirement |
 |---|---|

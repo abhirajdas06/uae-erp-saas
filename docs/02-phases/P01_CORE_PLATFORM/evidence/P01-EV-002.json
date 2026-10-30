@@ -1,0 +1,58 @@
+{
+  "evidence_id": "P01-EV-002",
+  "task_id": "P01-T-001",
+  "status": "PARTIAL_PHASE_EVIDENCE_COMPLETE_FOR_P01_T01",
+  "recorded_at": "2026-10-30",
+  "authorization_reference": "APPR-P01-001-P01-T01-ONLY",
+  "repository": {
+    "branch": "codex/p01-t01-bootstrap",
+    "base_revision": "353ee08",
+    "implementation_revision": "4f30e1becb29c1e6be6fad14970b65bee8217f48",
+    "working_tree": "evidence and tracking follow-up only"
+  },
+  "runtime": {
+    "python": "3.14.7",
+    "django": "6.1.2",
+    "pytest": "9.2.0",
+    "pytest_django": "4.14.0",
+    "ruff": "0.17.3",
+    "pip_audit": "2.10.1"
+  },
+  "locks": [
+    {
+      "path": "requirements.lock",
+      "sha256": "c423d1260ee717c94f76d0ad89f232bc7fd5705900c7053ceae24ce38d18a3b6"
+    },
+    {
+      "path": "requirements-dev.lock",
+      "sha256": "a9d092e47e1b9fe887c2164ae4d7df1f100201cc5bf28e32e1cc40572d9c059c"
+    }
+  ],
+  "configuration_sha256": "9270341db3a0985065fd358455e29038edad64ce55f46575f383fce05d077ec5",
+  "clean_install": {
+    "command": "python -m pip install --disable-pip-version-check --require-hashes -r requirements-dev.lock",
+    "environment": "new Python 3.14.7 virtual environment outside the repository",
+    "result": "PASS"
+  },
+  "dependency_integrity": {
+    "command": "python -m pip check",
+    "result": "PASS",
+    "summary": "No broken requirements found."
+  },
+  "security_review": {
+    "command": "python -m pip_audit --local --format json --output build/evidence/p01-t01-dependency-audit.json",
+    "result": "PASS",
+    "summary": "No known vulnerabilities found."
+  },
+  "direct_dependency_licenses": {
+    "Django": "BSD-3-Clause",
+    "pytest": "MIT",
+    "pytest-django": "BSD-3-Clause",
+    "ruff": "MIT",
+    "pip-audit": "Apache-2.0"
+  },
+  "limitations": [
+    "This evidence covers P01-T01 only; later P01 configuration, PostgreSQL, container, and CI evidence remains unexecuted.",
+    "The evidence binds to implementation revision 4f30e1becb29c1e6be6fad14970b65bee8217f48; independent review remains required before task closure."
+  ]
+}

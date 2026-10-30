@@ -3,7 +3,7 @@
 | Property | Value |
 |---|---|
 | Document ID | P01-TRACE-001 |
-| Status | APPROVED-SPECIFICATION COMPANION — ALL APPLICATION TESTS NOT RUN |
+| Status | APPROVED SPECIFICATION COMPANION — P01-T01 LOCAL EVIDENCE RECORDED |
 | Governing phase | [P01-SPEC-001](P01_PHASE_SPECIFICATION.md) |
 | Detailed isolation scenarios | [P01-TEN-TEST-001](P01_TENANT_ISOLATION_TEST_MATRIX.md) |
 
@@ -24,12 +24,12 @@
 
 | Suite ID | Scope | Mandatory evidence state |
 |---|---|---|
-| P01-SUITE-BOOT | Dependency lock, settings, startup, health, containers | NOT_RUN |
+| P01-SUITE-BOOT | Dependency lock, settings, startup, health, containers | PARTIAL — P01-T01 lock/bootstrap checks pass; health/containers remain NOT_RUN |
 | P01-SUITE-IAM | User/authentication/session/CSRF/abuse/RBAC/object scope | NOT_RUN |
 | P01-SUITE-TEN | All 53 scenarios in P01-TEN-TEST-001 | NOT_RUN |
 | P01-SUITE-DB | PostgreSQL migrations, roles, constraints, RLS and pooled connections | NOT_RUN |
 | P01-SUITE-AUDIT | Audit durability/permissions/redaction/correlation | NOT_RUN |
-| P01-SUITE-SEC | Secret/dependency/static/configuration and manual threat review | NOT_RUN |
+| P01-SUITE-SEC | Secret/dependency/static/configuration and manual threat review | PARTIAL — P01-T01 dependency audit/static checks pass; later configuration/review remains NOT_RUN |
 | P01-SUITE-OPS | Diagnostics, backup/recovery assumptions and runbooks | NOT_RUN |
 | P01-SUITE-CI | Reproducible complete gate and artifact integrity | NOT_RUN |
 
@@ -40,15 +40,15 @@ The detailed tenant matrix owns its scenario IDs. Concrete non-tenant executable
 | Evidence | Purpose | State |
 |---|---|---|
 | P01-EV-001 | Phase/task authorizations | PLANNED |
-| P01-EV-002 | Locks/configuration/build metadata | PLANNED |
+| P01-EV-002 | Locks/configuration/build metadata | PARTIAL — P01-T01 lock, clean-install, version, license and dependency evidence recorded |
 | P01-EV-003 | Architecture/model/ownership/threat reviews | PLANNED |
 | P01-EV-004 | Migration plans and PostgreSQL results | NOT_RUN |
 | P01-EV-005 | Authentication/permission test reports | NOT_RUN |
 | P01-EV-006 | Executed tenant-isolation matrix | NOT_RUN |
 | P01-EV-007 | Restricted-role/RLS/pooling evidence | NOT_RUN |
 | P01-EV-008 | Audit/logging/redaction evidence | NOT_RUN |
-| P01-EV-009 | Secret/dependency/container/static scans | NOT_RUN |
-| P01-EV-010 | CI run and exception report | NOT_RUN |
+| P01-EV-009 | Secret/dependency/container/static scans | PARTIAL — P01-T01 system/static/dependency checks pass; container/configuration scope remains NOT_RUN |
+| P01-EV-010 | CI run and exception report | PARTIAL — P01-T01 local discovery and tests pass; complete P01 CI remains NOT_RUN |
 | P01-EV-011 | Setup/migration/security documentation | PLANNED |
 | P01-EV-012 | Open defect/risk/decision review | PLANNED |
 | P01-EV-013 | Independent QA/Security review | PLANNED |

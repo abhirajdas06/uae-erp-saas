@@ -1,0 +1,28 @@
+{
+  "evidence_id": "P01-EV-010",
+  "task_id": "P01-T-001",
+  "status": "PARTIAL_PHASE_EVIDENCE_COMPLETE_FOR_P01_T01",
+  "recorded_at": "2026-10-30",
+  "authorization_reference": "APPR-P01-001-P01-T01-ONLY",
+  "implementation_revision": "4f30e1becb29c1e6be6fad14970b65bee8217f48",
+  "test_source_sha256": "3bec6e63f7e5937a20768870e00256d746de1b79030bc8a2e0f0eb1461d0bf45",
+  "test_discovery": {
+    "command": "python -m pytest --collect-only",
+    "result": "PASS",
+    "summary": "10 tests collected; 3 bounded bootstrap tests and 7 P00 validator regression tests."
+  },
+  "test_execution": {
+    "command": "python -m pytest",
+    "result": "PASS",
+    "summary": "10 passed."
+  },
+  "bootstrap_assertions": [
+    "Django is locked to 6.1.2.",
+    "The minimal apps.core application is registered.",
+    "tenants, users, and audit applications were not speculatively scaffolded."
+  ],
+  "limitations": [
+    "This is local P01-T01 evidence, not the complete P01 CI run required by P01-T12.",
+    "All 53 tenant-isolation scenarios remain NOT_RUN because tenant functionality is outside P01-T01."
+  ]
+}
