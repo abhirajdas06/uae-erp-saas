@@ -122,7 +122,7 @@ Implementation of P01 may now begin. It depends on none of the open items, and `
 
 The Product Owner supplied concrete configuration values for the seven previously unanswerable decisions, recorded as `PROD-CONFIG-001`. The submission states that the adviser is pending appointment and that adviser approval is required for every area, so it is a proposal rather than a professional opinion.
 
-Decision position: 98 `APPROVED`, 9 `RECOMMENDED` awaiting a named professional, 13 `DEFERRED` with triggers, 6 `OPEN`. Three discrepancies against the verified register were raised rather than adopted, the most material being a four-corner versus five-corner e-invoicing model, which affects P04 architecture.
+Decision position after the 30 October verification round: 98 `APPROVED`, 9 `RECOMMENDED` awaiting a named professional, 14 `DEFERRED` with triggers, 1 `SUPERSEDED`, and 4 `OPEN`, all four requiring a legal or specialist opinion. Three discrepancies against the verified register were raised rather than adopted, the most material being a four-corner versus five-corner e-invoicing model, which affects P04 architecture.
 
 ## 6. Next Recommended Action
 
